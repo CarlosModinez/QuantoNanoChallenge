@@ -17,6 +17,18 @@ class Box: SKSpriteNode {
         box.physicsBody = contactMask
     }
     
+    func addRandomBoxTexture() {
+        let sorter = Int.random(in: 0...3)
+        if sorter == 0 {
+            box.texture = SKTexture(imageNamed: "box_0")
+        } else if sorter == 1 {
+            box.texture = SKTexture(imageNamed: "box_1")
+        } else if sorter == 2 {
+            box.texture = SKTexture(imageNamed: "box_2")
+        } else {
+            box.texture = SKTexture(imageNamed: "box_3")
+        }
+    }
     
     func addPhysics() {
         box.physicsBody?.affectedByGravity = true

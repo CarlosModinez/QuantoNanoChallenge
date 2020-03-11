@@ -9,13 +9,13 @@
 import SpriteKit
 
 class Floor: SKSpriteNode, GameObject {
-    var floor = SKSpriteNode(color: .red, size: CGSize(width: 600, height: 50))
+    var floor = SKSpriteNode(color: .red, size: CGSize(width: 600, height: 100))
 
     func createFirstFloor() {
         floor.position = CGPoint(x: 0, y: -500)
         floor.zPosition = 3.0
         
-        let contactMask = SKPhysicsBody(rectangleOf: CGSize(width: 600, height: 50))
+        let contactMask = SKPhysicsBody(rectangleOf: floor.size)
         floor.physicsBody = contactMask
         floor.physicsBody?.affectedByGravity = false
         floor.physicsBody?.isDynamic = false
@@ -49,13 +49,13 @@ class Floor: SKSpriteNode, GameObject {
         //Muda o atrito de acordo com o tipo de chao sorteado
         if type == .ice {
             floor.physicsBody?.friction = 0.1
-            floor.color = .blue
+            floor.texture = SKTexture(imageNamed: "ice")
         } else if type == .dirt {
             floor.physicsBody?.friction = 0.7
-            floor.color = .brown
+            floor.texture = SKTexture(imageNamed: "dirt")
         } else {
             floor.physicsBody?.friction = 1.0
-            floor.color = .gray
+            floor.texture = SKTexture(imageNamed: "rock")
         }
             
         //Quem é ele na mascara

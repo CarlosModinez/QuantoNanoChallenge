@@ -15,11 +15,14 @@ class GameScene: SKScene {
     let swipeLeftRec = UISwipeGestureRecognizer()
     
     private var lastUpdateTime : TimeInterval = 0
+    var allowTap: Bool = true
+    var wasTapped: Bool = false
     var gameVelocity: Double = 1
     
     var spawiningFloors: SpawningFloors!
     var gameObjects = [GameObject]()
     
+    var backgroundSprite = SKSpriteNode(texture: Model.shared.currentBackground)
     var bar = Bar()
     var floor = Floor()
     var boxes = [Box]()
@@ -35,6 +38,11 @@ class GameScene: SKScene {
 
     override func didMove(to view: SKView) {
         initialSetup()
+        
+        backgroundSprite.zPosition = -10
+        backgroundSprite.anchorPoint = CGPoint(x: 0, y: 0)
+        backgroundSprite.position = self.frame.origin
+        self.addChild(backgroundSprite)
         
         tapRec.addTarget(self, action: #selector(GameScene.tappedView(_:) ))
         tapRec.numberOfTouchesRequired = 1
@@ -58,6 +66,8 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         
         cam.position.y = boxes[0].box.position.y
+        backgroundSprite.position.y = boxes[0].box.position.y - (view?.frame.size.height)!
+        checkInternality()
         
         // Initialize _lastUpdateTime if it has not already been
         if (self.lastUpdateTime == 0) {
@@ -66,33 +76,60 @@ class GameScene: SKScene {
         }
         
         let deltaTime = currentTime - lastUpdateTime
-        lastUpdateTime = currentTime
+        
+        if deltaTime >=  8 * 0.01666 && !wasTapped {
+            allowTap = true
+        }
+        
+        if wasTapped {
+            lastUpdateTime = currentTime
+            wasTapped = false
+            allowTap = false
+        }
         
         for gameObject in gameObjects {
             gameObject.update(deltaTime: deltaTime, velocity: gameVelocity)
         }
     }
     
-    @objc func tappedView(_ sender:UITapGestureRecognizer) {
-
-        var verticalSpace : CGFloat
-        var horizontalSpace : CGFloat
-
-        for floor in spawiningFloors.floorArray {
-            
-            verticalSpace = head.box.size.height * 3/2 + floor.floor.size.height/2
-            horizontalSpace = floor.floor.size.width / 2 + head.box.size.width/2
-            
-            if (floor.floor.position.y - head.box.position.y) < verticalSpace && (floor.floor.position.y - head.box.position.y) > 0 {
-                
-                if abs(head.box.position.x - floor.floor.position.x) < horizontalSpace {
-                    print(head.box.position.x - floor.floor.position.x)
-                    return
-                }
+    func checkInternality() {
+        if head.box.position.x > (scene?.size.width)!/2 || head.box.position.x < -(scene?.size.width)!/2 {
+            head.box.position.x = -head.box.position.x
+        }
+        
+        for box in disableBoxes {
+            if box.box.position.x > (scene?.size.width)!/2 || box.box.position.x < -(scene?.size.width)!/2 {
+                box.box.position.x = -box.box.position.x
             }
         }
-        createBox()
     }
+    
+    @objc func tappedView(_ sender:UITapGestureRecognizer) {
+        if allowTap {
+            allowTap = false
+            wasTapped = true
+            var verticalSpace : CGFloat
+            var horizontalSpace : CGFloat
+            
+            for floor in spawiningFloors.floorArray {
+                
+                verticalSpace = head.box.size.height * 3/2 + floor.floor.size.height/2
+                horizontalSpace = floor.floor.size.width / 2 + head.box.size.width/2
+                
+                if (floor.floor.position.y - head.box.position.y) < verticalSpace && (floor.floor.position.y - head.box.position.y) > 0 {
+                    
+                    if abs(head.box.position.x - floor.floor.position.x) < horizontalSpace {
+                        return
+                    }
+                }
+            }
+            createBox()
+        } else {
+            return
+        }
+            
+    }
+    
     
     @objc func swipedRight() {
         toppleTower(side: .right)
@@ -132,6 +169,7 @@ class GameScene: SKScene {
         let boxesSizeVector = boxes.count
         for i in 0..<boxesSizeVector {
             if i != 0 {
+                disableBoxes.append(boxes.last!)
                 boxes.removeLast()
             }
         }
@@ -147,7 +185,7 @@ class GameScene: SKScene {
         let box = Box()
         box.setup(position: CGPoint(x: 0, y: 500))
         box.addPhysics()
-        box.box.color = .red
+        box.box.texture = Model.shared.currentPlayerSkin
         boxes.append(box)
         head = boxes[0]
         addChild(box.box)
@@ -158,6 +196,7 @@ class GameScene: SKScene {
         let box = Box()
         box.setup(position: head.box.position)
         box.addPhysics()
+        box.addRandomBoxTexture()
         head.box.position = CGPoint(x: head.box.position.x, y: head.box.position.y + head.box.size.width)
         boxes.append(box)
         addChild(box.box)

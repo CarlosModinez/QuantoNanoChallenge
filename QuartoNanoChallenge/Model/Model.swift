@@ -15,7 +15,10 @@ class Model {
     let boxInitialPosition = CGPoint(x: 0, y: 0)
     
     let boxMass: CGFloat = 100
-    let forceApliedInSwipe = 30000
+    let forceApliedInSwipe = 33000
+    
+    var currentPlayerSkin = SKTexture(imageNamed: "Bird")
+    var currentBackground = SKTexture(imageNamed: "background_2")
     
     init() {
         

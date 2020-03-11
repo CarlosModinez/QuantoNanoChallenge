@@ -48,7 +48,7 @@
 		D1407E14241667F9009AD490 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		D1407E1624166814009AD490 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D1407E182417B6D3009AD490 /* CamControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamControl.swift; sourceTree = "<group>"; };
-		D1CABB3524111F2E004A28A5 /* QuartoNanoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuartoNanoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1CABB3524111F2E004A28A5 /* Topple Towers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Topple Towers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CABB3824111F2E004A28A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1CABB3A24111F2E004A28A5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		D1CABB3E24111F2E004A28A5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -109,7 +109,7 @@
 		D1CABB3624111F2E004A28A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D1CABB3524111F2E004A28A5 /* QuartoNanoChallenge.app */,
+				D1CABB3524111F2E004A28A5 /* Topple Towers.app */,
 				D1CABB4F24111F32004A28A5 /* QuartoNanoChallengeTests.xctest */,
 				D1CABB5A24111F32004A28A5 /* QuartoNanoChallengeUITests.xctest */,
 			);
@@ -215,7 +215,7 @@
 			);
 			name = QuartoNanoChallenge;
 			productName = QuartoNanoChallenge;
-			productReference = D1CABB3524111F2E004A28A5 /* QuartoNanoChallenge.app */;
+			productReference = D1CABB3524111F2E004A28A5 /* Topple Towers.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D1CABB4E24111F32004A28A5 /* QuartoNanoChallengeTests */ = {
@@ -446,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -500,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -522,7 +522,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlosmodinez.QuartoNanoChallenge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -540,7 +540,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.carlosmodinez.QuartoNanoChallenge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
