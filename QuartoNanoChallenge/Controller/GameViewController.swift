@@ -1,8 +1,8 @@
 //
 //  GameViewController.swift
-//  QuartoNanoChallenge
+//  Primeiro Nano Challenge
 //
-//  Created by Carlos Modinez on 05/03/20.
+//  Created by Carlos Modinez on 20/01/20.
 //  Copyright © 2020 Carlos Modinez. All rights reserved.
 //
 
@@ -15,28 +15,40 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
+        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
+        // including entities and graphs.
+        if let scene = GKScene(fileNamed: "GameScene") {
+            
+            // Get the SKScene from the loaded GKScene
+            if let sceneNode = scene.rootNode as! GameScene? {
+                
+                sceneNode.gameViewController = self
+                // Copy gameplay related content over to the scene
+            
+                
                 // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-
+                sceneNode.scaleMode = .aspectFill
                 
                 // Present the scene
-                view.presentScene(scene)
+                if let view = self.view as! SKView? {
+                    view.presentScene(sceneNode)
+                    view.ignoresSiblingOrder = true
+                    view.showsFPS = false
+                    view.showsNodeCount = true
+                    view.showsPhysics = false
+                }
             }
-            
-            view.ignoresSiblingOrder = true
-//            view.showsPhysics = true
-            view.showsFPS = true
-            view.showsNodeCount = true
         }
     }
 
     override var shouldAutorotate: Bool {
         return true
     }
-
+    
+    @IBAction func testeSomButtom(_ sender: Any) {
+        
+    }
+    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -49,3 +61,4 @@ class GameViewController: UIViewController {
         return true
     }
 }
+

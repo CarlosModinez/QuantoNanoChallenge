@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial Screen View Controller-->
+        <scene sceneID="Xe8-OU-QRh">
+            <objects>
+                <viewController restorationIdentifier="InitialScreen" storyboardIdentifier="InitialScreen" modalPresentationStyle="overFullScreen" id="sky-Mr-Ine" customClass="InitialScreenViewController" customModule="Topple_Towers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h0A-bJ-eZz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9I-Wd-lRk">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhY-Rk-6Iw">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <state key="normal" title="Tap to play" image="initialScreenBackGround"/>
+                                <connections>
+                                    <action selector="playBtnPressed:" destination="sky-Mr-Ine" eventType="touchUpInside" id="xQ2-yt-p6c"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HhY-Rk-6Iw" firstAttribute="centerY" secondItem="u9I-Wd-lRk" secondAttribute="centerY" id="Jt6-2r-WfR"/>
+                            <constraint firstItem="HhY-Rk-6Iw" firstAttribute="height" secondItem="u9I-Wd-lRk" secondAttribute="height" id="W5O-J6-gXH"/>
+                            <constraint firstItem="HhY-Rk-6Iw" firstAttribute="width" secondItem="u9I-Wd-lRk" secondAttribute="width" id="XoM-ba-A9d"/>
+                            <constraint firstItem="u9I-Wd-lRk" firstAttribute="width" secondItem="h0A-bJ-eZz" secondAttribute="width" id="c4O-IA-I3k"/>
+                            <constraint firstItem="HhY-Rk-6Iw" firstAttribute="centerX" secondItem="u9I-Wd-lRk" secondAttribute="centerX" id="h0f-0Z-TTX"/>
+                            <constraint firstItem="u9I-Wd-lRk" firstAttribute="centerY" secondItem="GO9-IX-rpL" secondAttribute="centerY" id="r5j-o1-NXW"/>
+                            <constraint firstItem="u9I-Wd-lRk" firstAttribute="height" secondItem="h0A-bJ-eZz" secondAttribute="height" id="rM6-s4-S79"/>
+                            <constraint firstItem="u9I-Wd-lRk" firstAttribute="centerX" secondItem="GO9-IX-rpL" secondAttribute="centerX" id="zZV-Zo-dQC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GO9-IX-rpL"/>
+                    </view>
+                    <connections>
+                        <outlet property="firstScreenView" destination="u9I-Wd-lRk" id="jo6-HW-MHJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWw-KN-3V3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="initialScreenBackGround" width="1076" height="1970"/>
+    </resources>
+</document>

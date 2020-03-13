@@ -10,6 +10,12 @@
 		D1407E15241667F9009AD490 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E14241667F9009AD490 /* Coins.swift */; };
 		D1407E1724166814009AD490 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E1624166814009AD490 /* GameObject.swift */; };
 		D1407E192417B6D3009AD490 /* CamControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E182417B6D3009AD490 /* CamControl.swift */; };
+		D1472B66241A5529005FBB07 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1472B65241A5529005FBB07 /* Water.swift */; };
+		D1472B68241A732C005FBB07 /* InitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1472B67241A732C005FBB07 /* InitialScreen.storyboard */; };
+		D1472B6A241A733F005FBB07 /* GameOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1472B69241A733F005FBB07 /* GameOver.storyboard */; };
+		D1472B6C241A735E005FBB07 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1472B6B241A735E005FBB07 /* InitialScreenViewController.swift */; };
+		D1472B6E241A7369005FBB07 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1472B6D241A7369005FBB07 /* GameOverViewController.swift */; };
+		D1B2841A241BC95D00EAFF05 /* CustomSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B28419241BC95D00EAFF05 /* CustomSound.swift */; };
 		D1CABB3924111F2E004A28A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB3824111F2E004A28A5 /* AppDelegate.swift */; };
 		D1CABB3B24111F2E004A28A5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D1CABB3A24111F2E004A28A5 /* GameScene.sks */; };
 		D1CABB3F24111F2E004A28A5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB3E24111F2E004A28A5 /* GameScene.swift */; };
@@ -24,7 +30,6 @@
 		D1CABB762411233F004A28A5 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB752411233F004A28A5 /* Box.swift */; };
 		D1CABB782411243A004A28A5 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB772411243A004A28A5 /* Floor.swift */; };
 		D1CABB7C241125F9004A28A5 /* SpawningFloors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */; };
-		D1CABB7E24114256004A28A5 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB7D24114256004A28A5 /* Bar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,12 @@
 		D1407E14241667F9009AD490 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		D1407E1624166814009AD490 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D1407E182417B6D3009AD490 /* CamControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamControl.swift; sourceTree = "<group>"; };
+		D1472B65241A5529005FBB07 /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
+		D1472B67241A732C005FBB07 /* InitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialScreen.storyboard; sourceTree = "<group>"; };
+		D1472B69241A733F005FBB07 /* GameOver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameOver.storyboard; sourceTree = "<group>"; };
+		D1472B6B241A735E005FBB07 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
+		D1472B6D241A7369005FBB07 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		D1B28419241BC95D00EAFF05 /* CustomSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSound.swift; sourceTree = "<group>"; };
 		D1CABB3524111F2E004A28A5 /* Topple Towers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Topple Towers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CABB3824111F2E004A28A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1CABB3A24111F2E004A28A5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -68,7 +79,6 @@
 		D1CABB752411233F004A28A5 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		D1CABB772411243A004A28A5 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 		D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawningFloors.swift; sourceTree = "<group>"; };
-		D1CABB7D24114256004A28A5 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D1B28417241BC8ED00EAFF05 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		D1B28418241BC92800EAFF05 /* SoundControll */ = {
+			isa = PBXGroup;
+			children = (
+				D1B28419241BC95D00EAFF05 /* CustomSound.swift */,
+			);
+			path = SoundControll;
+			sourceTree = "<group>";
+		};
 		D1CABB2C24111F2E004A28A5 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				D1CABB4024111F2E004A28A5 /* GameViewController.swift */,
+				D1472B6B241A735E005FBB07 /* InitialScreenViewController.swift */,
+				D1472B6D241A7369005FBB07 /* GameOverViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,9 +185,12 @@
 		D1CABB6D24111FB3004A28A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D1B28417241BC8ED00EAFF05 /* Sounds */,
 				D1CABB4524111F32004A28A5 /* Assets.xcassets */,
 				D1CABB3A24111F2E004A28A5 /* GameScene.sks */,
 				D1CABB4224111F2E004A28A5 /* Main.storyboard */,
+				D1472B67241A732C005FBB07 /* InitialScreen.storyboard */,
+				D1472B69241A733F005FBB07 /* GameOver.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +203,7 @@
 				D1407E1624166814009AD490 /* GameObject.swift */,
 				D1CABB3E24111F2E004A28A5 /* GameScene.swift */,
 				D1407E182417B6D3009AD490 /* CamControl.swift */,
+				D1B28418241BC92800EAFF05 /* SoundControll */,
 				D1CABB7A241125D7004A28A5 /* Spawners */,
 				D1CABB7924112579004A28A5 /* GameObjects */,
 			);
@@ -184,8 +215,8 @@
 			children = (
 				D1CABB752411233F004A28A5 /* Box.swift */,
 				D1CABB772411243A004A28A5 /* Floor.swift */,
-				D1CABB7D24114256004A28A5 /* Bar.swift */,
 				D1407E14241667F9009AD490 /* Coins.swift */,
+				D1472B65241A5529005FBB07 /* Water.swift */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -302,9 +333,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1472B6A241A733F005FBB07 /* GameOver.storyboard in Resources */,
 				D1CABB4424111F2E004A28A5 /* Main.storyboard in Resources */,
 				D1CABB3B24111F2E004A28A5 /* GameScene.sks in Resources */,
 				D1CABB4624111F32004A28A5 /* Assets.xcassets in Resources */,
+				D1472B68241A732C005FBB07 /* InitialScreen.storyboard in Resources */,
 				D1CABB4924111F32004A28A5 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,11 +367,14 @@
 				D1CABB782411243A004A28A5 /* Floor.swift in Sources */,
 				D1CABB7C241125F9004A28A5 /* SpawningFloors.swift in Sources */,
 				D1CABB3F24111F2E004A28A5 /* GameScene.swift in Sources */,
+				D1472B6E241A7369005FBB07 /* GameOverViewController.swift in Sources */,
 				D1CABB72241120C3004A28A5 /* BodyMasks.swift in Sources */,
+				D1B2841A241BC95D00EAFF05 /* CustomSound.swift in Sources */,
 				D1CABB4124111F2E004A28A5 /* GameViewController.swift in Sources */,
 				D1CABB762411233F004A28A5 /* Box.swift in Sources */,
+				D1472B6C241A735E005FBB07 /* InitialScreenViewController.swift in Sources */,
 				D1CABB3924111F2E004A28A5 /* AppDelegate.swift in Sources */,
-				D1CABB7E24114256004A28A5 /* Bar.swift in Sources */,
+				D1472B66241A5529005FBB07 /* Water.swift in Sources */,
 				D1407E15241667F9009AD490 /* Coins.swift in Sources */,
 				D1407E192417B6D3009AD490 /* CamControl.swift in Sources */,
 				D1CABB7024112004004A28A5 /* Model.swift in Sources */,
@@ -521,10 +557,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.carlosmodinez.QuartoNanoChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = akira.123.com;
 				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -539,10 +575,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.carlosmodinez.QuartoNanoChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = akira.123.com;
 				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

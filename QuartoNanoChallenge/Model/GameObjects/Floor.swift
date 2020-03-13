@@ -48,10 +48,10 @@ class Floor: SKSpriteNode, GameObject {
         
         //Muda o atrito de acordo com o tipo de chao sorteado
         if type == .ice {
-            floor.physicsBody?.friction = 0.1
+            floor.physicsBody?.friction = 0.08
             floor.texture = SKTexture(imageNamed: "ice")
         } else if type == .dirt {
-            floor.physicsBody?.friction = 0.7
+            floor.physicsBody?.friction = 0.5
             floor.texture = SKTexture(imageNamed: "dirt")
         } else {
             floor.physicsBody?.friction = 1.0
@@ -62,13 +62,12 @@ class Floor: SKSpriteNode, GameObject {
         floor.physicsBody!.categoryBitMask = BodyMasks.floor
         
         //Com quem colide
-        floor.physicsBody!.collisionBitMask = BodyMasks.player
+        floor.physicsBody!.collisionBitMask = BodyMasks.player | BodyMasks.box
     }
     
     func update(deltaTime daltaTime: TimeInterval, velocity: Double) {
-        
+        // Nao faz nada nao
     }
-    
 }
 
 enum floorType {

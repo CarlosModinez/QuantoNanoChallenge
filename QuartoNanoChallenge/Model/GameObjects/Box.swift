@@ -13,6 +13,7 @@ class Box: SKSpriteNode {
     
     func setup(position: CGPoint) {
         box.position = position
+        box.zPosition = 3.0
         let contactMask = SKPhysicsBody(rectangleOf: Model.shared.boxSize)
         box.physicsBody = contactMask
     }
@@ -39,13 +40,13 @@ class Box: SKSpriteNode {
 //        box.physicsBody?.restitution = 0
         
         //Quem é ele na mascara
-        box.physicsBody!.categoryBitMask = BodyMasks.player
+        box.physicsBody!.categoryBitMask = BodyMasks.box
         
         //Com quem colide
-        box.physicsBody!.collisionBitMask = BodyMasks.obstacle | BodyMasks.floor | BodyMasks.player
+        box.physicsBody!.collisionBitMask = BodyMasks.floor | BodyMasks.player | BodyMasks.box
         
         //Com quem ele tem contato
-        box.physicsBody?.contactTestBitMask = BodyMasks.reward
+        box.physicsBody?.contactTestBitMask = BodyMasks.reward | BodyMasks.water
     }
     
     func excludePhysics() {

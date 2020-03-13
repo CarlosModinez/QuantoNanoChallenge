@@ -15,7 +15,7 @@ class SpawningFloors: GameObject {
     var node: SKNode
     var cam : SKCameraNode
     var floorArray: [Floor] = []
-    var distance =  200//Distancia entre os blocos
+    var distance =  Model.shared.floorStep//Distancia entre os blocos
     var initialFloorsCreated: Bool = false
     
     init(node: SKNode, cam: SKCameraNode) {
@@ -68,7 +68,12 @@ class SpawningFloors: GameObject {
         
         for yPositionMultiplier in 0...6 {
             let newFloor = Floor()
-            let xPosition = Int.random(in: -320...320)
+            var xPosition: Int = 0
+            if yPositionMultiplier == 2 {
+                xPosition = 0
+            } else {
+                xPosition = Int.random(in: -320...320)
+            }
             let yPosition = yPositionMultiplier * distance
             let position = CGPoint(x: xPosition, y: yPosition)
             let size = CGSize(width: 300, height: 30)

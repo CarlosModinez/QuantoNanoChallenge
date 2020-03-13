@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Over View Controller-->
+        <scene sceneID="uaV-KC-mDW">
+            <objects>
+                <viewController restorationIdentifier="GameOver" storyboardIdentifier="GameOver" modalPresentationStyle="overFullScreen" id="43m-kd-0JT" customClass="GameOverViewController" customModule="Topple_Towers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TFg-LC-THE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud end game" translatesAutoresizingMaskIntoConstraints="NO" id="Jff-mv-xi9">
+                                <rect key="frame" x="-145" y="5" width="704" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-X9-7OF">
+                                <rect key="frame" x="31" y="467" width="352" height="63"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-M2-Kvg">
+                                <rect key="frame" x="154" y="224" width="106" height="57"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="38"/>
+                                <color key="textColor" red="0.90744990110000001" green="0.41886171700000002" blue="0.089991174640000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af8-aI-Mfn">
+                                <rect key="frame" x="31" y="274" width="352" height="96"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-YN-90V">
+                                <rect key="frame" x="175.5" y="432" width="63" height="42"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="28"/>
+                                <color key="textColor" red="0.90744990110000001" green="0.41886171700000002" blue="0.089991174640000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57G-p3-fBp">
+                                <rect key="frame" x="87" y="573" width="240" height="128"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="replay Icon" translatesAutoresizingMaskIntoConstraints="NO" id="FNV-vf-Eqs">
+                                        <rect key="frame" x="8" y="40" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FNV-vf-Eqs" secondAttribute="height" multiplier="1:1" id="YeH-fa-JPd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-4k-yaH">
+                                        <rect key="frame" x="57" y="24" width="173" height="80"/>
+                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="45"/>
+                                        <state key="normal" title="Replay">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playAgainPressed:" destination="43m-kd-0JT" eventType="touchUpInside" id="ocW-2t-ifT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.065310953734199373" blue="0.82259024236766787" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="FNV-vf-Eqs" firstAttribute="leading" secondItem="57G-p3-fBp" secondAttribute="leading" constant="8" id="5k1-1L-m1C"/>
+                                    <constraint firstItem="H9i-4k-yaH" firstAttribute="centerY" secondItem="57G-p3-fBp" secondAttribute="centerY" id="7f0-vP-iGR"/>
+                                    <constraint firstItem="H9i-4k-yaH" firstAttribute="leading" secondItem="FNV-vf-Eqs" secondAttribute="trailing" constant="1" id="9cy-2D-cEs"/>
+                                    <constraint firstItem="FNV-vf-Eqs" firstAttribute="width" secondItem="57G-p3-fBp" secondAttribute="width" multiplier="0.2" id="G04-P0-hS9"/>
+                                    <constraint firstAttribute="trailing" secondItem="H9i-4k-yaH" secondAttribute="trailing" constant="10" id="VGZ-Zz-8hA"/>
+                                    <constraint firstItem="FNV-vf-Eqs" firstAttribute="centerY" secondItem="57G-p3-fBp" secondAttribute="centerY" id="nK7-zW-eL8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="af8-aI-Mfn" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="4Ri-jr-U8b"/>
+                            <constraint firstItem="Jff-mv-xi9" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" id="6PD-fu-xtD"/>
+                            <constraint firstItem="af8-aI-Mfn" firstAttribute="top" secondItem="Kg1-M2-Kvg" secondAttribute="bottom" constant="-7" id="6cg-kW-Vca"/>
+                            <constraint firstItem="43J-X9-7OF" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="A6W-WF-Tf1"/>
+                            <constraint firstItem="af8-aI-Mfn" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.5" id="CtC-Fq-5Gq"/>
+                            <constraint firstItem="57G-p3-fBp" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.340909" id="ETR-oB-eLN"/>
+                            <constraint firstItem="Jff-mv-xi9" firstAttribute="top" secondItem="Kg1-M2-Kvg" secondAttribute="bottom" constant="-276" id="EuO-yU-ZnH"/>
+                            <constraint firstItem="57G-p3-fBp" firstAttribute="height" secondItem="Jff-mv-xi9" secondAttribute="height" multiplier="0.142857" id="J5o-3N-w1a"/>
+                            <constraint firstItem="57G-p3-fBp" firstAttribute="centerX" secondItem="43J-X9-7OF" secondAttribute="centerX" id="MbD-9Z-ren"/>
+                            <constraint firstItem="Jff-mv-xi9" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" id="PET-Ce-AOB"/>
+                            <constraint firstItem="43J-X9-7OF" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.5" id="PrC-mH-UNI"/>
+                            <constraint firstItem="43J-X9-7OF" firstAttribute="top" secondItem="Mdc-YN-90V" secondAttribute="bottom" constant="-7" id="UiD-Fp-DAr"/>
+                            <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="aU4-M9-r7k"/>
+                            <constraint firstItem="Jff-mv-xi9" firstAttribute="centerX" secondItem="DMB-vy-Reb" secondAttribute="centerX" id="mjA-2P-yWF"/>
+                            <constraint firstItem="Mdc-YN-90V" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" id="qWQ-vO-nOd"/>
+                            <constraint firstItem="Mdc-YN-90V" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="qlL-gi-leE"/>
+                            <constraint firstItem="57G-p3-fBp" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="yZT-1M-Lq9"/>
+                            <constraint firstItem="57G-p3-fBp" firstAttribute="top" secondItem="43J-X9-7OF" secondAttribute="bottom" constant="43" id="z47-TG-mOe"/>
+                            <constraint firstItem="Jff-mv-xi9" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="1.7" id="zTn-4P-ahq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DMB-vy-Reb"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblCurrenntScore" destination="af8-aI-Mfn" id="nph-LL-GtM"/>
+                        <outlet property="lblScore" destination="43J-X9-7OF" id="vRb-GN-7g9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jh-Oq-lTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.28985507246378" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud end game" width="1496.5" height="1588"/>
+        <image name="replay Icon" width="85" height="76"/>
+    </resources>
+</document>
