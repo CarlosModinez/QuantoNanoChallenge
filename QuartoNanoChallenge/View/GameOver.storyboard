@@ -99,8 +99,8 @@
                         <viewLayoutGuide key="safeArea" id="DMB-vy-Reb"/>
                     </view>
                     <connections>
-                        <outlet property="lblCurrenntScore" destination="af8-aI-Mfn" id="nph-LL-GtM"/>
-                        <outlet property="lblScore" destination="43J-X9-7OF" id="vRb-GN-7g9"/>
+                        <outlet property="lblCurrenntScore" destination="af8-aI-Mfn" id="hhn-60-ZZM"/>
+                        <outlet property="lblScore" destination="43J-X9-7OF" id="2tg-gQ-IYC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Jh-Oq-lTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
