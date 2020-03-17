@@ -46,6 +46,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //Preload for game over view
     var gameOverView: UIStoryboard = UIStoryboard(name: "GameOver", bundle: nil)
     var controller: GameOverViewController!
+    var firstTap: Bool = true
     
     //Sounds ans sounds control
     var lastUpdateTimeForSounds: TimeInterval = 0
@@ -264,7 +265,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             for floor in spawiningFloors.floorArray {
                 
                 verticalSpace = head.box.size.height * 3/2 + floor.floor.size.height/2
-                horizontalSpace = floor.floor.size.width / 2 
+                horizontalSpace = floor.floor.size.width / 2
                 
                 if (floor.floor.position.y - head.box.position.y) < verticalSpace && (floor.floor.position.y - head.box.position.y) > 0 {
                     if abs(head.box.position.x - floor.floor.position.x) < horizontalSpace {
@@ -273,6 +274,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
             }
             createBox()
+            if firstTap {
+                water.allowGrowUp = true
+                firstTap = false
+            }
         } else {
             return
         }
@@ -325,6 +330,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initialSetup() {
+        firstTap = true
         allowSound = true
         gameVelocity = 1.0
         self.camera = cam
@@ -342,7 +348,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func createWater() {
-        water.setup()
+        water.setup(yPosition: Int(-gameViewController.height/1.5))
+        water.allowGrowUp = false
         addChild(water.water)
         gameObjects.append(water)
     }

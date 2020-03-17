@@ -11,10 +11,10 @@ import SpriteKit
 
 class Water: SKSpriteNode, GameObject {
     var water = SKSpriteNode(color: .blue, size: CGSize(width: 900, height: 1000))
-    var dieCounter: Double = 1.0
-    func setup() {
+    var allowGrowUp = false
+    func setup(yPosition: Int) {
         water.texture = SKTexture(imageNamed: "waveFullScreen")
-        water.position = CGPoint(x: 0, y: -800)
+        water.position = CGPoint(x: 0, y: yPosition)
         water.physicsBody = SKPhysicsBody(rectangleOf: water.size)
         water.zPosition = 5.0
        
@@ -31,6 +31,8 @@ class Water: SKSpriteNode, GameObject {
     }
     
     func update(deltaTime: TimeInterval, velocity: Double) {
-        water.position.y += CGFloat(velocity/dieCounter)
+        if allowGrowUp {
+            water.position.y += CGFloat(velocity)
+        }
     }
 }
