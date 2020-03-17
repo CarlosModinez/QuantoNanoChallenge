@@ -43,10 +43,10 @@ class Box: SKSpriteNode {
         box.physicsBody!.categoryBitMask = BodyMasks.box
         
         //Com quem colide
-        box.physicsBody!.collisionBitMask = BodyMasks.floor | BodyMasks.player | BodyMasks.box
+        box.physicsBody!.collisionBitMask = BodyMasks.ice | BodyMasks.dirt | BodyMasks.rock | BodyMasks.player | BodyMasks.box
         
         //Com quem ele tem contato
-        box.physicsBody?.contactTestBitMask = BodyMasks.reward | BodyMasks.water
+        box.physicsBody?.contactTestBitMask = BodyMasks.reward | BodyMasks.water | BodyMasks.ice | BodyMasks.dirt | BodyMasks.rock
     }
     
     func excludePhysics() {

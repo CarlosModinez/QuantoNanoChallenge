@@ -30,16 +30,11 @@ class SpawningFloors: GameObject {
             spawnNewFloor()
         }
     }
-
-    private func removeUselessFloors() {
-        
-        floorArray.remove(at: 0)
-        
-    }
+    
     private func spawnNewFloor() {
 
         if cam.position.y - floorArray[0].floor.position.y >= 800 {
-            removeUselessFloors()
+
             let newFloor = Floor()
             let xPosition = Int.random(in: -320...320)
             let yPosition = Int((floorArray.last?.floor.position.y)!) + distance
@@ -93,6 +88,7 @@ class SpawningFloors: GameObject {
             newFloor.sortFloor(position: position, size: size, withCoins: withCoins, type: type)
             floorArray.append(newFloor)
             node.addChild(newFloor.floor)
+            
         }
     }
     

@@ -12,10 +12,12 @@ import GameplayKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameViewController: GameViewController!
     
+    //Gestures
     let tapRec = UITapGestureRecognizer()
     let swipeRightRec = UISwipeGestureRecognizer()
     let swipeLeftRec = UISwipeGestureRecognizer()
     
+    //Variables for control update and control tap permission
     var lastUpdateTime : TimeInterval = 0
     var allowTap: Bool = true
     var wasTapped: Bool = false
@@ -25,13 +27,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var initialScreenWasShowed: Bool = false
     var runnigAnimation : Bool = false
     
+    //Score presentation
     var score: Int = 0
     var scoreText: SKLabelNode!
     var scoreBox: SKSpriteNode!
-    
+     
+    //Game objects and camera
     var spawiningFloors: SpawningFloors!
     var gameObjects = [GameObject]()
-    
     var backgroundSprite = SKSpriteNode(texture: Model.shared.currentBackground)
     var water = Water()
     var floor = Floor()
@@ -40,9 +43,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var disableBoxes = [Box]()
     var cam = CamControl().cam
     
+    //Preload for game over view
     var gameOverView: UIStoryboard = UIStoryboard(name: "GameOver", bundle: nil     )
     var controller: GameOverViewController!
     
+    //Sounds ans sounds control
+    var lastUpdateTimeForSounds: TimeInterval = 0
+    var allowSound: Bool = true
+    var wasPlayed: Bool = false
+    let iceCollision = CustomSound(fileName: "Box Colision Ice.wav")
+    let dirtCollision = CustomSound(fileName: "Box Colision Dirt.wav")
+    let rockCollision = CustomSound(fileName: "Box Colision Rock.wav")
+    let stackUpSound = CustomSound(fileName: "Stack Up Box.wav")
+    let swipeSound = CustomSound(fileName: "Swipe.wav")
+    let waterSplash = CustomSound(fileName: "Water Splash(3).wav")
+    
+    //Enumerate for identify swipe side
     enum Side {
         case right
         case left
@@ -55,7 +71,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         controller.gameScene = self
         
         physicsWorld.contactDelegate = self
-        
         
         tapRec.addTarget(self, action: #selector(GameScene.tappedView(_:) ))
         tapRec.numberOfTouchesRequired = 1
@@ -74,6 +89,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
+
         
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
@@ -83,7 +99,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             secondBody = contact.bodyA
         }
         
-        if firstBody.contactTestBitMask == 0 && secondBody.contactTestBitMask ==  6 {
+        if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask ==  BodyMasks.water {
             
             if score > 0 {
                 Model.shared.currentScore = score
@@ -94,17 +110,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if score > Model.shared.bestScore {
                 Model.shared.bestScore = score
             }
+            waterSplash.play()
+            allowSound = false
             showGameOverView()
             runnigAnimation = false
             
             
-        } else if firstBody.contactTestBitMask == 40 && secondBody.contactTestBitMask ==  6 {
-            
+        } else if firstBody.categoryBitMask == BodyMasks.box && secondBody.categoryBitMask == BodyMasks.water {
             // Tenho que excluir a caixa que caiu na agua
             // Tenho dois vetores de caixa: disableBoxes e boxes
             //Tocar um som
-        } 
+        } else if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask == BodyMasks.ice && allowSound {
+            iceCollision.play()
+            wasPlayed = true
+            
+        } else if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask == BodyMasks.dirt && allowSound {
+            dirtCollision.play()
+            wasPlayed = true
+        } else if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask == BodyMasks.rock && allowSound {
+            rockCollision.play()
+            wasPlayed = true
+        }
     }
+    
+    
     
     func showGameOverView() {
         self.gameViewController.present(controller, animated: true, completion: nil)
@@ -145,15 +174,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // Initialize _lastUpdateTime if it has not already been
             if (self.lastUpdateTime == 0) {
                 self.lastUpdateTime = currentTime
+                self.lastUpdateTimeForSounds = currentTime
                 return
             }
             
             let deltaTime = currentTime - lastUpdateTime
-            
+            let deltaTimeForSound = currentTime - lastUpdateTimeForSounds
             
             if deltaTime >=  8 * 0.01666 && !wasTapped {
                 allowTap = true
             }
+            
+            
+            if deltaTimeForSound >= 8 * 0.016666 && !wasPlayed{
+                allowSound = true
+            } else if wasPlayed {
+                lastUpdateTimeForSounds = currentTime
+                wasPlayed = false
+                allowSound = false
+            }
+            
             
             if wasTapped {
                 lastUpdateTime = currentTime
@@ -211,6 +251,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     @objc func tappedView(_ sender:UITapGestureRecognizer) {
         if allowTap {
+            stackUpSound.play()
             allowTap = false
             wasTapped = true
             var verticalSpace : CGFloat
@@ -238,13 +279,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     @objc func swipedRight() {
         toppleTower(side: .right)
         cleanBoxArray()
-        boxes[0].box.physicsBody?.contactTestBitMask = 0
+        swipeSound.play()
     }
     
     @objc func swipedLeft() {
         toppleTower(side: .left)
         cleanBoxArray()
-        boxes[0].box.physicsBody?.contactTestBitMask = 0
+        swipeSound.play()
     }
     
     
@@ -259,7 +300,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         for i in 0..<boxes.count {
-            boxes[i].addPhysics()
             
             if i == 0 {
                 boxes[i].box.physicsBody?.applyImpulse(CGVector(dx: force * (boxes.count - 1), dy: 0))
@@ -282,14 +322,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initialSetup() {
-        
+        allowSound = true
         gameVelocity = 1.0
         self.camera = cam
         spawiningFloors = SpawningFloors(node: self, cam: cam)
         gameObjects.append(spawiningFloors)
         
         addScore()
-        createFirstFloor()
         createPlayerHead()
         createWater()
         
@@ -318,10 +357,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         box.box.physicsBody!.categoryBitMask = BodyMasks.player
                 
         //Com quem colide
-        box.box.physicsBody!.collisionBitMask = BodyMasks.floor | BodyMasks.player | BodyMasks.box
+        box.box.physicsBody!.collisionBitMask = BodyMasks.ice | BodyMasks.dirt | BodyMasks.rock | BodyMasks.box
                 
         //Com quem ele tem contato
-        box.physicsBody?.contactTestBitMask = BodyMasks.reward | BodyMasks.water
+        box.physicsBody?.contactTestBitMask = BodyMasks.reward | BodyMasks.water | BodyMasks.ice | BodyMasks.dirt | BodyMasks.rock | BodyMasks.box
         
         box.box.texture = Model.shared.currentPlayerSkin
         boxes.append(box)
@@ -350,9 +389,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreText.zPosition = 6
         addChild(scoreText)
         addChild(scoreBox)
-    }
-    func createFirstFloor() {
-        floor.createFirstFloor()
-        addChild(floor.floor)
     }
 }
