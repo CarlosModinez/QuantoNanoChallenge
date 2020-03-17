@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BalooBhaina-Regular.ttf">
+            <string>BalooBhaina-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game Over View Controller-->
         <scene sceneID="uaV-KC-mDW">
@@ -20,41 +25,41 @@
                                 <rect key="frame" x="-145" y="5" width="704" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-X9-7OF">
-                                <rect key="frame" x="31" y="467" width="352" height="63"/>
-                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="42"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="41.5" y="470.5" width="124" height="101"/>
+                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="50"/>
+                                <color key="textColor" red="0.90980392156862744" green="0.41568627450980389" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-M2-Kvg">
-                                <rect key="frame" x="154" y="224" width="106" height="57"/>
-                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="38"/>
-                                <color key="textColor" red="0.90744990110000001" green="0.41886171700000002" blue="0.089991174640000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-M2-Kvg">
+                                <rect key="frame" x="130.5" y="188.5" width="153.5" height="121"/>
+                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="60"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af8-aI-Mfn">
-                                <rect key="frame" x="31" y="274" width="352" height="96"/>
-                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="64"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="128" y="252.5" width="158.5" height="129"/>
+                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="64"/>
+                                <color key="textColor" red="0.90980392156862744" green="0.41568627450980389" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-YN-90V">
-                                <rect key="frame" x="175.5" y="432" width="63" height="42"/>
-                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="28"/>
-                                <color key="textColor" red="0.90744990110000001" green="0.41886171700000002" blue="0.089991174640000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="61.5" y="413" width="84.5" height="80.5"/>
+                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57G-p3-fBp">
-                                <rect key="frame" x="87" y="573" width="240" height="128"/>
+                                <rect key="frame" x="84" y="589.5" width="246" height="134.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="replay Icon" translatesAutoresizingMaskIntoConstraints="NO" id="FNV-vf-Eqs">
-                                        <rect key="frame" x="8" y="40" width="48" height="48"/>
+                                        <rect key="frame" x="8" y="42.5" width="49" height="49.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="FNV-vf-Eqs" secondAttribute="height" multiplier="1:1" id="YeH-fa-JPd"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-4k-yaH">
-                                        <rect key="frame" x="57" y="24" width="173" height="80"/>
-                                        <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="45"/>
+                                        <rect key="frame" x="58" y="16" width="178" height="103"/>
+                                        <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="45"/>
                                         <state key="normal" title="Replay">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -73,27 +78,40 @@
                                     <constraint firstItem="FNV-vf-Eqs" firstAttribute="centerY" secondItem="57G-p3-fBp" secondAttribute="centerY" id="nK7-zW-eL8"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pS-8j-qJB">
+                                <rect key="frame" x="235" y="413" width="151.5" height="80.5"/>
+                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-dg-OI3">
+                                <rect key="frame" x="301.5" y="470.5" width="18" height="101"/>
+                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="50"/>
+                                <color key="textColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="af8-aI-Mfn" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="4Ri-jr-U8b"/>
-                            <constraint firstItem="Mdc-YN-90V" firstAttribute="top" secondItem="Kg1-M2-Kvg" secondAttribute="bottom" constant="151" id="5DI-JU-VL5"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" id="6PD-fu-xtD"/>
-                            <constraint firstItem="af8-aI-Mfn" firstAttribute="top" secondItem="Kg1-M2-Kvg" secondAttribute="bottom" constant="-7" id="6cg-kW-Vca"/>
-                            <constraint firstItem="43J-X9-7OF" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="A6W-WF-Tf1"/>
-                            <constraint firstItem="af8-aI-Mfn" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.5" id="CtC-Fq-5Gq"/>
-                            <constraint firstItem="57G-p3-fBp" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.340909" id="ETR-oB-eLN"/>
-                            <constraint firstItem="57G-p3-fBp" firstAttribute="height" secondItem="Jff-mv-xi9" secondAttribute="height" multiplier="0.142857" id="J5o-3N-w1a"/>
-                            <constraint firstItem="57G-p3-fBp" firstAttribute="centerX" secondItem="43J-X9-7OF" secondAttribute="centerX" id="MbD-9Z-ren"/>
+                            <constraint firstItem="43J-X9-7OF" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="0.5" id="A6W-WF-Tf1"/>
+                            <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="Aua-bh-Pgu"/>
+                            <constraint firstItem="af8-aI-Mfn" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.7" id="EHf-s7-5WX"/>
+                            <constraint firstItem="57G-p3-fBp" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.35" id="ETR-oB-eLN"/>
+                            <constraint firstItem="4pS-8j-qJB" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" id="I5r-MU-mxW"/>
+                            <constraint firstItem="57G-p3-fBp" firstAttribute="height" secondItem="Jff-mv-xi9" secondAttribute="height" multiplier="0.15" id="J5o-3N-w1a"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" id="PET-Ce-AOB"/>
-                            <constraint firstItem="43J-X9-7OF" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.5" id="PrC-mH-UNI"/>
-                            <constraint firstItem="43J-X9-7OF" firstAttribute="top" secondItem="Mdc-YN-90V" secondAttribute="bottom" constant="-7" id="UiD-Fp-DAr"/>
-                            <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="aU4-M9-r7k"/>
+                            <constraint firstItem="7d3-dg-OI3" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="1.15" id="Pcu-34-iRi"/>
+                            <constraint firstItem="4pS-8j-qJB" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="XpL-zS-aFQ"/>
+                            <constraint firstItem="57G-p3-fBp" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="1.45" id="faY-OA-OdB"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="centerX" secondItem="DMB-vy-Reb" secondAttribute="centerX" id="mjA-2P-yWF"/>
                             <constraint firstItem="Mdc-YN-90V" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" id="qWQ-vO-nOd"/>
-                            <constraint firstItem="Mdc-YN-90V" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="qlL-gi-leE"/>
+                            <constraint firstItem="7d3-dg-OI3" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="qer-P3-Tg9"/>
+                            <constraint firstItem="Mdc-YN-90V" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="0.5" id="qlL-gi-leE"/>
+                            <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.55" id="rTM-iC-bm7"/>
                             <constraint firstItem="57G-p3-fBp" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="yZT-1M-Lq9"/>
-                            <constraint firstItem="57G-p3-fBp" firstAttribute="top" secondItem="43J-X9-7OF" secondAttribute="bottom" constant="43" id="z47-TG-mOe"/>
+                            <constraint firstItem="43J-X9-7OF" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="1.15" id="yvF-GC-0em"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="1.7" id="zTn-4P-ahq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DMB-vy-Reb"/>

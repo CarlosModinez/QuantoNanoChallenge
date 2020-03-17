@@ -48,6 +48,9 @@
 		D1CABB762411233F004A28A5 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB752411233F004A28A5 /* Box.swift */; };
 		D1CABB782411243A004A28A5 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB772411243A004A28A5 /* Floor.swift */; };
 		D1CABB7C241125F9004A28A5 /* SpawningFloors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */; };
+		FB8041D024217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
+		FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
+		FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,8 @@
 		D1CABB752411233F004A28A5 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		D1CABB772411243A004A28A5 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 		D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawningFloors.swift; sourceTree = "<group>"; };
+		FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
+		FBAEEEDF242174B9000F15B8 /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +187,7 @@
 				D1CABB5224111F32004A28A5 /* QuartoNanoChallengeTests */,
 				D1CABB5D24111F32004A28A5 /* QuartoNanoChallengeUITests */,
 				D1CABB3624111F2E004A28A5 /* Products */,
+				FBAEEEDE242174B4000F15B8 /* Fonts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,6 +287,15 @@
 				D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */,
 			);
 			path = Spawners;
+			sourceTree = "<group>";
+		};
+		FBAEEEDE242174B4000F15B8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */,
+				FBAEEEDF242174B9000F15B8 /* BalooBhaina-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +408,7 @@
 				D1CABB4424111F2E004A28A5 /* Main.storyboard in Resources */,
 				D1CABB3B24111F2E004A28A5 /* GameScene.sks in Resources */,
 				D18372FC24210C0700079634 /* Pig Colision Rock.wav in Resources */,
+				FB8041D024217C400034B83B /* BalooBhaina-Regular.ttf in Resources */,
 				D18372FB24210C0700079634 /* Swipe(2).wav in Resources */,
 				D18372FD24210C0700079634 /* Box Colision Rock.wav in Resources */,
 				D18372FA24210C0700079634 /* Box Colision Ice.wav in Resources */,
@@ -418,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +442,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,7 +641,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CM34PRAQJX;
+				DEVELOPMENT_TEAM = F6XL2RL8RU;
 				INFOPLIST_FILE = QuartoNanoChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -641,7 +659,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CM34PRAQJX;
+				DEVELOPMENT_TEAM = F6XL2RL8RU;
 				INFOPLIST_FILE = QuartoNanoChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
