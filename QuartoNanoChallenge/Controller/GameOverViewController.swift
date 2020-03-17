@@ -15,21 +15,21 @@ class GameOverViewController: UIViewController {
     @IBOutlet weak var lblCurrenntScore: UILabel!
     
     var gameScene: GameScene!
+    var width : CGFloat!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
     }
     
     @IBAction func playAgainPressed(_ sender: Any) {
+        width = self.view.bounds.width
         gameScene.gameObjects.removeAll()
         gameScene.removeAllChildren()
         gameScene.boxes.removeAll()
         gameScene.disableBoxes.removeAll()
         gameScene.runnigAnimation = true
         gameScene.initialSetup()
-
-        
         self.dismiss(animated: true, completion: nil)
     }
     

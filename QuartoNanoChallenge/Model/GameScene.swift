@@ -44,17 +44,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var cam = CamControl().cam
     
     //Preload for game over view
-    var gameOverView: UIStoryboard = UIStoryboard(name: "GameOver", bundle: nil     )
+    var gameOverView: UIStoryboard = UIStoryboard(name: "GameOver", bundle: nil)
     var controller: GameOverViewController!
     
     //Sounds ans sounds control
     var lastUpdateTimeForSounds: TimeInterval = 0
     var allowSound: Bool = true
     var wasPlayed: Bool = false
-    let iceCollision = CustomSound(fileName: "Box Colision Ice.wav")
-    let dirtCollision = CustomSound(fileName: "Box Colision Dirt.wav")
-    let rockCollision = CustomSound(fileName: "Box Colision Rock.wav")
-    let stackUpSound = CustomSound(fileName: "Stack Up Box.wav")
+    let iceCollision = CustomSound(fileName: "Pig Colision Ice.wav")
+    let dirtCollision = CustomSound(fileName: "Pig Colision Dirt.wav")
+    let rockCollision = CustomSound(fileName: "Pig Colision Rock.wav")
+    let stackUpSound = CustomSound(fileName: "Stack Up Box(3).wav")
     let swipeSound = CustomSound(fileName: "Swipe.wav")
     let waterSplash = CustomSound(fileName: "Water Splash(3).wav")
     
@@ -153,8 +153,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if initialScreenWasShowed && runnigAnimation {
             
             score = (Int(cam.position.y) - Model.shared.floorStep * 2 - 37) / 5
-            scoreBox.position.y = cam.position.y + 500
-            scoreText.position.y = cam.position.y + 500
+            scoreBox.position.y = cam.position.y + gameViewController.height/1.5
+            scoreText.position.y = cam.position.y + gameViewController.height/1.5
             scoreBox.position.x = 250
             scoreText.position.x = 250
             if score > 0 {
@@ -238,12 +238,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func checkInternality() {
+//        if head.box.position.x > gameViewController.width/2 || head.box.position.x < -gameViewController.width {
+//            head.box.position.x = -head.box.position.x
+//        }
+//
         if head.box.position.x > (scene?.size.width)!/2 + 2 || head.box.position.x < -(scene?.size.width)!/2 - 2{
             head.box.position.x = -head.box.position.x
         }
         
         for box in disableBoxes {
-            if box.box.position.x > (scene?.size.width)!/2 || box.box.position.x < -(scene?.size.width)!/2 {
+            if box.box.position.x > (scene?.size.width)!/2 + 2 || box.box.position.x < -(scene?.size.width)!/2 - 2 {
                 box.box.position.x = -box.box.position.x
             }
         }
@@ -260,10 +264,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             for floor in spawiningFloors.floorArray {
                 
                 verticalSpace = head.box.size.height * 3/2 + floor.floor.size.height/2
-                horizontalSpace = floor.floor.size.width / 2 + head.box.size.width/2
+                horizontalSpace = floor.floor.size.width / 2 
                 
                 if (floor.floor.position.y - head.box.position.y) < verticalSpace && (floor.floor.position.y - head.box.position.y) > 0 {
-                    
                     if abs(head.box.position.x - floor.floor.position.x) < horizontalSpace {
                         return
                     }

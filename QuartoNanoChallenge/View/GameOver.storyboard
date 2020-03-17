@@ -22,7 +22,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-X9-7OF">
                                 <rect key="frame" x="31" y="467" width="352" height="63"/>
                                 <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="42"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-M2-Kvg">
@@ -34,7 +34,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af8-aI-Mfn">
                                 <rect key="frame" x="31" y="274" width="352" height="96"/>
                                 <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="64"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-YN-90V">
@@ -77,12 +77,12 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="af8-aI-Mfn" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="4Ri-jr-U8b"/>
+                            <constraint firstItem="Mdc-YN-90V" firstAttribute="top" secondItem="Kg1-M2-Kvg" secondAttribute="bottom" constant="151" id="5DI-JU-VL5"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" id="6PD-fu-xtD"/>
                             <constraint firstItem="af8-aI-Mfn" firstAttribute="top" secondItem="Kg1-M2-Kvg" secondAttribute="bottom" constant="-7" id="6cg-kW-Vca"/>
                             <constraint firstItem="43J-X9-7OF" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="A6W-WF-Tf1"/>
                             <constraint firstItem="af8-aI-Mfn" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.5" id="CtC-Fq-5Gq"/>
                             <constraint firstItem="57G-p3-fBp" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.340909" id="ETR-oB-eLN"/>
-                            <constraint firstItem="Jff-mv-xi9" firstAttribute="top" secondItem="Kg1-M2-Kvg" secondAttribute="bottom" constant="-276" id="EuO-yU-ZnH"/>
                             <constraint firstItem="57G-p3-fBp" firstAttribute="height" secondItem="Jff-mv-xi9" secondAttribute="height" multiplier="0.142857" id="J5o-3N-w1a"/>
                             <constraint firstItem="57G-p3-fBp" firstAttribute="centerX" secondItem="43J-X9-7OF" secondAttribute="centerX" id="MbD-9Z-ren"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" id="PET-Ce-AOB"/>
