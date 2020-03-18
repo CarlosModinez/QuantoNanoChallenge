@@ -90,6 +90,13 @@
                                 <color key="textColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAs-JL-l3r">
+                                <rect key="frame" x="287.5" y="438" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="positionteste:" destination="43m-kd-0JT" eventType="touchUpInside" id="5j8-02-GaQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -99,12 +106,16 @@
                             <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="Aua-bh-Pgu"/>
                             <constraint firstItem="af8-aI-Mfn" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.7" id="EHf-s7-5WX"/>
                             <constraint firstItem="57G-p3-fBp" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.35" id="ETR-oB-eLN"/>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="centerY" secondItem="4pS-8j-qJB" secondAttribute="centerY" id="FLb-8Y-wi7"/>
                             <constraint firstItem="4pS-8j-qJB" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" id="I5r-MU-mxW"/>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="height" secondItem="4pS-8j-qJB" secondAttribute="height" multiplier="0.372671" id="Iid-kH-Z2f"/>
                             <constraint firstItem="57G-p3-fBp" firstAttribute="height" secondItem="Jff-mv-xi9" secondAttribute="height" multiplier="0.15" id="J5o-3N-w1a"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" id="PET-Ce-AOB"/>
                             <constraint firstItem="7d3-dg-OI3" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="1.15" id="Pcu-34-iRi"/>
                             <constraint firstItem="4pS-8j-qJB" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="XpL-zS-aFQ"/>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="centerX" secondItem="4pS-8j-qJB" secondAttribute="centerX" id="dGN-7N-0MF"/>
                             <constraint firstItem="57G-p3-fBp" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="1.45" id="faY-OA-OdB"/>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="width" secondItem="4pS-8j-qJB" secondAttribute="width" multiplier="0.30363" id="hYQ-93-r4u"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="centerX" secondItem="DMB-vy-Reb" secondAttribute="centerX" id="mjA-2P-yWF"/>
                             <constraint firstItem="Mdc-YN-90V" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" id="qWQ-vO-nOd"/>
                             <constraint firstItem="7d3-dg-OI3" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="qer-P3-Tg9"/>

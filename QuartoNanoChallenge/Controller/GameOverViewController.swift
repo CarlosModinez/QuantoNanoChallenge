@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import GameKit
+import GameplayKit
 
 class GameOverViewController: UIViewController {
 
+
+    //let gameOver = GameOverViewController()
     
     @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var lblCurrenntScore: UILabel!
@@ -37,4 +41,13 @@ class GameOverViewController: UIViewController {
         lblScore.text = String(Model.shared.bestScore)
         lblCurrenntScore.text = String(Model.shared.currentScore)
     }
+    @IBAction func positionteste(_ sender: Any) {
+        
+        let cenaGame = GameScene()
+        let gameover = GameOverViewController()
+        cenaGame.openGameCenter(view: (gameover))
+        let gcvc = GKGameCenterViewController()
+        self.present(gcvc, animated: true, completion: nil)
+    }
+    
 }

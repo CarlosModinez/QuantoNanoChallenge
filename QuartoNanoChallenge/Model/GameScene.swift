@@ -8,8 +8,9 @@
 
 import SpriteKit
 import GameplayKit
+import GameKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelegate {
     var gameViewController: GameViewController!
     
     //Gestures
@@ -110,6 +111,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
             if score > Model.shared.bestScore {
                 Model.shared.bestScore = score
+                saveHighScore(number: score)
             }
             waterSplash.play()
             allowSound = false
@@ -399,5 +401,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreText.zPosition = 6
         addChild(scoreText)
         addChild(scoreBox)
+    }
+    
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func saveHighScore(number: Int) {
+        if GKLocalPlayer.local.isAuthenticated {
+            let scoreReporter = GKScore(leaderboardIdentifier: "akira.123.com.scores")
+            scoreReporter.value = Int64(number)
+            
+            let scoreArray: [GKScore] = [scoreReporter]
+            GKScore.report(scoreArray, withCompletionHandler: nil)
+        }
+    }
+    
+    func openGameCenter(view: UIViewController) {
+        let vc = view
+        let gcvc = GKGameCenterViewController()
+        gcvc.gameCenterDelegate = self
+        vc.present(gcvc, animated: true, completion: nil)
+        print("heheyehyheyheyehyehyeheyeh ", gcvc)
+        
     }
 }
