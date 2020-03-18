@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -54,6 +54,9 @@
 		FB8041D024217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
+		FBACE77C2421A52E0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
+		FBACE77D2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
+		FBACE77E2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,7 +176,6 @@
 				01613BB24938E4421A548D5E /* Pods-QuartoNanoChallengeTests.debug.xcconfig */,
 				16CA36B93D1C517DD9DFA28F /* Pods-QuartoNanoChallengeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -463,6 +465,7 @@
 				D18372F824210C0700079634 /* Swipe(3).wav in Resources */,
 				D1CABB4624111F32004A28A5 /* Assets.xcassets in Resources */,
 				D18372F224210C0700079634 /* Pig Colision Dirt.wav in Resources */,
+				FBACE77C2421A52E0007B24B /* GoogleService-Info.plist in Resources */,
 				D18372EF24210C0700079634 /* Pig Oink(3).wav in Resources */,
 				D18372EE24210C0700079634 /* Stack Up Box.wav in Resources */,
 				D1472B68241A732C005FBB07 /* InitialScreen.storyboard in Resources */,
@@ -483,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */,
+				FBACE77D2421A52F0007B24B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */,
+				FBACE77E2421A52F0007B24B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
