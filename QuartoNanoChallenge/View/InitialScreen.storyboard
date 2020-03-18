@@ -16,7 +16,7 @@
         <!--Initial Screen View Controller-->
         <scene sceneID="Xe8-OU-QRh">
             <objects>
-                <viewController restorationIdentifier="InitialScreen" storyboardIdentifier="InitialScreen" modalPresentationStyle="overFullScreen" id="sky-Mr-Ine" customClass="InitialScreenViewController" customModule="Topple_Towers" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialScreen" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sky-Mr-Ine" customClass="InitialScreenViewController" customModule="Topple_Towers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h0A-bJ-eZz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

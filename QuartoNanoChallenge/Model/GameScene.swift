@@ -54,6 +54,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     var controller: GameOverViewController!
     var firstTap: Bool = true
     
+    //Preload for Initial View
+    var initialView: UIStoryboard = UIStoryboard(name: "InitialScreen", bundle: nil)
+    var initialViewController: InitialScreenViewController!
+
+    
     //Sounds ans sounds control
     var lastUpdateTimeForSounds: TimeInterval = 0
     var allowSound: Bool = true
@@ -76,6 +81,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         gameOverView = UIStoryboard(name: "GameOver", bundle: nil)
         controller = gameOverView.instantiateViewController(withIdentifier: "GameOver") as? GameOverViewController
         controller.gameScene = self
+        
+        initialView = UIStoryboard(name: "InitialScreen", bundle: nil)
+        initialViewController = initialView.instantiateViewController(withIdentifier: "InitialScreen") as? InitialScreenViewController
         
         physicsWorld.contactDelegate = self
         
@@ -153,12 +161,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         controller.updateScore()
     }
     
-    private func showInitialScreen() {
-        let  firstGameView: UIStoryboard = UIStoryboard(name: "InitialScreen", bundle: nil)
-        let controller = firstGameView.instantiateViewController(withIdentifier: "InitialScreen") as! InitialScreenViewController
+    func showInitialScreen() {
+        initialScreenWasShowed = true
+        self.gameViewController.present(initialViewController, animated: true, completion: nil)
         
-        controller.gameScene = self
-        self.gameViewController.present(controller, animated: true, completion: nil)
+        
     }
     
     

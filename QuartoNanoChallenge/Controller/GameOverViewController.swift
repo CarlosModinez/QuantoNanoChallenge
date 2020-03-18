@@ -50,4 +50,8 @@ class GameOverViewController: UIViewController {
         self.present(gcvc, animated: true, completion: nil)
     }
     
+    @IBAction func goHomePressed(_ sender: Any) {
+        gameScene.showInitialScreen()
+        self.dismiss(animated: true, completion: nil)
+    }
 }

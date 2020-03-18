@@ -51,31 +51,34 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57G-p3-fBp">
                                 <rect key="frame" x="84" y="589.5" width="246" height="134.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="replay Icon" translatesAutoresizingMaskIntoConstraints="NO" id="FNV-vf-Eqs">
-                                        <rect key="frame" x="8" y="42.5" width="49" height="49.5"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-4k-yaH">
+                                        <rect key="frame" x="10" y="25" width="85" height="85"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="FNV-vf-Eqs" secondAttribute="height" multiplier="1:1" id="YeH-fa-JPd"/>
+                                            <constraint firstAttribute="width" secondItem="H9i-4k-yaH" secondAttribute="height" multiplier="1:1" id="b2S-8v-Eob"/>
                                         </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-4k-yaH">
-                                        <rect key="frame" x="58" y="16" width="178" height="103"/>
-                                        <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="45"/>
-                                        <state key="normal" title="Replay">
+                                        <state key="normal" image="replay Icon">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="playAgainPressed:" destination="43m-kd-0JT" eventType="touchUpInside" id="ocW-2t-ifT"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4e-gw-XJq">
+                                        <rect key="frame" x="151" y="25" width="85" height="85"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="goHomePressed:" destination="43m-kd-0JT" eventType="touchUpInside" id="qft-tA-5D4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.065310953734199373" blue="0.82259024236766787" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="FNV-vf-Eqs" firstAttribute="leading" secondItem="57G-p3-fBp" secondAttribute="leading" constant="8" id="5k1-1L-m1C"/>
                                     <constraint firstItem="H9i-4k-yaH" firstAttribute="centerY" secondItem="57G-p3-fBp" secondAttribute="centerY" id="7f0-vP-iGR"/>
-                                    <constraint firstItem="H9i-4k-yaH" firstAttribute="leading" secondItem="FNV-vf-Eqs" secondAttribute="trailing" constant="1" id="9cy-2D-cEs"/>
-                                    <constraint firstItem="FNV-vf-Eqs" firstAttribute="width" secondItem="57G-p3-fBp" secondAttribute="width" multiplier="0.2" id="G04-P0-hS9"/>
-                                    <constraint firstAttribute="trailing" secondItem="H9i-4k-yaH" secondAttribute="trailing" constant="10" id="VGZ-Zz-8hA"/>
-                                    <constraint firstItem="FNV-vf-Eqs" firstAttribute="centerY" secondItem="57G-p3-fBp" secondAttribute="centerY" id="nK7-zW-eL8"/>
+                                    <constraint firstItem="v4e-gw-XJq" firstAttribute="height" secondItem="H9i-4k-yaH" secondAttribute="height" id="QyB-2B-QnG"/>
+                                    <constraint firstItem="v4e-gw-XJq" firstAttribute="centerY" secondItem="57G-p3-fBp" secondAttribute="centerY" id="TEZ-fh-i6g"/>
+                                    <constraint firstAttribute="trailing" secondItem="v4e-gw-XJq" secondAttribute="trailing" constant="10" id="Xbq-Mo-k0d"/>
+                                    <constraint firstItem="v4e-gw-XJq" firstAttribute="width" secondItem="H9i-4k-yaH" secondAttribute="width" id="cwN-1h-Sqg"/>
+                                    <constraint firstItem="H9i-4k-yaH" firstAttribute="leading" secondItem="57G-p3-fBp" secondAttribute="leading" constant="10" id="r4b-Wj-GFC"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pS-8j-qJB">
