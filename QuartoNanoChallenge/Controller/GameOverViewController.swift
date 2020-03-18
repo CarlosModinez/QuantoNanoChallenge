@@ -44,11 +44,15 @@ class GameOverViewController: UIViewController {
     }
     @IBAction func positionteste(_ sender: Any) {
         
+        
+        
         let cenaGame = GameScene()
         let gameover = GameOverViewController()
         cenaGame.openGameCenter(view: (gameover))
         let gcvc = GKGameCenterViewController()
-        self.present(gcvc, animated: true, completion: nil)
+        gcvc.viewState = .leaderboards
+        gcvc.leaderboardIdentifier = "akira.123.com.scores"
+        present(gcvc, animated: true, completion: nil)
     }
     
     @IBAction func goHomePressed(_ sender: Any) {
@@ -56,4 +60,11 @@ class GameOverViewController: UIViewController {
         gameScene.showInitialScreen()
         self.dismiss(animated: false, completion: nil)
     }
+}
+
+extension GameOverViewController: GKGameCenterControllerDelegate {
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+
 }
