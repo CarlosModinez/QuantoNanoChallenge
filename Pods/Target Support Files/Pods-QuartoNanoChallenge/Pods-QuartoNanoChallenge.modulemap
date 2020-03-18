@@ -1,0 +1,6 @@
+framework module Pods_QuartoNanoChallenge {
+  umbrella header "Pods-QuartoNanoChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3181BF06149C391BAFBB32 /* Pods_QuartoNanoChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FAE8066F3FBB720266D66C /* Pods_QuartoNanoChallengeTests.framework */; };
+		39FB7BFABA261DDA9F705C50 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */; };
+		9EBC2A5FAA44158131BAA818 /* Pods_QuartoNanoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE829F655A340B98BB80D /* Pods_QuartoNanoChallenge.framework */; };
 		D1407E15241667F9009AD490 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E14241667F9009AD490 /* Coins.swift */; };
 		D1407E1724166814009AD490 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E1624166814009AD490 /* GameObject.swift */; };
 		D1407E192417B6D3009AD490 /* CamControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E182417B6D3009AD490 /* CamControl.swift */; };
@@ -71,6 +74,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01613BB24938E4421A548D5E /* Pods-QuartoNanoChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallengeTests/Pods-QuartoNanoChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0D764DDF7102CF5D83F493E0 /* Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		16CA36B93D1C517DD9DFA28F /* Pods-QuartoNanoChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallengeTests/Pods-QuartoNanoChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		7189858464AB8F5AA11C6D7B /* Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1407E14241667F9009AD490 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		D1407E1624166814009AD490 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D1407E182417B6D3009AD490 /* CamControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamControl.swift; sourceTree = "<group>"; };
@@ -118,7 +126,12 @@
 		D1CABB752411233F004A28A5 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		D1CABB772411243A004A28A5 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 		D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawningFloors.swift; sourceTree = "<group>"; };
+		E05BE829F655A340B98BB80D /* Pods_QuartoNanoChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuartoNanoChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1FAE8066F3FBB720266D66C /* Pods_QuartoNanoChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuartoNanoChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2375ECD9F5D3F9A57184AA4 /* Pods-QuartoNanoChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallenge.release.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallenge/Pods-QuartoNanoChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		F3B91D639A23CA3F31C617BC /* Pods-QuartoNanoChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallenge.debug.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallenge/Pods-QuartoNanoChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
+		FB8041D7242184DD0034B83B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FBAEEEDF242174B9000F15B8 /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EBC2A5FAA44158131BAA818 /* Pods_QuartoNanoChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3181BF06149C391BAFBB32 /* Pods_QuartoNanoChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,12 +156,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39FB7BFABA261DDA9F705C50 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C67608B45B27C5C10B36782 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3B91D639A23CA3F31C617BC /* Pods-QuartoNanoChallenge.debug.xcconfig */,
+				F2375ECD9F5D3F9A57184AA4 /* Pods-QuartoNanoChallenge.release.xcconfig */,
+				0D764DDF7102CF5D83F493E0 /* Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.debug.xcconfig */,
+				7189858464AB8F5AA11C6D7B /* Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig */,
+				01613BB24938E4421A548D5E /* Pods-QuartoNanoChallengeTests.debug.xcconfig */,
+				16CA36B93D1C517DD9DFA28F /* Pods-QuartoNanoChallengeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C716A9F75F685E0E21D326F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E05BE829F655A340B98BB80D /* Pods_QuartoNanoChallenge.framework */,
+				A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */,
+				E1FAE8066F3FBB720266D66C /* Pods_QuartoNanoChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1B28417241BC8ED00EAFF05 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +228,8 @@
 				D1CABB5D24111F32004A28A5 /* QuartoNanoChallengeUITests */,
 				D1CABB3624111F2E004A28A5 /* Products */,
 				FBAEEEDE242174B4000F15B8 /* Fonts */,
+				6C67608B45B27C5C10B36782 /* Pods */,
+				C716A9F75F685E0E21D326F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +246,7 @@
 		D1CABB3724111F2E004A28A5 /* QuartoNanoChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				FB8041D7242184DD0034B83B /* GoogleService-Info.plist */,
 				D1CABB6E24111FB9004A28A5 /* Model */,
 				D1CABB6D24111FB3004A28A5 /* View */,
 				D1CABB6C24111F9D004A28A5 /* Controller */,
@@ -305,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1CABB6324111F32004A28A5 /* Build configuration list for PBXNativeTarget "QuartoNanoChallenge" */;
 			buildPhases = (
+				ACD2B20B04D3F4FEC75F5BA4 /* [CP] Check Pods Manifest.lock */,
 				D1CABB3124111F2E004A28A5 /* Sources */,
 				D1CABB3224111F2E004A28A5 /* Frameworks */,
 				D1CABB3324111F2E004A28A5 /* Resources */,
+				26B0FBC9AB310DF2E5F5E525 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,6 +367,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1CABB6624111F32004A28A5 /* Build configuration list for PBXNativeTarget "QuartoNanoChallengeTests" */;
 			buildPhases = (
+				0E54333826807EA304F12A68 /* [CP] Check Pods Manifest.lock */,
 				D1CABB4B24111F32004A28A5 /* Sources */,
 				D1CABB4C24111F32004A28A5 /* Frameworks */,
 				D1CABB4D24111F32004A28A5 /* Resources */,
@@ -340,9 +386,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1CABB6924111F32004A28A5 /* Build configuration list for PBXNativeTarget "QuartoNanoChallengeUITests" */;
 			buildPhases = (
+				56ADF2CFFFEB1035914F83F9 /* [CP] Check Pods Manifest.lock */,
 				D1CABB5624111F32004A28A5 /* Sources */,
 				D1CABB5724111F32004A28A5 /* Frameworks */,
 				D1CABB5824111F32004A28A5 /* Resources */,
+				59DE6965513B7FBAAA423BE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -447,6 +495,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E54333826807EA304F12A68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuartoNanoChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26B0FBC9AB310DF2E5F5E525 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuartoNanoChallenge/Pods-QuartoNanoChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuartoNanoChallenge/Pods-QuartoNanoChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuartoNanoChallenge/Pods-QuartoNanoChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56ADF2CFFFEB1035914F83F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59DE6965513B7FBAAA423BE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACD2B20B04D3F4FEC75F5BA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuartoNanoChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1CABB3124111F2E004A28A5 /* Sources */ = {
@@ -638,6 +789,7 @@
 		};
 		D1CABB6424111F32004A28A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B91D639A23CA3F31C617BC /* Pods-QuartoNanoChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -656,6 +808,7 @@
 		};
 		D1CABB6524111F32004A28A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2375ECD9F5D3F9A57184AA4 /* Pods-QuartoNanoChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -674,6 +827,7 @@
 		};
 		D1CABB6724111F32004A28A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01613BB24938E4421A548D5E /* Pods-QuartoNanoChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -696,6 +850,7 @@
 		};
 		D1CABB6824111F32004A28A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16CA36B93D1C517DD9DFA28F /* Pods-QuartoNanoChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -718,6 +873,7 @@
 		};
 		D1CABB6A24111F32004A28A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D764DDF7102CF5D83F493E0 /* Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -738,6 +894,7 @@
 		};
 		D1CABB6B24111F32004A28A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7189858464AB8F5AA11C6D7B /* Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
