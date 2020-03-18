@@ -68,9 +68,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     let dirtCollision = CustomSound(fileName: "Pig Colision Dirt.wav")
     let rockCollision = CustomSound(fileName: "Pig Colision Rock.wav")
     let stackUpSound = CustomSound(fileName: "Stack Up Box(3).wav")
+    let stackUpDanied = CustomSound(fileName: "Stack Up Box.wav")
     let swipeSound = CustomSound(fileName: "Swipe.wav")
     let waterSplash = CustomSound(fileName: "Water Splash(3).wav")
-    
+    let coinCollected = CustomSound(fileName: "Coin Collected.wav")
     
     var currentState: stateMachine = .initialView
     
@@ -160,6 +161,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
             wasPlayed = true
         } else if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask == BodyMasks.reward {
             secondBody.node?.removeFromParent()
+            coinCollected.play()
             coinsCount += 1
             Model.shared.currentCoins = coinsCount
         }
@@ -310,7 +312,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     
     @objc func tappedView(_ sender:UITapGestureRecognizer) {
         if allowTap {
-            stackUpSound.play()
             allowTap = false
             wasTapped = true
             var verticalSpace : CGFloat
@@ -323,10 +324,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
                 
                 if (floor.floor.position.y - head.box.position.y) < verticalSpace && (floor.floor.position.y - head.box.position.y) > 0 {
                     if abs(head.box.position.x - floor.floor.position.x) < horizontalSpace {
+                        stackUpDanied.play()
                         return
                     }
                 }
             }
+            stackUpSound.play()
             createBox()
             if firstTap {
                 water.allowGrowUp = true

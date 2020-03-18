@@ -10,6 +10,7 @@
 		0A3181BF06149C391BAFBB32 /* Pods_QuartoNanoChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FAE8066F3FBB720266D66C /* Pods_QuartoNanoChallengeTests.framework */; };
 		39FB7BFABA261DDA9F705C50 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */; };
 		9EBC2A5FAA44158131BAA818 /* Pods_QuartoNanoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE829F655A340B98BB80D /* Pods_QuartoNanoChallenge.framework */; };
+		D100615D2422A3ED00E4A3EC /* Coin Collected.wav in Resources */ = {isa = PBXBuildFile; fileRef = D100615C2422A3EC00E4A3EC /* Coin Collected.wav */; };
 		D1407E15241667F9009AD490 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E14241667F9009AD490 /* Coins.swift */; };
 		D1407E1724166814009AD490 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E1624166814009AD490 /* GameObject.swift */; };
 		D1407E192417B6D3009AD490 /* CamControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E182417B6D3009AD490 /* CamControl.swift */; };
@@ -84,6 +85,7 @@
 		16CA36B93D1C517DD9DFA28F /* Pods-QuartoNanoChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallengeTests/Pods-QuartoNanoChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		7189858464AB8F5AA11C6D7B /* Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D100615C2422A3EC00E4A3EC /* Coin Collected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Coin Collected.wav"; sourceTree = "<group>"; };
 		D1407E14241667F9009AD490 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		D1407E1624166814009AD490 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D1407E182417B6D3009AD490 /* CamControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamControl.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				D18372DD24210C0500079634 /* Pig Oink(3).wav */,
 				D18372DC24210C0500079634 /* Stack Up Box.wav */,
 				D18372DE24210C0600079634 /* Stack Up Box(2).wav */,
+				D100615C2422A3EC00E4A3EC /* Coin Collected.wav */,
 				D18372DA24210C0500079634 /* Stack Up Box(3).wav */,
 				D18372DB24210C0500079634 /* Swipe.wav */,
 				D18372E924210C0700079634 /* Swipe(2).wav */,
@@ -476,6 +479,7 @@
 				D18372EF24210C0700079634 /* Pig Oink(3).wav in Resources */,
 				D18372EE24210C0700079634 /* Stack Up Box.wav in Resources */,
 				D1472B68241A732C005FBB07 /* InitialScreen.storyboard in Resources */,
+				D100615D2422A3ED00E4A3EC /* Coin Collected.wav in Resources */,
 				D18372ED24210C0700079634 /* Swipe.wav in Resources */,
 				D1CABB4924111F32004A28A5 /* LaunchScreen.storyboard in Resources */,
 				D18372F624210C0700079634 /* Pig Oink(2).wav in Resources */,
