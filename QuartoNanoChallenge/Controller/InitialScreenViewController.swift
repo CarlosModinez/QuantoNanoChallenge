@@ -19,7 +19,6 @@ class InitialScreenViewController: UIViewController {
         super.viewDidLoad()
         firstScreenView.layer.cornerRadius = 30.0
         authPlayer()
-        
     }
     
     func authPlayer () {
@@ -37,9 +36,12 @@ class InitialScreenViewController: UIViewController {
     }
     
     @IBAction func playBtnPressed(_ sender: Any) {
+        gameScene.currentState = .game
         gameScene.runnigAnimation = true
-        gameScene.initialSetup()
+        gameScene.intialScreenIsShowing = false
         gameScene.initialScreenWasShowed = true
+        gameScene.initialSetup()
+        
         self.dismiss(animated: true, completion: nil)
     }
     

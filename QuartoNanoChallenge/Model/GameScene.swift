@@ -55,6 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     var firstTap: Bool = true
     
     //Preload for Initial View
+    var intialScreenIsShowing: Bool = false
     var initialView: UIStoryboard = UIStoryboard(name: "InitialScreen", bundle: nil)
     var initialViewController: InitialScreenViewController!
 
@@ -70,10 +71,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     let swipeSound = CustomSound(fileName: "Swipe.wav")
     let waterSplash = CustomSound(fileName: "Water Splash(3).wav")
     
+    
+    var currentState: stateMachine = .initialView
+    
     //Enumerate for identify swipe side
     enum Side {
         case right
         case left
+    }
+    enum stateMachine {
+        case game
+        case initialView
+        case gameOverView
+        case storeView
+        case popUpView
     }
 
     override func didMove(to view: SKView) {
@@ -154,23 +165,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         }
     }
     
-    
-    
     func showGameOverView() {
+        currentState = .gameOverView
         self.gameViewController.present(controller, animated: true, completion: nil)
         controller.updateScore()
     }
     
     func showInitialScreen() {
+        currentState = .initialView
+        
+        self.gameObjects.removeAll()
+        self.removeAllChildren()
+        self.boxes.removeAll()
+        self.disableBoxes.removeAll()
+        
+        initialViewController.gameScene = self
         initialScreenWasShowed = true
-        self.gameViewController.present(initialViewController, animated: true, completion: nil)
-        
-        
+        self.gameViewController.present(initialViewController, animated: false, completion: nil)
     }
     
     
     override func update(_ currentTime: TimeInterval) {
-        if initialScreenWasShowed && runnigAnimation {
+        if initialScreenWasShowed && runnigAnimation && currentState == .game {
             
             //Posicoes do score
             score = (Int(cam.position.y) - Model.shared.floorStep * 2 - 37) / 5
@@ -236,7 +252,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
             for gameObject in gameObjects {
                 gameObject.update(deltaTime: deltaTime, velocity: gameVelocity)
             }
-        } else {
+        } else if !intialScreenIsShowing && currentState == .initialView {
+            intialScreenIsShowing = true
             showInitialScreen()
         }
     }
@@ -318,7 +335,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         } else {
             return
         }
-            
     }
     
     @objc func swipedRight() {

@@ -27,6 +27,7 @@ class GameOverViewController: UIViewController {
     }
     
     @IBAction func playAgainPressed(_ sender: Any) {
+        gameScene.currentState = .game
         width = self.view.bounds.width
         gameScene.gameObjects.removeAll()
         gameScene.removeAllChildren()
@@ -51,7 +52,8 @@ class GameOverViewController: UIViewController {
     }
     
     @IBAction func goHomePressed(_ sender: Any) {
+        gameScene.currentState = .initialView
         gameScene.showInitialScreen()
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
 }
