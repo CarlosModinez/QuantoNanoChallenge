@@ -16,7 +16,7 @@ class Water: SKSpriteNode, GameObject {
         water.texture = SKTexture(imageNamed: "waveFullScreen")
         water.position = CGPoint(x: 0, y: yPosition)
         water.physicsBody = SKPhysicsBody(rectangleOf: water.size)
-        water.zPosition = 5.0
+        water.zPosition = 10.0
        
         water.physicsBody?.affectedByGravity = false
         water.physicsBody?.isDynamic = false

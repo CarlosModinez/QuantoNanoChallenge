@@ -450,8 +450,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         scoreText.fontName = "Baloo Bhaina Regular"
         scoreText.fontColor = .black
         scoreBox.color = .white
-        scoreBox.zPosition = 5
-        scoreText.zPosition = 6
+        scoreBox.zPosition = 20
+        scoreText.zPosition = 21
         addChild(scoreText)
         addChild(scoreBox)
     }
@@ -460,12 +460,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         coinsText.fontSize = 30
         coinsText.fontName = "Baloo Bhaina Regular"
         coinsText.fontColor = .black
-        coinsText.zPosition = 5
+        coinsText.zPosition = 21
         coinsCount = 0
         addChild(coinsText)
         
         coinFigure = SKSpriteNode(imageNamed: "coin")
-        coinFigure.zPosition = 5
+        coinFigure.zPosition = 21
         coinFigure.size = CGSize(width: 20, height: 20)
         addChild(coinFigure)
     }
