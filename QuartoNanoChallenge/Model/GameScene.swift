@@ -32,6 +32,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     var score: Int = 0
     var scoreText: SKLabelNode!
     var scoreBox: SKSpriteNode!
+    
+    //Coins presentantation
+    var coinsCount: Int = 0
+    var coinsText: SKLabelNode!
+    var coinFigure: SKSpriteNode!
      
     //Game objects and camera
     var spawiningFloors: SpawningFloors!
@@ -91,7 +96,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     func didBegin(_ contact: SKPhysicsContact) {
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
-
+    
         
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
@@ -126,13 +131,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         } else if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask == BodyMasks.ice && allowSound {
             iceCollision.play()
             wasPlayed = true
-            
         } else if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask == BodyMasks.dirt && allowSound {
             dirtCollision.play()
             wasPlayed = true
         } else if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask == BodyMasks.rock && allowSound {
             rockCollision.play()
             wasPlayed = true
+        } else if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask == BodyMasks.reward {
+            secondBody.node?.removeFromParent()
         }
     }
     

@@ -52,7 +52,7 @@ class SpawningFloors: GameObject {
             let position = CGPoint(x: xPosition, y: yPosition)
             let size = CGSize(width: 300, height: 30)
             let sortType = Int.random(in: 0..<3)
-            let withCoins = false
+            let withCoins = Bool.random()
             
             var type: floorType
             if sortType == 0 {
@@ -74,7 +74,7 @@ class SpawningFloors: GameObject {
         
         for yPositionMultiplier in 0...6 {
             let newFloor = Floor()
-        
+            var withCoins = false
             var xPosition: Int
             if floorArray.count > 0 {
                 repeat {
@@ -94,7 +94,7 @@ class SpawningFloors: GameObject {
             let position = CGPoint(x: xPosition, y: yPosition)
             let size = CGSize(width: 300, height: 30)
             let sortType = Int.random(in: 0..<3)
-            let withCoins = false
+            
             
             var type: floorType
             if sortType == 0 {
@@ -105,7 +105,7 @@ class SpawningFloors: GameObject {
                 type = .rock
             }
             
-//        var withCoins = Bool.random()
+
             newFloor.sortFloor(position: position, size: size, withCoins: withCoins, type: type)
             floorArray.append(newFloor)
             node.addChild(newFloor.floor)

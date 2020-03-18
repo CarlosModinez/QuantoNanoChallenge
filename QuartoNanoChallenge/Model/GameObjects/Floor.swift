@@ -48,7 +48,11 @@ class Floor: SKSpriteNode, GameObject {
         //Com quem colide
         floor.physicsBody!.collisionBitMask = BodyMasks.player | BodyMasks.box
         
-        
+        if withCoins {
+            let coin = Coins()
+            coin.setup()
+            floor.addChild(coin.coin)
+        }
     }
     
     func update(deltaTime daltaTime: TimeInterval, velocity: Double) {
