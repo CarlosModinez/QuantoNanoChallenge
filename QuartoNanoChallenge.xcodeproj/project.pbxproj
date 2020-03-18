@@ -806,13 +806,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F6XL2RL8RU;
+				DEVELOPMENT_TEAM = CM34PRAQJX;
 				INFOPLIST_FILE = QuartoNanoChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = akira.123.com;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.carlosmodinez;
 				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -825,13 +825,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F6XL2RL8RU;
+				DEVELOPMENT_TEAM = CM34PRAQJX;
 				INFOPLIST_FILE = QuartoNanoChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = akira.123.com;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.carlosmodinez;
 				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

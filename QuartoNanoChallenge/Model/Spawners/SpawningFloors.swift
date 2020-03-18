@@ -34,7 +34,7 @@ class SpawningFloors: GameObject {
     
     private func spawnNewFloor() {
 
-        if cam.position.y - floorArray[0].floor.position.y >= 800 {
+        if abs(cam.position.y  - (floorArray.last!.floor.position.y)) <= 800 {
 
             let newFloor = Floor()
             

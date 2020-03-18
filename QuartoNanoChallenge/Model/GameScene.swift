@@ -254,6 +254,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
                 box.box.position.x = -box.box.position.x
             }
         }
+        
+        for i in 1..<boxes.count {
+            if boxes[i].box.position.x > (scene?.size.width)!/2 + 2 || boxes[i].box.position.x < -(scene?.size.width)!/2 - 2 {
+                boxes[i].box.position.x = -boxes[i].box.position.x
+            }
+        }
     }
     
     @objc func tappedView(_ sender:UITapGestureRecognizer) {
