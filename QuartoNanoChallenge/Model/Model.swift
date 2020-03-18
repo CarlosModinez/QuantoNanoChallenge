@@ -34,6 +34,18 @@ class Model {
         }
     }
     
+    var totalCoins: Int {
+        didSet {
+            UserDefaults.standard.set(self.bestScore, forKey: " totalCoins")
+        }
+    }
+    
+    var currentCoins: Int {
+        didSet {
+            UserDefaults.standard.set(self.bestScore, forKey: " currentCoins")
+        }
+    }
+    
     private init() {
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore
@@ -44,9 +56,12 @@ class Model {
         else
         {
             UserDefaults.standard.set(0, forKey: "bestScore")
+            UserDefaults.standard.set(0, forKey: "totalCoins")
             UserDefaults.standard.set(true, forKey: "launchedBefore")
         }
         
+        totalCoins = UserDefaults.standard.integer(forKey: "totalCoins")
+        currentCoins = UserDefaults.standard.integer(forKey: "currentCoins")
         bestScore = UserDefaults.standard.integer(forKey: "bestScore")
         currentScore = UserDefaults.standard.integer(forKey: "currentScore")
     }

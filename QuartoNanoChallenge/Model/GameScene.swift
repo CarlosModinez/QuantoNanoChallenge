@@ -118,6 +118,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
                 Model.shared.bestScore = score
                 saveHighScore(number: score)
             }
+            Model.shared.currentCoins = coinsCount
+            Model.shared.totalCoins += Model.shared.currentCoins
             waterSplash.play()
             allowSound = false
             showGameOverView()
@@ -139,6 +141,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
             wasPlayed = true
         } else if firstBody.categoryBitMask == BodyMasks.player && secondBody.categoryBitMask == BodyMasks.reward {
             secondBody.node?.removeFromParent()
+            coinsCount += 1
+            Model.shared.currentCoins = coinsCount
         }
     }
     
@@ -161,16 +165,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     override func update(_ currentTime: TimeInterval) {
         if initialScreenWasShowed && runnigAnimation {
             
+            //Posicoes do score
             score = (Int(cam.position.y) - Model.shared.floorStep * 2 - 37) / 5
             scoreBox.position.y = cam.position.y + gameViewController.height/1.5
             scoreText.position.y = cam.position.y + gameViewController.height/1.5
             scoreBox.position.x = 250
             scoreText.position.x = 250
+            
+            //posicoes da contagem de moedas
+            coinsText.position.y = cam.position.y + gameViewController.height/1.5 - scoreBox.size.height/3
+            coinsText.position.x = 250
+            coinsText.text = String(coinsCount)
+            coinFigure.position.y = coinsText.position.y
+            coinFigure.position.x = coinsText.position.x - scoreBox.size.width/3
+
+          
+            //Atribuicao dos valores para aparecer na tela
             if score > 0 {
                 scoreText.text = String(score)
             } else {
                 scoreText.text = String(0)
             }
+            
             cam.position.y = boxes[0].box.position.y
             backgroundSprite.position.y = boxes[0].box.position.y - (view?.frame.size.height)!
             checkInternality()
@@ -352,6 +368,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         gameObjects.append(spawiningFloors)
         
         addScore()
+        addCoinsCount()
         createPlayerHead()
         createWater()
         
@@ -405,14 +422,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     
     func addScore() {
         scoreText = SKLabelNode()
-        scoreBox = SKSpriteNode(color: .white, size: CGSize(width: 100, height: 50))
+        scoreBox = SKSpriteNode(color: .white, size: CGSize(width: 150, height: 100))
         scoreText.fontSize = 30
+        scoreText.fontName = "Baloo Bhaina Regular"
         scoreText.fontColor = .black
         scoreBox.color = .white
         scoreBox.zPosition = 5
         scoreText.zPosition = 6
         addChild(scoreText)
         addChild(scoreBox)
+    }
+    func addCoinsCount() {
+        coinsText = SKLabelNode()
+        coinsText.fontSize = 30
+        coinsText.fontName = "Baloo Bhaina Regular"
+        coinsText.fontColor = .black
+        coinsText.zPosition = 5
+        coinsCount = 0
+        addChild(coinsText)
+        
+        coinFigure = SKSpriteNode(imageNamed: "coin")
+        coinFigure.zPosition = 5
+        coinFigure.size = CGSize(width: 20, height: 20)
+        addChild(coinFigure)
     }
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
