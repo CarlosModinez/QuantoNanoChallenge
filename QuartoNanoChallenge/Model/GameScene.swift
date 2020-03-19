@@ -10,7 +10,7 @@ import SpriteKit
 import GameplayKit
 import GameKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelegate {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameViewController: GameViewController!
     
     //Gestures
@@ -37,6 +37,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     var coinsCount: Int = 0
     var coinsText: SKLabelNode!
     var coinFigure: SKSpriteNode!
+    var coinBackground: SKSpriteNode!
      
     //Game objects and camera
     var spawiningFloors: SpawningFloors!
@@ -135,7 +136,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
 
             if score > Model.shared.bestScore {
                 Model.shared.bestScore = score
-                saveHighScore(number: score)
             }
             Model.shared.currentCoins = coinsCount
             Model.shared.totalCoins += Model.shared.currentCoins
@@ -190,18 +190,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
             
             //Posicoes do score
             score = (Int(cam.position.y) - Model.shared.floorStep * 2 - 37) / 5
-            scoreBox.position.y = cam.position.y + gameViewController.height/1.5
-            scoreText.position.y = cam.position.y + gameViewController.height/1.5
-            scoreBox.position.x = 250
-            scoreText.position.x = 250
+            scoreBox.position.y = cam.position.y + gameViewController.height/1.35
+            scoreText.position.y = cam.position.y + gameViewController.height/1.4
+            
+            scoreBox.position.x = 0
+            scoreText.position.x = 0
             
             //posicoes da contagem de moedas
-            coinsText.position.y = cam.position.y + gameViewController.height/1.5 - scoreBox.size.height/3
-            coinsText.position.x = 250
+            coinsText.position.y = cam.position.y + gameViewController.height/1.38
+            coinsText.position.x = 340
             coinsText.text = String(coinsCount)
-            coinFigure.position.y = coinsText.position.y
-            coinFigure.position.x = coinsText.position.x - scoreBox.size.width/3
-
+            
+            coinFigure.position.y = cam.position.y + gameViewController.height/1.35
+            coinFigure.position.x = coinsText.position.x - scoreBox.size.width/5
+            
+            
+            coinBackground.position.y = cam.position.y + gameViewController.height/1.35
+            coinBackground.position.x = coinsText.position.x
           
             //Atribuicao dos valores para aparecer na tela
             if score > 0 {
@@ -445,51 +450,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     
     func addScore() {
         scoreText = SKLabelNode()
-        scoreBox = SKSpriteNode(color: .white, size: CGSize(width: 150, height: 100))
-        scoreText.fontSize = 30
+        scoreBox = SKSpriteNode(color: .white, size: CGSize(width: 300, height: 100))
+        scoreText.fontSize = 80
         scoreText.fontName = "Baloo Bhaina Regular"
-        scoreText.fontColor = .black
-        scoreBox.color = .white
+        scoreText.fontColor = .white
+        scoreBox.texture = SKTexture(imageNamed: "scoreBox")
+        scoreBox.alpha = 0.4
+        
         scoreBox.zPosition = 5
+        
         scoreText.zPosition = 6
         addChild(scoreText)
         addChild(scoreBox)
     }
     func addCoinsCount() {
         coinsText = SKLabelNode()
-        coinsText.fontSize = 30
+        coinsText.fontSize = 50
         coinsText.fontName = "Baloo Bhaina Regular"
-        coinsText.fontColor = .black
+        coinsText.fontColor = .white
         coinsText.zPosition = 5
         coinsCount = 0
         addChild(coinsText)
         
+        coinBackground = SKSpriteNode(imageNamed: "scoreBox")
+        coinBackground.zPosition = 4
+        coinBackground.size = CGSize(width: 200, height: 100)
+        coinBackground.alpha = 0.4
+        addChild(coinBackground)
+        
         coinFigure = SKSpriteNode(imageNamed: "coin")
         coinFigure.zPosition = 5
-        coinFigure.size = CGSize(width: 20, height: 20)
+        coinFigure.size = CGSize(width: 50, height: 50)
         addChild(coinFigure)
     }
     
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
-    }
-    
-    func saveHighScore(number: Int) {
-        if GKLocalPlayer.local.isAuthenticated {
-            let scoreReporter = GKScore(leaderboardIdentifier: "akira.123.com.scores")
-            scoreReporter.value = Int64(number)
-            
-            let scoreArray: [GKScore] = [scoreReporter]
-            GKScore.report(scoreArray, withCompletionHandler: nil)
-        }
-    }
-    
-    func openGameCenter(view: UIViewController) {
-        let vc = view
-        let gcvc = GKGameCenterViewController()
-        gcvc.gameCenterDelegate = self
-        vc.present(gcvc, animated: true, completion: nil)
-        print("heheyehyheyheyehyehyeheyeh ", gcvc)
-        
-    }
 }

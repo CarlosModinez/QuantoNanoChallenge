@@ -11,6 +11,7 @@ import GameKit
 
 class InitialScreenViewController: UIViewController {
     
+    @IBOutlet weak var tapToPlayOutlet: UIButton!
     @IBOutlet weak var firstScreenView: UIView!
     
     var gameScene: GameScene!
@@ -19,12 +20,25 @@ class InitialScreenViewController: UIViewController {
         super.viewDidLoad()
         firstScreenView.layer.cornerRadius = 30.0
         authPlayer()
+//        animationLabel()
     }
+    
+    func animationLabel() {
+        UIView.animate(withDuration: 1, delay: 0, options: [UIButton.AnimationOptions.autoreverse, UIButton.AnimationOptions.repeat],
+                                   animations: {
+
+                                    self.tapToPlayOutlet.setTitleColor(UIColor.clear, for: .normal)
+                                    print("1")
+//        self.tapToPlayOutlet.titleLabel?.textColor.withAlphaComponent(0)
+        }, completion: nil)
+    }
+    
+    
     
     func authPlayer () {
         let localPlayer = GKLocalPlayer.local
         localPlayer.authenticateHandler = {
-        (view, error) in
+            (view, error) in
             if view != nil{
                 self.present(view!, animated: true, completion: nil)
             }
@@ -32,7 +46,7 @@ class InitialScreenViewController: UIViewController {
                 print("player ", GKLocalPlayer.local.isAuthenticated)
             }
         }
-
+        
     }
     
     @IBAction func playBtnPressed(_ sender: Any) {
