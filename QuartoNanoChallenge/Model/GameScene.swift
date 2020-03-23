@@ -148,6 +148,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     }
     
     func showGameOverView() {
+        controller.gameViewController = self.gameViewController
+        controller.gameScene = self
         self.gameViewController.present(controller, animated: true, completion: nil)
     }
     
