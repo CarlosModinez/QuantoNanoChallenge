@@ -24,7 +24,7 @@ class InitialScreenViewController: UIViewController {
     func authPlayer () {
         let localPlayer = GKLocalPlayer.local
         localPlayer.authenticateHandler = {
-        (view, error) in
+            (view, error) in
             if view != nil{
                 self.present(view!, animated: true, completion: nil)
             }
@@ -32,17 +32,13 @@ class InitialScreenViewController: UIViewController {
                 print("player ", GKLocalPlayer.local.isAuthenticated)
             }
         }
-
     }
     
     @IBAction func playBtnPressed(_ sender: Any) {
-        gameScene.currentState = .game
-        gameScene.runnigAnimation = true
-        gameScene.intialScreenIsShowing = false
-        gameScene.initialScreenWasShowed = true
-        gameScene.initialSetup()
-        
-        self.dismiss(animated: true, completion: nil)
+        let gameViewController: GameViewController!
+        let gameView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        gameViewController = gameView.instantiateViewController(withIdentifier: "gameView") as? GameViewController
+        self.present(gameViewController, animated: true, completion: nil)
     }
     
 }

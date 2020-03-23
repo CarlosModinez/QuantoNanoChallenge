@@ -12,40 +12,29 @@ import GameplayKit
 
 class GameOverViewController: UIViewController {
 
-
-    //let gameOver = GameOverViewController()
-    
     @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var lblCurrenntScore: UILabel!
     
     var gameScene: GameScene!
     var width : CGFloat!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func playAgainPressed(_ sender: Any) {
-        gameScene.currentState = .game
-        width = self.view.bounds.width
-        gameScene.gameObjects.removeAll()
-        gameScene.removeAllChildren()
-        gameScene.boxes.removeAll()
-        gameScene.disableBoxes.removeAll()
-        gameScene.runnigAnimation = true
-        gameScene.initialSetup()
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    func updateScore() {
+        gameScene.runnigAnimation = false
         lblScore.text = String(Model.shared.bestScore)
         lblCurrenntScore.text = String(Model.shared.currentScore)
     }
+    
+    @IBAction func playAgainPressed(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = self
+        let gameViewController: GameViewController!
+        let gameView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        gameViewController = gameView.instantiateViewController(withIdentifier: "gameView") as? GameViewController
+        self.present(gameViewController, animated: false, completion: nil)
+    }
+    
     @IBAction func positionteste(_ sender: Any) {
-        
-        
-        
         let cenaGame = GameScene()
         let gameover = GameOverViewController()
         cenaGame.openGameCenter(view: (gameover))
@@ -56,9 +45,10 @@ class GameOverViewController: UIViewController {
     }
     
     @IBAction func goHomePressed(_ sender: Any) {
-        gameScene.currentState = .initialView
-        gameScene.showInitialScreen()
-        self.dismiss(animated: false, completion: nil)
+        let gameViewController: InitialScreenViewController!
+        let gameView: UIStoryboard = UIStoryboard(name: "InitialScreen", bundle: nil)
+        gameViewController = gameView.instantiateViewController(withIdentifier: "InitialScreen") as? InitialScreenViewController
+        self.present(gameViewController, animated: true, completion: nil)
     }
 }
 

@@ -25,8 +25,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     var gameVelocity: Double = 1
     
     //Flags for view controller
-    var initialScreenWasShowed: Bool = false
-    var runnigAnimation : Bool = false
+    var runnigAnimation : Bool = true
     
     //Score presentation
     var score: Int = 0
@@ -37,7 +36,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     var coinsCount: Int = 0
     var coinsText: SKLabelNode!
     var coinFigure: SKSpriteNode!
-     
+    
     //Game objects and camera
     var spawiningFloors: SpawningFloors!
     var gameObjects = [GameObject]()
@@ -54,12 +53,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     var controller: GameOverViewController!
     var firstTap: Bool = true
     
-    //Preload for Initial View
-    var intialScreenIsShowing: Bool = false
-    var initialView: UIStoryboard = UIStoryboard(name: "InitialScreen", bundle: nil)
-    var initialViewController: InitialScreenViewController!
-
-    
     //Sounds ans sounds control
     var lastUpdateTimeForSounds: TimeInterval = 0
     var allowSound: Bool = true
@@ -73,29 +66,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     let waterSplash = CustomSound(fileName: "Water Splash(3).wav")
     let coinCollected = CustomSound(fileName: "Coin Collected.wav")
     
-    var currentState: stateMachine = .initialView
-    
     //Enumerate for identify swipe side
     enum Side {
         case right
         case left
     }
-    enum stateMachine {
-        case game
-        case initialView
-        case gameOverView
-        case storeView
-        case popUpView
-    }
-
+    
     override func didMove(to view: SKView) {
         
+        initialSetup()
         gameOverView = UIStoryboard(name: "GameOver", bundle: nil)
         controller = gameOverView.instantiateViewController(withIdentifier: "GameOver") as? GameOverViewController
         controller.gameScene = self
-        
-        initialView = UIStoryboard(name: "InitialScreen", bundle: nil)
-        initialViewController = initialView.instantiateViewController(withIdentifier: "InitialScreen") as? InitialScreenViewController
         
         physicsWorld.contactDelegate = self
         
@@ -116,7 +98,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     func didBegin(_ contact: SKPhysicsContact) {
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
-    
+        
         
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
             firstBody = contact.bodyA
@@ -133,7 +115,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
             } else {
                 Model.shared.currentScore = 0
             }
-
+            
             if score > Model.shared.bestScore {
                 Model.shared.bestScore = score
                 saveHighScore(number: score)
@@ -143,8 +125,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
             waterSplash.play()
             allowSound = false
             showGameOverView()
-            runnigAnimation = false
-            
             
         } else if firstBody.categoryBitMask == BodyMasks.box && secondBody.categoryBitMask == BodyMasks.water {
             // Tenho que excluir a caixa que caiu na agua
@@ -168,28 +148,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     }
     
     func showGameOverView() {
-        currentState = .gameOverView
         self.gameViewController.present(controller, animated: true, completion: nil)
-        controller.updateScore()
     }
-    
-    func showInitialScreen() {
-        currentState = .initialView
-        
-        self.gameObjects.removeAll()
-        self.removeAllChildren()
-        self.boxes.removeAll()
-        self.disableBoxes.removeAll()
-        
-        initialViewController.gameScene = self
-        initialScreenWasShowed = true
-        self.gameViewController.present(initialViewController, animated: false, completion: nil)
-    }
-    
     
     override func update(_ currentTime: TimeInterval) {
-        if initialScreenWasShowed && runnigAnimation && currentState == .game {
-            
+        if runnigAnimation {
             //Posicoes do score
             score = (Int(cam.position.y) - Model.shared.floorStep * 2 - 37) / 5
             scoreBox.position.y = cam.position.y + gameViewController.height/1.5
@@ -203,8 +166,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
             coinsText.text = String(coinsCount)
             coinFigure.position.y = coinsText.position.y
             coinFigure.position.x = coinsText.position.x - scoreBox.size.width/3
-
-          
+            
+            
             //Atribuicao dos valores para aparecer na tela
             if score > 0 {
                 scoreText.text = String(score)
@@ -253,15 +216,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
             
             for gameObject in gameObjects {
                 gameObject.update(deltaTime: deltaTime, velocity: gameVelocity)
+                
             }
-        } else if !intialScreenIsShowing && currentState == .initialView {
-            intialScreenIsShowing = true
-            showInitialScreen()
         }
     }
     
     func excludeBoxesCauseWater() {
-
+        
         var positionForExclude  = [Int]()
         let disableBoxesSize = disableBoxes.count
         let boxesSize = boxes.count
@@ -272,13 +233,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
                 positionForExclude.append(i)
             }
         }
-        
-//        if positionForExclude.count > 0 {
-//            for j in 0..<positionForExclude.count - 1 {
-//                disableBoxes.remove(at: positionForExclude[j])
-//            }
-//        }
-        
+
         positionForExclude.removeAll()
         for i in 0..<boxesSize {
             if boxes[i].box.position.y <= water.water.position.y {
@@ -289,10 +244,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
     }
     
     func checkInternality() {
-//        if head.box.position.x > gameViewController.width/2 || head.box.position.x < -gameViewController.width {
-//            head.box.position.x = -head.box.position.x
-//        }
-//
         if head.box.position.x > (scene?.size.width)!/2 + 2 || head.box.position.x < -(scene?.size.width)!/2 - 2{
             head.box.position.x = -head.box.position.x
         }
@@ -419,13 +370,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         box.box.physicsBody?.allowsRotation = true
         box.box.physicsBody?.mass = Model.shared.boxMass
         box.box.physicsBody?.linearDamping = 1.0
-                
+        
         //Quem é ele na mascara
         box.box.physicsBody!.categoryBitMask = BodyMasks.player
-                
+        
         //Com quem colide
         box.box.physicsBody!.collisionBitMask = BodyMasks.ice | BodyMasks.dirt | BodyMasks.rock | BodyMasks.box
-                
+        
         //Com quem ele tem contato
         box.physicsBody?.contactTestBitMask = BodyMasks.reward | BodyMasks.water | BodyMasks.ice | BodyMasks.dirt | BodyMasks.rock | BodyMasks.box
         
@@ -434,7 +385,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         head = boxes[0]
         addChild(box.box)
     }
-   
+    
     func createBox() {
         let head = boxes[0]
         let box = Box()
@@ -493,6 +444,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate, GKGameCenterControllerDelega
         gcvc.gameCenterDelegate = self
         vc.present(gcvc, animated: true, completion: nil)
         print("heheyehyheyheyehyehyeheyeh ", gcvc)
-        
     }
 }
