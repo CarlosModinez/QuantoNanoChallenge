@@ -50,10 +50,6 @@ class GameViewController: UIViewController {
         return true
     }
     
-    @IBAction func testeSomButtom(_ sender: Any) {
-        
-    }
-    
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
