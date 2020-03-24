@@ -440,7 +440,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func openGameCenter(view: UIViewController) {
         let vc = view
         let gcvc = GKGameCenterViewController()
-        gcvc.gameCenterDelegate = self
+        gcvc.gameCenterDelegate = self as! GKGameCenterControllerDelegate
         vc.present(gcvc, animated: true, completion: nil)
         print("heheyehyheyheyehyehyeheyeh ", gcvc)
     }

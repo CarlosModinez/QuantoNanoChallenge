@@ -41,7 +41,7 @@ class GameOverViewController: UIViewController {
     }
     
     @IBAction func positionteste(_ sender: Any) {
-        GameCenter.shared.showLeaderboard(presentingVC: )
+        //GameCenter.shared.showLeaderboard(presentingVC: )
     }
     
     @IBAction func goHomePressed(_ sender: Any) {

@@ -74,19 +74,15 @@ class SpawningFloors: GameObject {
         
         for yPositionMultiplier in 0...6 {
             let newFloor = Floor()
-            var withCoins = false
+            let withCoins = false
             var xPosition: Int
-            if floorArray.count > 0 {
-                repeat {
-                    xPosition = Int.random(in: -320...320)
-                } while abs(xPosition - Int(floorArray[arrayPosition - 1].floor.position.x)) < Int(Model.shared.boxSize.width)
-            } else {
-                xPosition = Int.random(in: -320...320)
-            }
             arrayPosition += 1
-    
             if yPositionMultiplier == 2 {
                 xPosition = 0
+            } else if yPositionMultiplier == 3{
+                xPosition = -200
+            } else if yPositionMultiplier == 4{
+                xPosition = 200
             } else {
                 xPosition = Int.random(in: -320...320)
             }
