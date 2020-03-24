@@ -165,7 +165,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //posicoes da contagem de moedas
             coinsText.position.y = cam.position.y + gameViewController.height/1.38
-            coinsText.position.x = 340
+            coinsText.position.x = gameViewController.width/1.25
             coinsText.text = String(coinsCount)
             
             coinFigure.position.y = cam.position.y + gameViewController.height/1.35
@@ -405,17 +405,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func addScore() {
+        
         scoreText = SKLabelNode()
-        scoreBox = SKSpriteNode(color: .white, size: CGSize(width: 300, height: 100))
+        scoreBox = SKSpriteNode(color: .clear, size: CGSize(width: 300, height: 100))
         scoreText.fontSize = 80
         scoreText.fontName = "Baloo Bhaina Regular"
-        scoreText.fontColor = .black
-        scoreBox.color = .white
+        scoreText.fontColor = .white
         scoreBox.zPosition = 20
         scoreText.zPosition = 21
+        scoreBox = SKSpriteNode(imageNamed: "scoreBox")
+        scoreBox.alpha = 0.4
+        
         addChild(scoreText)
         addChild(scoreBox)
     }
+    
+    
     func addCoinsCount() {
         coinsText = SKLabelNode()
         coinsText.fontSize = 50
@@ -435,13 +440,5 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         coinFigure.zPosition = 5
         coinFigure.size = CGSize(width: 50, height: 50)
         addChild(coinFigure)
-    }
-    
-    func openGameCenter(view: UIViewController) {
-        let vc = view
-        let gcvc = GKGameCenterViewController()
-        gcvc.gameCenterDelegate = self as! GKGameCenterControllerDelegate
-        vc.present(gcvc, animated: true, completion: nil)
-        print("heheyehyheyheyehyehyeheyeh ", gcvc)
     }
 }

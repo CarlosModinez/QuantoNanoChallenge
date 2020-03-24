@@ -25,6 +25,7 @@ class Model {
     var bestScore: Int {
         didSet {
             UserDefaults.standard.set(self.bestScore, forKey: "bestScore")
+            GameCenter.shared.updateScore(with: self.bestScore)
         }
     }
 

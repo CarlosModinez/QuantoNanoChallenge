@@ -19,7 +19,7 @@ class InitialScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         firstScreenView.layer.cornerRadius = 30.0
-        authPlayer()
+        GameCenter.shared.authenticateLocalPlayer(presentingVC: InitialScreenViewController())
 //        animationLabel()
     }
     
@@ -31,22 +31,6 @@ class InitialScreenViewController: UIViewController {
                                     print("1")
 //        self.tapToPlayOutlet.titleLabel?.textColor.withAlphaComponent(0)
         }, completion: nil)
-    }
-    
-    
-    
-    func authPlayer () {
-        let localPlayer = GKLocalPlayer.local
-        localPlayer.authenticateHandler = {
-            (view, error) in
-            if view != nil{
-                self.present(view!, animated: true, completion: nil)
-            }
-            else {
-                print("player ", GKLocalPlayer.local.isAuthenticated)
-            }
-        }
-        
     }
     
     @IBAction func playBtnPressed(_ sender: Any) {

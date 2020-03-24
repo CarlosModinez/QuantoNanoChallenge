@@ -41,13 +41,18 @@ class GameOverViewController: UIViewController {
     }
     
     @IBAction func positionteste(_ sender: Any) {
-        //GameCenter.shared.showLeaderboard(presentingVC: )
+        GameCenter.shared.showLeaderboard(presentingVC: GameOverViewController())
     }
     
     @IBAction func goHomePressed(_ sender: Any) {
+        gameScene.removeAllChildren()
+        
+        let appDelegate = UIApplication.shared.delegate
+        appDelegate?.window??.rootViewController = self
+        
         let gameViewController: InitialScreenViewController!
         let gameView: UIStoryboard = UIStoryboard(name: "InitialScreen", bundle: nil)
         gameViewController = gameView.instantiateViewController(withIdentifier: "InitialScreen") as? InitialScreenViewController
-        self.present(gameViewController, animated: true, completion: nil)
+        self.present(gameViewController, animated: false, completion: nil)
     }
 }
