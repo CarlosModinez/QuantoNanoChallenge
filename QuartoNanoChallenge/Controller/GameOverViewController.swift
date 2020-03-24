@@ -37,7 +37,7 @@ class GameOverViewController: UIViewController {
         let gameViewController: GameViewController!
         let gameView: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         gameViewController = gameView.instantiateViewController(withIdentifier: "gameView") as? GameViewController
-        self.present(gameViewController, animated: true, completion: nil)
+        self.present(gameViewController, animated: false, completion: nil)
     }
     
     @IBAction func positionteste(_ sender: Any) {
