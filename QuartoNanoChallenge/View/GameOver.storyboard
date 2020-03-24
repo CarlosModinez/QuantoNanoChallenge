@@ -25,77 +25,60 @@
                                 <rect key="frame" x="-145" y="5" width="704" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-X9-7OF">
-                                <rect key="frame" x="41.5" y="470.5" width="124" height="101"/>
+                                <rect key="frame" x="41.5" y="380" width="124" height="101"/>
                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="50"/>
                                 <color key="textColor" red="0.90980392156862744" green="0.41568627450980389" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-M2-Kvg">
-                                <rect key="frame" x="130.5" y="188.5" width="153.5" height="121"/>
+                                <rect key="frame" x="130.5" y="143.5" width="153.5" height="121"/>
                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="60"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="af8-aI-Mfn">
-                                <rect key="frame" x="128" y="252.5" width="158.5" height="129"/>
+                                <rect key="frame" x="128" y="207.5" width="158.5" height="129"/>
                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="64"/>
                                 <color key="textColor" red="0.90980392156862744" green="0.41568627450980389" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdc-YN-90V">
-                                <rect key="frame" x="61.5" y="413" width="84.5" height="80.5"/>
+                                <rect key="frame" x="61.5" y="322" width="84.5" height="80.5"/>
                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="40"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57G-p3-fBp">
-                                <rect key="frame" x="84" y="589.5" width="246" height="134.5"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-4k-yaH">
-                                        <rect key="frame" x="10" y="25" width="85" height="85"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="H9i-4k-yaH" secondAttribute="height" multiplier="1:1" id="b2S-8v-Eob"/>
-                                        </constraints>
-                                        <state key="normal" image="replay Icon">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="playAgainPressed:" destination="43m-kd-0JT" eventType="touchUpInside" id="ocW-2t-ifT"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4e-gw-XJq">
-                                        <rect key="frame" x="151" y="25" width="85" height="85"/>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="goHomePressed:" destination="43m-kd-0JT" eventType="touchUpInside" id="qft-tA-5D4"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.065310953734199373" blue="0.82259024236766787" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="H9i-4k-yaH" firstAttribute="centerY" secondItem="57G-p3-fBp" secondAttribute="centerY" id="7f0-vP-iGR"/>
-                                    <constraint firstItem="v4e-gw-XJq" firstAttribute="height" secondItem="H9i-4k-yaH" secondAttribute="height" id="QyB-2B-QnG"/>
-                                    <constraint firstItem="v4e-gw-XJq" firstAttribute="centerY" secondItem="57G-p3-fBp" secondAttribute="centerY" id="TEZ-fh-i6g"/>
-                                    <constraint firstAttribute="trailing" secondItem="v4e-gw-XJq" secondAttribute="trailing" constant="10" id="Xbq-Mo-k0d"/>
-                                    <constraint firstItem="v4e-gw-XJq" firstAttribute="width" secondItem="H9i-4k-yaH" secondAttribute="width" id="cwN-1h-Sqg"/>
-                                    <constraint firstItem="H9i-4k-yaH" firstAttribute="leading" secondItem="57G-p3-fBp" secondAttribute="leading" constant="10" id="r4b-Wj-GFC"/>
-                                </constraints>
-                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-4k-yaH">
+                                <rect key="frame" x="41.5" y="499" width="331" height="89.5"/>
+                                <state key="normal" image="Restart Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgainPressed:" destination="43m-kd-0JT" eventType="touchUpInside" id="ocW-2t-ifT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4e-gw-XJq">
+                                <rect key="frame" x="41.5" y="589.5" width="158.5" height="89.5"/>
+                                <state key="normal" image="MenuButtom"/>
+                                <connections>
+                                    <action selector="goHomePressed:" destination="43m-kd-0JT" eventType="touchUpInside" id="qft-tA-5D4"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pS-8j-qJB">
-                                <rect key="frame" x="235" y="413" width="151.5" height="80.5"/>
+                                <rect key="frame" x="235" y="322" width="151.5" height="80.5"/>
                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="40"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-dg-OI3">
-                                <rect key="frame" x="301.5" y="470.5" width="18" height="101"/>
+                                <rect key="frame" x="301.5" y="380" width="18" height="101"/>
                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="50"/>
                                 <color key="textColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAs-JL-l3r">
-                                <rect key="frame" x="287.5" y="438" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAs-JL-l3r">
+                                <rect key="frame" x="214" y="589.5" width="158.5" height="89.5"/>
+                                <state key="normal" image="GameCenterButtom"/>
                                 <connections>
                                     <action selector="positionteste:" destination="43m-kd-0JT" eventType="touchUpInside" id="5j8-02-GaQ"/>
                                 </connections>
@@ -103,29 +86,33 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" multiplier="1.4" id="0ph-SO-vP0"/>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="0.383" id="3ol-2Y-2ic"/>
                             <constraint firstItem="af8-aI-Mfn" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="4Ri-jr-U8b"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" id="6PD-fu-xtD"/>
                             <constraint firstItem="43J-X9-7OF" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="0.5" id="A6W-WF-Tf1"/>
                             <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="Aua-bh-Pgu"/>
-                            <constraint firstItem="af8-aI-Mfn" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.7" id="EHf-s7-5WX"/>
-                            <constraint firstItem="57G-p3-fBp" firstAttribute="width" secondItem="Jff-mv-xi9" secondAttribute="width" multiplier="0.35" id="ETR-oB-eLN"/>
-                            <constraint firstItem="VAs-JL-l3r" firstAttribute="centerY" secondItem="4pS-8j-qJB" secondAttribute="centerY" id="FLb-8Y-wi7"/>
-                            <constraint firstItem="4pS-8j-qJB" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" id="I5r-MU-mxW"/>
-                            <constraint firstItem="VAs-JL-l3r" firstAttribute="height" secondItem="4pS-8j-qJB" secondAttribute="height" multiplier="0.372671" id="Iid-kH-Z2f"/>
-                            <constraint firstItem="57G-p3-fBp" firstAttribute="height" secondItem="Jff-mv-xi9" secondAttribute="height" multiplier="0.15" id="J5o-3N-w1a"/>
+                            <constraint firstItem="af8-aI-Mfn" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.6" id="EHf-s7-5WX"/>
+                            <constraint firstItem="H9i-4k-yaH" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" multiplier="1.2" id="Ey2-iz-dB7"/>
+                            <constraint firstItem="v4e-gw-XJq" firstAttribute="leading" secondItem="H9i-4k-yaH" secondAttribute="leading" id="GyU-UZ-WHR"/>
+                            <constraint firstItem="4pS-8j-qJB" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.8" id="I5r-MU-mxW"/>
+                            <constraint firstItem="v4e-gw-XJq" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" multiplier="0.1" id="Naw-qb-Lq8"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" id="PET-Ce-AOB"/>
-                            <constraint firstItem="7d3-dg-OI3" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="1.15" id="Pcu-34-iRi"/>
+                            <constraint firstItem="7d3-dg-OI3" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.95" id="Pcu-34-iRi"/>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="trailing" secondItem="H9i-4k-yaH" secondAttribute="trailing" id="Qr4-U3-xyN"/>
+                            <constraint firstItem="v4e-gw-XJq" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" multiplier="1.4" id="X73-0N-xaZ"/>
                             <constraint firstItem="4pS-8j-qJB" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="XpL-zS-aFQ"/>
-                            <constraint firstItem="VAs-JL-l3r" firstAttribute="centerX" secondItem="4pS-8j-qJB" secondAttribute="centerX" id="dGN-7N-0MF"/>
-                            <constraint firstItem="57G-p3-fBp" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="1.45" id="faY-OA-OdB"/>
-                            <constraint firstItem="VAs-JL-l3r" firstAttribute="width" secondItem="4pS-8j-qJB" secondAttribute="width" multiplier="0.30363" id="hYQ-93-r4u"/>
+                            <constraint firstItem="H9i-4k-yaH" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="0.8" id="fIl-kG-Ry5"/>
+                            <constraint firstItem="v4e-gw-XJq" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="0.383" id="jj7-SL-d7c"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="centerX" secondItem="DMB-vy-Reb" secondAttribute="centerX" id="mjA-2P-yWF"/>
-                            <constraint firstItem="Mdc-YN-90V" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" id="qWQ-vO-nOd"/>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" multiplier="0.1" id="nGB-ed-75b"/>
+                            <constraint firstItem="Mdc-YN-90V" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.8" id="qWQ-vO-nOd"/>
                             <constraint firstItem="7d3-dg-OI3" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="qer-P3-Tg9"/>
                             <constraint firstItem="Mdc-YN-90V" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="0.5" id="qlL-gi-leE"/>
-                            <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.55" id="rTM-iC-bm7"/>
-                            <constraint firstItem="57G-p3-fBp" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="yZT-1M-Lq9"/>
-                            <constraint firstItem="43J-X9-7OF" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="1.15" id="yvF-GC-0em"/>
+                            <constraint firstItem="H9i-4k-yaH" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" multiplier="0.1" id="qwz-km-yD4"/>
+                            <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.45" id="rTM-iC-bm7"/>
+                            <constraint firstItem="H9i-4k-yaH" firstAttribute="centerX" secondItem="DMB-vy-Reb" secondAttribute="centerX" id="sLa-Z9-bPL"/>
+                            <constraint firstItem="43J-X9-7OF" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.95" id="yvF-GC-0em"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="1.7" id="zTn-4P-ahq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DMB-vy-Reb"/>
@@ -141,7 +128,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GameCenterButtom" width="279" height="136"/>
+        <image name="MenuButtom" width="280" height="137"/>
+        <image name="Restart Button" width="578" height="156"/>
         <image name="cloud end game" width="1496.5" height="1588"/>
-        <image name="replay Icon" width="85" height="76"/>
     </resources>
 </document>

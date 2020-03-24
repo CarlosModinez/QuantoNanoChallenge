@@ -55,6 +55,9 @@
 		FB8041D024217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
+		FBA4C2BE24239A8800E23C4B /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4C2BD24239A8800E23C4B /* GameCenter.swift */; };
+		FBA4C2BF24239A8800E23C4B /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4C2BD24239A8800E23C4B /* GameCenter.swift */; };
+		FBA4C2C024239A8800E23C4B /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4C2BD24239A8800E23C4B /* GameCenter.swift */; };
 		FBACE77C2421A52E0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 		FBACE77D2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 		FBACE77E2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
@@ -139,6 +142,7 @@
 		F3B91D639A23CA3F31C617BC /* Pods-QuartoNanoChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallenge.debug.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallenge/Pods-QuartoNanoChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
 		FB8041D7242184DD0034B83B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBA4C2BD24239A8800E23C4B /* GameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameCenter.swift; path = ../../../../../../Downloads/GameCenter.swift; sourceTree = "<group>"; };
 		FBACE77F2421B91C0007B24B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		FBACE7812421C2780007B24B /* GameCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCenterManager.swift; sourceTree = "<group>"; };
 		FBAEEEDF242174B9000F15B8 /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
@@ -313,6 +317,7 @@
 		D1CABB6E24111FB9004A28A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBA4C2BD24239A8800E23C4B /* GameCenter.swift */,
 				D1CABB6F24112004004A28A5 /* Model.swift */,
 				D1CABB71241120C3004A28A5 /* BodyMasks.swift */,
 				D1407E1624166814009AD490 /* GameObject.swift */,
@@ -629,6 +634,7 @@
 				D1B2841A241BC95D00EAFF05 /* CustomSound.swift in Sources */,
 				D1CABB4124111F2E004A28A5 /* GameViewController.swift in Sources */,
 				FBACE7822421C2780007B24B /* GameCenterManager.swift in Sources */,
+				FBA4C2BE24239A8800E23C4B /* GameCenter.swift in Sources */,
 				D1CABB762411233F004A28A5 /* Box.swift in Sources */,
 				D1472B6C241A735E005FBB07 /* InitialScreenViewController.swift in Sources */,
 				D1CABB3924111F2E004A28A5 /* AppDelegate.swift in Sources */,
@@ -643,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA4C2BF24239A8800E23C4B /* GameCenter.swift in Sources */,
 				D1CABB5424111F32004A28A5 /* QuartoNanoChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,6 +658,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA4C2C024239A8800E23C4B /* GameCenter.swift in Sources */,
 				D1CABB5F24111F32004A28A5 /* QuartoNanoChallengeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -817,7 +825,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.carlosmodinez;
+				PRODUCT_BUNDLE_IDENTIFIER = akira.123.com;
 				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -837,7 +845,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.carlosmodinez;
+				PRODUCT_BUNDLE_IDENTIFIER = akira.123.com;
 				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
