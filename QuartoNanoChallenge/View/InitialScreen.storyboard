@@ -56,8 +56,8 @@
                         <viewLayoutGuide key="safeArea" id="GO9-IX-rpL"/>
                     </view>
                     <connections>
-                        <outlet property="firstScreenView" destination="u9I-Wd-lRk" id="jo6-HW-MHJ"/>
-                        <outlet property="tapToPlayOutlet" destination="HhY-Rk-6Iw" id="lZj-er-xbP"/>
+                        <outlet property="firstScreenView" destination="u9I-Wd-lRk" id="gdS-7Z-qaY"/>
+                        <outlet property="tapToPlayOutlet" destination="HhY-Rk-6Iw" id="FVU-7j-Izz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWw-KN-3V3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
