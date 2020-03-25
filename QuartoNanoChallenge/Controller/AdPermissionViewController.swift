@@ -57,6 +57,12 @@ class AdPermissionViewController: UIViewController {
         
         btnDoubleCoins.isHidden = true
         btnDoubleCoins.isEnabled = false
+        
+        let AdViewController: AdViewController!
+        let AdView: UIStoryboard = UIStoryboard(name: "Ad", bundle: nil)
+        AdViewController = AdView.instantiateViewController(withIdentifier: "Ad") as? AdViewController
+        self.present(AdViewController, animated: false, completion: nil)
+        
     }
     
     @IBAction func noThanksPressed(_ sender: Any) {

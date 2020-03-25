@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		0A3181BF06149C391BAFBB32 /* Pods_QuartoNanoChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FAE8066F3FBB720266D66C /* Pods_QuartoNanoChallengeTests.framework */; };
 		39FB7BFABA261DDA9F705C50 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */; };
-		9EBC2A5FAA44158131BAA818 /* Pods_QuartoNanoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE829F655A340B98BB80D /* Pods_QuartoNanoChallenge.framework */; };
 		D100615D2422A3ED00E4A3EC /* Coin Collected.wav in Resources */ = {isa = PBXBuildFile; fileRef = D100615C2422A3EC00E4A3EC /* Coin Collected.wav */; };
 		D1407E15241667F9009AD490 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E14241667F9009AD490 /* Coins.swift */; };
 		D1407E1724166814009AD490 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E1624166814009AD490 /* GameObject.swift */; };
 		D1407E192417B6D3009AD490 /* CamControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E182417B6D3009AD490 /* CamControl.swift */; };
+		D141E2CE242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D141E2CD242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework */; };
+		D141E2D0242B9A2E0088EDEC /* Ad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D141E2CF242B9A2E0088EDEC /* Ad.storyboard */; };
 		D1472B66241A5529005FBB07 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1472B65241A5529005FBB07 /* Water.swift */; };
 		D1472B68241A732C005FBB07 /* InitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1472B67241A732C005FBB07 /* InitialScreen.storyboard */; };
 		D1472B6A241A733F005FBB07 /* GameOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1472B69241A733F005FBB07 /* GameOver.storyboard */; };
@@ -54,12 +55,11 @@
 		D1CABB762411233F004A28A5 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB752411233F004A28A5 /* Box.swift */; };
 		D1CABB782411243A004A28A5 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB772411243A004A28A5 /* Floor.swift */; };
 		D1CABB7C241125F9004A28A5 /* SpawningFloors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */; };
+		D1F02A8C242B969300151085 /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F02A8B242B969300151085 /* AdViewController.swift */; };
 		FB8041D024217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB92DC4D242A56960019C877 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92DC4C242A56950019C877 /* GameCenter.swift */; };
-		FB92DC4E242A56960019C877 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92DC4C242A56950019C877 /* GameCenter.swift */; };
-		FB92DC4F242A56960019C877 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92DC4C242A56950019C877 /* GameCenter.swift */; };
 		FBACE77C2421A52E0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 		FBACE77D2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 		FBACE77E2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
@@ -93,6 +93,8 @@
 		D1407E14241667F9009AD490 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		D1407E1624166814009AD490 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D1407E182417B6D3009AD490 /* CamControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamControl.swift; sourceTree = "<group>"; };
+		D141E2CD242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_QuartoNanoChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D141E2CF242B9A2E0088EDEC /* Ad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ad.storyboard; sourceTree = "<group>"; };
 		D1472B65241A5529005FBB07 /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
 		D1472B67241A732C005FBB07 /* InitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialScreen.storyboard; sourceTree = "<group>"; };
 		D1472B69241A733F005FBB07 /* GameOver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameOver.storyboard; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		D1CABB752411233F004A28A5 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		D1CABB772411243A004A28A5 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 		D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawningFloors.swift; sourceTree = "<group>"; };
+		D1F02A8B242B969300151085 /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		E05BE829F655A340B98BB80D /* Pods_QuartoNanoChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuartoNanoChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1FAE8066F3FBB720266D66C /* Pods_QuartoNanoChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuartoNanoChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2375ECD9F5D3F9A57184AA4 /* Pods-QuartoNanoChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallenge.release.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallenge/Pods-QuartoNanoChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EBC2A5FAA44158131BAA818 /* Pods_QuartoNanoChallenge.framework in Frameworks */,
+				D141E2CE242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework in Frameworks */,
 				FBACE7802421B91C0007B24B /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +198,7 @@
 		C716A9F75F685E0E21D326F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D141E2CD242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework */,
 				FBACE77F2421B91C0007B24B /* GameKit.framework */,
 				E05BE829F655A340B98BB80D /* Pods_QuartoNanoChallenge.framework */,
 				A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */,
@@ -263,14 +267,14 @@
 		D1CABB3724111F2E004A28A5 /* QuartoNanoChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				FB92DC4C242A56950019C877 /* GameCenter.swift */,
-				FB8041D7242184DD0034B83B /* GoogleService-Info.plist */,
 				D1CABB6E24111FB9004A28A5 /* Model */,
 				D1CABB6D24111FB3004A28A5 /* View */,
 				D1CABB6C24111F9D004A28A5 /* Controller */,
 				D1CABB3824111F2E004A28A5 /* AppDelegate.swift */,
+				FB92DC4C242A56950019C877 /* GameCenter.swift */,
 				D1CABB4724111F32004A28A5 /* LaunchScreen.storyboard */,
 				D1CABB4A24111F32004A28A5 /* Info.plist */,
+				FB8041D7242184DD0034B83B /* GoogleService-Info.plist */,
 			);
 			path = QuartoNanoChallenge;
 			sourceTree = "<group>";
@@ -300,6 +304,7 @@
 				D1472B6B241A735E005FBB07 /* InitialScreenViewController.swift */,
 				D1472B6D241A7369005FBB07 /* GameOverViewController.swift */,
 				D1B76201242AB553009B23C0 /* AdPermissionViewController.swift */,
+				D1F02A8B242B969300151085 /* AdViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				D1472B67241A732C005FBB07 /* InitialScreen.storyboard */,
 				D1472B69241A733F005FBB07 /* GameOver.storyboard */,
 				D1B76203242AB56D009B23C0 /* AdPermission.storyboard */,
+				D141E2CF242B9A2E0088EDEC /* Ad.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -481,6 +487,7 @@
 				D18372FD24210C0700079634 /* Box Colision Rock.wav in Resources */,
 				D18372FA24210C0700079634 /* Box Colision Ice.wav in Resources */,
 				D18372F824210C0700079634 /* Swipe(3).wav in Resources */,
+				D141E2D0242B9A2E0088EDEC /* Ad.storyboard in Resources */,
 				D1CABB4624111F32004A28A5 /* Assets.xcassets in Resources */,
 				D18372F224210C0700079634 /* Pig Colision Dirt.wav in Resources */,
 				FBACE77C2421A52E0007B24B /* GoogleService-Info.plist in Resources */,
@@ -644,6 +651,7 @@
 				D1CABB3924111F2E004A28A5 /* AppDelegate.swift in Sources */,
 				D1472B66241A5529005FBB07 /* Water.swift in Sources */,
 				D1407E15241667F9009AD490 /* Coins.swift in Sources */,
+				D1F02A8C242B969300151085 /* AdViewController.swift in Sources */,
 				D1407E192417B6D3009AD490 /* CamControl.swift in Sources */,
 				D1CABB7024112004004A28A5 /* Model.swift in Sources */,
 			);
@@ -653,7 +661,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB92DC4E242A56960019C877 /* GameCenter.swift in Sources */,
 				D1CABB5424111F32004A28A5 /* QuartoNanoChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,7 +669,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB92DC4F242A56960019C877 /* GameCenter.swift in Sources */,
 				D1CABB5F24111F32004A28A5 /* QuartoNanoChallengeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
