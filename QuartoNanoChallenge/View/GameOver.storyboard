@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4e-gw-XJq">
-                                <rect key="frame" x="127.5" y="589.5" width="159" height="89.5"/>
+                                <rect key="frame" x="24" y="589.5" width="159" height="89.5"/>
                                 <state key="normal" image="houseMini"/>
                                 <connections>
                                     <action selector="goHomePressed:" destination="43m-kd-0JT" eventType="touchUpInside" id="qft-tA-5D4"/>
@@ -76,7 +76,7 @@
                                 <color key="textColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAs-JL-l3r">
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAs-JL-l3r">
                                 <rect key="frame" x="127.5" y="589.5" width="159" height="89.5"/>
                                 <state key="normal" image="GameCenterButtom"/>
                                 <connections>
@@ -102,7 +102,7 @@
                             <constraint firstItem="v4e-gw-XJq" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" multiplier="1.4" id="X73-0N-xaZ"/>
                             <constraint firstItem="4pS-8j-qJB" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="XpL-zS-aFQ"/>
                             <constraint firstItem="H9i-4k-yaH" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="0.383" id="fIl-kG-Ry5"/>
-                            <constraint firstItem="v4e-gw-XJq" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="fNY-3f-wPC"/>
+                            <constraint firstItem="v4e-gw-XJq" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="0.5" id="fNY-3f-wPC"/>
                             <constraint firstItem="v4e-gw-XJq" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="0.383" id="jj7-SL-d7c"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="centerX" secondItem="DMB-vy-Reb" secondAttribute="centerX" id="mjA-2P-yWF"/>
                             <constraint firstItem="VAs-JL-l3r" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" multiplier="0.1" id="nGB-ed-75b"/>
