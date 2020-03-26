@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class AdPermissionViewController: UIViewController {
+class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
 
     var gameScene: GameScene!
     
@@ -19,36 +20,64 @@ class AdPermissionViewController: UIViewController {
     @IBOutlet weak var btnNoThanks: UIButton!
     @IBOutlet weak var btnGoHome: UIButton!
     
-    var adWasShowed: Bool!
+    var rewardedAd: GADRewardedAd?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        adWasShowed = false
-        
         btnGoHome.isHidden = true
         btnGoHome.isEnabled = false
         
+        btnDoubleCoins.isEnabled = false
+        
+        // Go home  button layout adjust
         btnGoHome.layer.shadowColor = UIColor.black.cgColor
         btnGoHome.layer.shadowOpacity = 1
         btnGoHome.layer.shadowOffset = CGSize(width: 3, height: 3)
         btnGoHome.layer.shadowRadius = 10
         
+        // Double coins button layout adjust
         btnDoubleCoins.layer.shadowColor = UIColor.black.cgColor
         btnDoubleCoins.layer.shadowOpacity = 1
         btnDoubleCoins.layer.shadowOffset = CGSize(width: 3, height:3)
         btnDoubleCoins.layer.shadowRadius = 10
         
+        // View layout adjust
         presentationView.layer.cornerRadius = 50
         presentationView.layer.shadowColor = UIColor.black.cgColor
         presentationView.layer.shadowOpacity = 1
         presentationView.layer.shadowOffset = CGSize(width: 10, height: 10)
         presentationView.layer.shadowRadius = 10
+        
+        
         updateCoins()
+        
+        //Search for ad and when find, allow click in double coins button
+        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
+        rewardedAd?.load(GADRequest()) { error in
+            if let error = error {
+                // Handle ad failed to load case.
+                print("NAO")
+                print(error)
+            } else {
+                // Ad successfully loaded.
+                print("BOA")
+                self.btnDoubleCoins.isEnabled = true
+            }
+        }
     }
     
     @IBAction func doubleCoinsPressed(_ sender: Any) {
-        adWasShowed = true
+        if rewardedAd?.isReady == true {
+           rewardedAd?.present(fromRootViewController: self, delegate:self)
+        }
+    }
+
+    func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
+        print("reward received")
+    }
+
+    func rewardedAdDidPresent(_ rewardedAd: GADRewardedAd) {
         Model.shared.currentCoins += Model.shared.currentCoins
         updateCoins()
         
@@ -57,12 +86,14 @@ class AdPermissionViewController: UIViewController {
         
         btnDoubleCoins.isHidden = true
         btnDoubleCoins.isEnabled = false
-        
-        let AdViewController: AdViewController!
-        let AdView: UIStoryboard = UIStoryboard(name: "Ad", bundle: nil)
-        AdViewController = AdView.instantiateViewController(withIdentifier: "Ad") as? AdViewController
-        self.present(AdViewController, animated: false, completion: nil)
-        
+    }
+    
+    func rewardedAdDidDismiss(_ rewardedAd: GADRewardedAd) {
+        print("View was dismissed")
+    }
+    
+    func rewardedAd(_ rewardedAd: GADRewardedAd, didFailToPresentWithError error: Error) {
+        print("Rewarded ad failed to present.")
     }
     
     @IBAction func noThanksPressed(_ sender: Any) {
