@@ -346,7 +346,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func initialSetup() {
         firstTap = true
         allowSound = true
-        gameVelocity = 0.7
+        gameVelocity = 0.85
         self.camera = cam
         spawiningFloors = SpawningFloors(node: self, cam: cam)
         gameObjects.append(spawiningFloors)

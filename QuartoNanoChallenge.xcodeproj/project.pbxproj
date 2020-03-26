@@ -828,7 +828,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.carlosmodinez;
+				PRODUCT_BUNDLE_IDENTIFIER = akira.123.com;
 				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

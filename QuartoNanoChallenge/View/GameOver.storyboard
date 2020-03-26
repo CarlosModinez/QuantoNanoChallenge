@@ -25,14 +25,14 @@
                                 <rect key="frame" x="-145" y="5" width="704" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-X9-7OF">
-                                <rect key="frame" x="145" y="380" width="124" height="101"/>
+                                <rect key="frame" x="145" y="361.5" width="124" height="101"/>
                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="50"/>
                                 <color key="textColor" red="0.90980392156862744" green="0.41568627450980389" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg1-M2-Kvg">
-                                <rect key="frame" x="130.5" y="143.5" width="153.5" height="121"/>
-                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="60"/>
+                                <rect key="frame" x="149.5" y="158.5" width="115" height="91"/>
+                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="45"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9i-4k-yaH">
-                                <rect key="frame" x="127.5" y="499" width="159" height="89.5"/>
+                                <rect key="frame" x="127.5" y="476" width="159" height="90"/>
                                 <state key="normal" image="restartMini">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -77,7 +77,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAs-JL-l3r">
-                                <rect key="frame" x="127.5" y="589.5" width="159" height="89.5"/>
+                                <rect key="frame" x="231" y="589.5" width="159" height="89.5"/>
                                 <state key="normal" image="GameCenterButtom"/>
                                 <connections>
                                     <action selector="positionteste:" destination="43m-kd-0JT" eventType="touchUpInside" id="5j8-02-GaQ"/>
@@ -93,14 +93,14 @@
                             <constraint firstItem="43J-X9-7OF" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="A6W-WF-Tf1"/>
                             <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="Aua-bh-Pgu"/>
                             <constraint firstItem="af8-aI-Mfn" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.6" id="EHf-s7-5WX"/>
-                            <constraint firstItem="H9i-4k-yaH" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" multiplier="1.2" id="Ey2-iz-dB7"/>
+                            <constraint firstItem="H9i-4k-yaH" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" multiplier="1.15" id="Ey2-iz-dB7"/>
                             <constraint firstItem="4pS-8j-qJB" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.8" id="I5r-MU-mxW"/>
                             <constraint firstItem="v4e-gw-XJq" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" multiplier="0.1" id="Naw-qb-Lq8"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" id="PET-Ce-AOB"/>
                             <constraint firstItem="7d3-dg-OI3" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.95" id="Pcu-34-iRi"/>
-                            <constraint firstItem="VAs-JL-l3r" firstAttribute="trailing" secondItem="H9i-4k-yaH" secondAttribute="trailing" id="Qr4-U3-xyN"/>
                             <constraint firstItem="v4e-gw-XJq" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" multiplier="1.4" id="X73-0N-xaZ"/>
                             <constraint firstItem="4pS-8j-qJB" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="XpL-zS-aFQ"/>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="c6F-IS-BoZ"/>
                             <constraint firstItem="H9i-4k-yaH" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="0.383" id="fIl-kG-Ry5"/>
                             <constraint firstItem="v4e-gw-XJq" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="0.5" id="fNY-3f-wPC"/>
                             <constraint firstItem="v4e-gw-XJq" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="0.383" id="jj7-SL-d7c"/>
@@ -112,7 +112,7 @@
                             <constraint firstItem="H9i-4k-yaH" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" multiplier="0.1" id="qwz-km-yD4"/>
                             <constraint firstItem="Kg1-M2-Kvg" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.45" id="rTM-iC-bm7"/>
                             <constraint firstItem="H9i-4k-yaH" firstAttribute="centerX" secondItem="DMB-vy-Reb" secondAttribute="centerX" id="sLa-Z9-bPL"/>
-                            <constraint firstItem="43J-X9-7OF" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.95" id="yvF-GC-0em"/>
+                            <constraint firstItem="43J-X9-7OF" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.91" id="yvF-GC-0em"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="1.7" id="zTn-4P-ahq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DMB-vy-Reb"/>
