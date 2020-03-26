@@ -189,7 +189,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             //Exclui os objetos que a agua passou
             excludeBoxesCauseWater()
             if gameVelocity < 2 {
-                gameVelocity += 0.001
+                gameVelocity += 0.001/3
             }
             // Initialize _lastUpdateTime if it has not already been
             if (self.lastUpdateTime == 0) {
@@ -346,7 +346,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func initialSetup() {
         firstTap = true
         allowSound = true
-        gameVelocity = 1.0
+        gameVelocity = 0.7
         self.camera = cam
         spawiningFloors = SpawningFloors(node: self, cam: cam)
         gameObjects.append(spawiningFloors)

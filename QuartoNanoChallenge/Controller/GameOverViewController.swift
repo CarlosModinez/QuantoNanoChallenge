@@ -25,6 +25,7 @@ class GameOverViewController: UIViewController {
         gameScene.runnigAnimation = false
         lblScore.text = String(Model.shared.bestScore)
         lblCurrenntScore.text = String(Model.shared.currentScore)
+        GameCenter.shared.updateScore(with: Model.shared.bestScore)
     }
     
     @IBAction func playAgainPressed(_ sender: Any) {
