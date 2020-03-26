@@ -28,6 +28,15 @@ class GameOverViewController: UIViewController {
         GameCenter.shared.updateScore(with: Model.shared.bestScore)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if Model.shared.currentCoins > 0 {
+            let adPermissionViewController: AdPermissionViewController!
+            let adPermissionView: UIStoryboard = UIStoryboard(name: "AdPermission", bundle: nil)
+            adPermissionViewController = adPermissionView.instantiateViewController(withIdentifier: "AdView") as? AdPermissionViewController
+            adPermissionViewController.gameScene = self.gameScene
+            self.present(adPermissionViewController, animated: true, completion: nil)
+        }
+    }
     @IBAction func playAgainPressed(_ sender: Any) {
         
         gameScene.removeAllChildren()

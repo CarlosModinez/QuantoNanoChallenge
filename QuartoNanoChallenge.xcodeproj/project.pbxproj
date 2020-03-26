@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		0A3181BF06149C391BAFBB32 /* Pods_QuartoNanoChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FAE8066F3FBB720266D66C /* Pods_QuartoNanoChallengeTests.framework */; };
 		39FB7BFABA261DDA9F705C50 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */; };
-		9EBC2A5FAA44158131BAA818 /* Pods_QuartoNanoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05BE829F655A340B98BB80D /* Pods_QuartoNanoChallenge.framework */; };
 		D100615D2422A3ED00E4A3EC /* Coin Collected.wav in Resources */ = {isa = PBXBuildFile; fileRef = D100615C2422A3EC00E4A3EC /* Coin Collected.wav */; };
 		D1407E15241667F9009AD490 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E14241667F9009AD490 /* Coins.swift */; };
 		D1407E1724166814009AD490 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E1624166814009AD490 /* GameObject.swift */; };
 		D1407E192417B6D3009AD490 /* CamControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E182417B6D3009AD490 /* CamControl.swift */; };
+		D141E2CE242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D141E2CD242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework */; };
 		D1472B66241A5529005FBB07 /* Water.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1472B65241A5529005FBB07 /* Water.swift */; };
 		D1472B68241A732C005FBB07 /* InitialScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1472B67241A732C005FBB07 /* InitialScreen.storyboard */; };
 		D1472B6A241A733F005FBB07 /* GameOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1472B69241A733F005FBB07 /* GameOver.storyboard */; };
@@ -38,6 +38,8 @@
 		D18372FC24210C0700079634 /* Pig Colision Rock.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372EA24210C0700079634 /* Pig Colision Rock.wav */; };
 		D18372FD24210C0700079634 /* Box Colision Rock.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372EB24210C0700079634 /* Box Colision Rock.wav */; };
 		D1B2841A241BC95D00EAFF05 /* CustomSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B28419241BC95D00EAFF05 /* CustomSound.swift */; };
+		D1B76202242AB553009B23C0 /* AdPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B76201242AB553009B23C0 /* AdPermissionViewController.swift */; };
+		D1B76204242AB56D009B23C0 /* AdPermission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B76203242AB56D009B23C0 /* AdPermission.storyboard */; };
 		D1CABB3924111F2E004A28A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB3824111F2E004A28A5 /* AppDelegate.swift */; };
 		D1CABB3B24111F2E004A28A5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D1CABB3A24111F2E004A28A5 /* GameScene.sks */; };
 		D1CABB3F24111F2E004A28A5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB3E24111F2E004A28A5 /* GameScene.swift */; };
@@ -56,8 +58,6 @@
 		FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB92DC4D242A56960019C877 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92DC4C242A56950019C877 /* GameCenter.swift */; };
-		FB92DC4E242A56960019C877 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92DC4C242A56950019C877 /* GameCenter.swift */; };
-		FB92DC4F242A56960019C877 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92DC4C242A56950019C877 /* GameCenter.swift */; };
 		FBACE77C2421A52E0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 		FBACE77D2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 		FBACE77E2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
@@ -91,6 +91,7 @@
 		D1407E14241667F9009AD490 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		D1407E1624166814009AD490 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D1407E182417B6D3009AD490 /* CamControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamControl.swift; sourceTree = "<group>"; };
+		D141E2CD242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_QuartoNanoChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1472B65241A5529005FBB07 /* Water.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Water.swift; sourceTree = "<group>"; };
 		D1472B67241A732C005FBB07 /* InitialScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InitialScreen.storyboard; sourceTree = "<group>"; };
 		D1472B69241A733F005FBB07 /* GameOver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameOver.storyboard; sourceTree = "<group>"; };
@@ -115,6 +116,8 @@
 		D18372EA24210C0700079634 /* Pig Colision Rock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig Colision Rock.wav"; sourceTree = "<group>"; };
 		D18372EB24210C0700079634 /* Box Colision Rock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Box Colision Rock.wav"; sourceTree = "<group>"; };
 		D1B28419241BC95D00EAFF05 /* CustomSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSound.swift; sourceTree = "<group>"; };
+		D1B76201242AB553009B23C0 /* AdPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPermissionViewController.swift; sourceTree = "<group>"; };
+		D1B76203242AB56D009B23C0 /* AdPermission.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdPermission.storyboard; sourceTree = "<group>"; };
 		D1CABB3524111F2E004A28A5 /* Topple Towers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Topple Towers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CABB3824111F2E004A28A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1CABB3A24111F2E004A28A5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -151,7 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EBC2A5FAA44158131BAA818 /* Pods_QuartoNanoChallenge.framework in Frameworks */,
+				D141E2CE242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework in Frameworks */,
 				FBACE7802421B91C0007B24B /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +194,7 @@
 		C716A9F75F685E0E21D326F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D141E2CD242B97B10088EDEC /* Pods_QuartoNanoChallenge.framework */,
 				FBACE77F2421B91C0007B24B /* GameKit.framework */,
 				E05BE829F655A340B98BB80D /* Pods_QuartoNanoChallenge.framework */,
 				A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */,
@@ -259,14 +263,14 @@
 		D1CABB3724111F2E004A28A5 /* QuartoNanoChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				FB92DC4C242A56950019C877 /* GameCenter.swift */,
-				FB8041D7242184DD0034B83B /* GoogleService-Info.plist */,
 				D1CABB6E24111FB9004A28A5 /* Model */,
 				D1CABB6D24111FB3004A28A5 /* View */,
 				D1CABB6C24111F9D004A28A5 /* Controller */,
 				D1CABB3824111F2E004A28A5 /* AppDelegate.swift */,
+				FB92DC4C242A56950019C877 /* GameCenter.swift */,
 				D1CABB4724111F32004A28A5 /* LaunchScreen.storyboard */,
 				D1CABB4A24111F32004A28A5 /* Info.plist */,
+				FB8041D7242184DD0034B83B /* GoogleService-Info.plist */,
 			);
 			path = QuartoNanoChallenge;
 			sourceTree = "<group>";
@@ -295,6 +299,7 @@
 				D1CABB4024111F2E004A28A5 /* GameViewController.swift */,
 				D1472B6B241A735E005FBB07 /* InitialScreenViewController.swift */,
 				D1472B6D241A7369005FBB07 /* GameOverViewController.swift */,
+				D1B76201242AB553009B23C0 /* AdPermissionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 				D1CABB4224111F2E004A28A5 /* Main.storyboard */,
 				D1472B67241A732C005FBB07 /* InitialScreen.storyboard */,
 				D1472B69241A733F005FBB07 /* GameOver.storyboard */,
+				D1B76203242AB56D009B23C0 /* AdPermission.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 				FBACE77C2421A52E0007B24B /* GoogleService-Info.plist in Resources */,
 				D18372EF24210C0700079634 /* Pig Oink(3).wav in Resources */,
 				D18372EE24210C0700079634 /* Stack Up Box.wav in Resources */,
+				D1B76204242AB56D009B23C0 /* AdPermission.storyboard in Resources */,
 				D1472B68241A732C005FBB07 /* InitialScreen.storyboard in Resources */,
 				D100615D2422A3ED00E4A3EC /* Coin Collected.wav in Resources */,
 				D18372ED24210C0700079634 /* Swipe.wav in Resources */,
@@ -622,6 +629,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B76202242AB553009B23C0 /* AdPermissionViewController.swift in Sources */,
 				D1407E1724166814009AD490 /* GameObject.swift in Sources */,
 				D1CABB782411243A004A28A5 /* Floor.swift in Sources */,
 				D1CABB7C241125F9004A28A5 /* SpawningFloors.swift in Sources */,
@@ -645,7 +653,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB92DC4E242A56960019C877 /* GameCenter.swift in Sources */,
 				D1CABB5424111F32004A28A5 /* QuartoNanoChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,7 +661,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB92DC4F242A56960019C877 /* GameCenter.swift in Sources */,
 				D1CABB5F24111F32004A28A5 /* QuartoNanoChallengeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -822,7 +828,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = akira.123.com;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.carlosmodinez;
 				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -19,7 +19,7 @@ class InitialScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        firstScreenView.layer.cornerRadius = 30.0
-        GameCenter.shared.authenticateLocalPlayer(presentingVC: self)
+        GameCenter.shared.authenticateLocalPlayer(presentingVC: InitialScreenViewController())
 //        animationLabel()
     }
     
