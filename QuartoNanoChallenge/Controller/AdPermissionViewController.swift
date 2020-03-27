@@ -20,15 +20,12 @@ class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
     @IBOutlet weak var btnNoThanks: UIButton!
     @IBOutlet weak var btnGoHome: UIButton!
     
-    var rewardedAd: GADRewardedAd?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         btnGoHome.isHidden = true
         btnGoHome.isEnabled = false
-        
-        btnDoubleCoins.isEnabled = false
         
         // Go home  button layout adjust
         btnGoHome.layer.shadowColor = UIColor.black.cgColor
@@ -49,27 +46,12 @@ class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
         presentationView.layer.shadowOffset = CGSize(width: 10, height: 10)
         presentationView.layer.shadowRadius = 10
         
-        
         updateCoins()
-        
-        //Search for ad and when find, allow click in double coins button
-        rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
-        rewardedAd?.load(GADRequest()) { error in
-            if let error = error {
-                // Handle ad failed to load case.
-                print("NAO")
-                print(error)
-            } else {
-                // Ad successfully loaded.
-                print("BOA")
-                self.btnDoubleCoins.isEnabled = true
-            }
-        }
     }
     
     @IBAction func doubleCoinsPressed(_ sender: Any) {
-        if rewardedAd?.isReady == true {
-           rewardedAd?.present(fromRootViewController: self, delegate:self)
+        if Model.shared.rewardedAd?.isReady == true {
+            Model.shared.rewardedAd?.present(fromRootViewController: self, delegate: self)
         }
     }
 
@@ -89,7 +71,7 @@ class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
     }
     
     func rewardedAdDidDismiss(_ rewardedAd: GADRewardedAd) {
-        print("View was dismissed")
+        createAndLoadRewardedAd()
     }
     
     func rewardedAd(_ rewardedAd: GADRewardedAd, didFailToPresentWithError error: Error) {
@@ -111,6 +93,22 @@ class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
         let gameView: UIStoryboard = UIStoryboard(name: "InitialScreen", bundle: nil)
         gameViewController = gameView.instantiateViewController(withIdentifier: "InitialScreen") as? InitialScreenViewController
         self.present(gameViewController, animated: false, completion: nil)
+    }
+    
+    func createAndLoadRewardedAd() {
+        let rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
+            // ID LOJA
+            //"ca-app-pub-3143840922595951/3310571075")
+            // ID TESTE
+            //"ca-app-pub-3940256099942544/1712485313")
+        rewardedAd.load(GADRequest()) { error in
+            if let error = error {
+                print("Loading failed: \(error)")
+            } else {
+                print("Loading Succeeded")
+                Model.shared.rewardedAd = rewardedAd
+            }
+        }
     }
     
     func updateCoins() {
