@@ -377,6 +377,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         box.box.physicsBody?.allowsRotation = true
         box.box.physicsBody?.mass = Model.shared.boxMass
         box.box.physicsBody?.linearDamping = 1.0
+        box.box.zPosition = 7
         
         //Quem é ele na mascara
         box.box.physicsBody!.categoryBitMask = BodyMasks.player
@@ -391,6 +392,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         boxes.append(box)
         head = boxes[0]
         addChild(box.box)
+        
+        let orelhas = SKSpriteNode(texture: Model.shared.currentEars)
+        orelhas.zPosition = -1
+        orelhas.size = CGSize(width: box.box.size.width * 280 / 128, height: box.box.size.height * 280 / 128) // esse numero do tamanho das antes
+        head.box.addChild(orelhas)
     }
     
     func createBox() {
