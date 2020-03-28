@@ -9,7 +9,30 @@
 /* Begin PBXBuildFile section */
 		0A3181BF06149C391BAFBB32 /* Pods_QuartoNanoChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1FAE8066F3FBB720266D66C /* Pods_QuartoNanoChallengeTests.framework */; };
 		39FB7BFABA261DDA9F705C50 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */; };
-		D100615D2422A3ED00E4A3EC /* Coin Collected.wav in Resources */ = {isa = PBXBuildFile; fileRef = D100615C2422A3EC00E4A3EC /* Coin Collected.wav */; };
+		D11DC46C243009050004C5E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D11DC469243009040004C5E2 /* Assets.xcassets */; };
+		D11DC47324300B1D0004C5E2 /* CustomSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11DC47224300B1D0004C5E2 /* CustomSound.swift */; };
+		D11DC48924300BED0004C5E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D11DC48824300BED0004C5E2 /* Main.storyboard */; };
+		D11DC4B824300F5A0004C5E2 /* Box Colision Dirt.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4AB24300F2A0004C5E2 /* Box Colision Dirt.wav */; };
+		D11DC4B924300F5A0004C5E2 /* Box Colision Ice.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4B224300F2B0004C5E2 /* Box Colision Ice.wav */; };
+		D11DC4BA24300F5A0004C5E2 /* Box Colision Rock.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4B024300F2A0004C5E2 /* Box Colision Rock.wav */; };
+		D11DC4BB24300F5A0004C5E2 /* Coin Collected.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4A524300F2A0004C5E2 /* Coin Collected.wav */; };
+		D11DC4BC24300F5A0004C5E2 /* Pig Colision Dirt.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4B324300F2B0004C5E2 /* Pig Colision Dirt.wav */; };
+		D11DC4BD24300F5A0004C5E2 /* Pig Colision Ice.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4A824300F2A0004C5E2 /* Pig Colision Ice.wav */; };
+		D11DC4BE24300F5A0004C5E2 /* Pig Colision Rock.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4B524300F2B0004C5E2 /* Pig Colision Rock.wav */; };
+		D11DC4BF24300F5A0004C5E2 /* Pig Oink.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4AC24300F2A0004C5E2 /* Pig Oink.wav */; };
+		D11DC4C024300F5A0004C5E2 /* Pig Oink(2).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4A424300F290004C5E2 /* Pig Oink(2).wav */; };
+		D11DC4C124300F5A0004C5E2 /* Pig Oink(3).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4AA24300F2A0004C5E2 /* Pig Oink(3).wav */; };
+		D11DC4C224300F5A0004C5E2 /* Stack Up Box.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4B624300F2B0004C5E2 /* Stack Up Box.wav */; };
+		D11DC4C324300F5A0004C5E2 /* Stack Up Box(2).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4AF24300F2A0004C5E2 /* Stack Up Box(2).wav */; };
+		D11DC4C424300F5A0004C5E2 /* Stack Up Box(3).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4A924300F2A0004C5E2 /* Stack Up Box(3).wav */; };
+		D11DC4C524300F5A0004C5E2 /* Swipe.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4A624300F2A0004C5E2 /* Swipe.wav */; };
+		D11DC4C624300F5A0004C5E2 /* Swipe(2).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4A724300F2A0004C5E2 /* Swipe(2).wav */; };
+		D11DC4C724300F5A0004C5E2 /* Swipe(3).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4AD24300F2A0004C5E2 /* Swipe(3).wav */; };
+		D11DC4C824300F5A0004C5E2 /* Water Splash.wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4B124300F2A0004C5E2 /* Water Splash.wav */; };
+		D11DC4C924300F5A0004C5E2 /* Water Splash(2).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4B424300F2B0004C5E2 /* Water Splash(2).wav */; };
+		D11DC4CA24300F5A0004C5E2 /* Water Splash(3).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4AE24300F2A0004C5E2 /* Water Splash(3).wav */; };
+		D13A92B8242F90C700829CA7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13A92B7242F90C700829CA7 /* Character.swift */; };
+		D13A92BA242F90D900829CA7 /* AllCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13A92B9242F90D900829CA7 /* AllCharacters.swift */; };
 		D1407E15241667F9009AD490 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E14241667F9009AD490 /* Coins.swift */; };
 		D1407E1724166814009AD490 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E1624166814009AD490 /* GameObject.swift */; };
 		D1407E192417B6D3009AD490 /* CamControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E182417B6D3009AD490 /* CamControl.swift */; };
@@ -19,32 +42,12 @@
 		D1472B6A241A733F005FBB07 /* GameOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1472B69241A733F005FBB07 /* GameOver.storyboard */; };
 		D1472B6C241A735E005FBB07 /* InitialScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1472B6B241A735E005FBB07 /* InitialScreenViewController.swift */; };
 		D1472B6E241A7369005FBB07 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1472B6D241A7369005FBB07 /* GameOverViewController.swift */; };
-		D18372EC24210C0700079634 /* Stack Up Box(3).wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372DA24210C0500079634 /* Stack Up Box(3).wav */; };
-		D18372ED24210C0700079634 /* Swipe.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372DB24210C0500079634 /* Swipe.wav */; };
-		D18372EE24210C0700079634 /* Stack Up Box.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372DC24210C0500079634 /* Stack Up Box.wav */; };
-		D18372EF24210C0700079634 /* Pig Oink(3).wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372DD24210C0500079634 /* Pig Oink(3).wav */; };
-		D18372F024210C0700079634 /* Stack Up Box(2).wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372DE24210C0600079634 /* Stack Up Box(2).wav */; };
-		D18372F124210C0700079634 /* Pig Colision Ice.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372DF24210C0600079634 /* Pig Colision Ice.wav */; };
-		D18372F224210C0700079634 /* Pig Colision Dirt.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E024210C0600079634 /* Pig Colision Dirt.wav */; };
-		D18372F324210C0700079634 /* Water Splash(2).wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E124210C0600079634 /* Water Splash(2).wav */; };
-		D18372F424210C0700079634 /* Water Splash.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E224210C0600079634 /* Water Splash.wav */; };
-		D18372F524210C0700079634 /* Water Splash(3).wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E324210C0600079634 /* Water Splash(3).wav */; };
-		D18372F624210C0700079634 /* Pig Oink(2).wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E424210C0600079634 /* Pig Oink(2).wav */; };
-		D18372F724210C0700079634 /* Box Colision Dirt.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E524210C0600079634 /* Box Colision Dirt.wav */; };
-		D18372F824210C0700079634 /* Swipe(3).wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E624210C0600079634 /* Swipe(3).wav */; };
-		D18372F924210C0700079634 /* Pig Oink.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E724210C0600079634 /* Pig Oink.wav */; };
-		D18372FA24210C0700079634 /* Box Colision Ice.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E824210C0700079634 /* Box Colision Ice.wav */; };
-		D18372FB24210C0700079634 /* Swipe(2).wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372E924210C0700079634 /* Swipe(2).wav */; };
-		D18372FC24210C0700079634 /* Pig Colision Rock.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372EA24210C0700079634 /* Pig Colision Rock.wav */; };
-		D18372FD24210C0700079634 /* Box Colision Rock.wav in Resources */ = {isa = PBXBuildFile; fileRef = D18372EB24210C0700079634 /* Box Colision Rock.wav */; };
-		D1B2841A241BC95D00EAFF05 /* CustomSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B28419241BC95D00EAFF05 /* CustomSound.swift */; };
 		D1B76202242AB553009B23C0 /* AdPermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B76201242AB553009B23C0 /* AdPermissionViewController.swift */; };
 		D1B76204242AB56D009B23C0 /* AdPermission.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B76203242AB56D009B23C0 /* AdPermission.storyboard */; };
 		D1CABB3924111F2E004A28A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB3824111F2E004A28A5 /* AppDelegate.swift */; };
 		D1CABB3B24111F2E004A28A5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D1CABB3A24111F2E004A28A5 /* GameScene.sks */; };
 		D1CABB3F24111F2E004A28A5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB3E24111F2E004A28A5 /* GameScene.swift */; };
 		D1CABB4124111F2E004A28A5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB4024111F2E004A28A5 /* GameViewController.swift */; };
-		D1CABB4424111F2E004A28A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CABB4224111F2E004A28A5 /* Main.storyboard */; };
 		D1CABB4624111F32004A28A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1CABB4524111F32004A28A5 /* Assets.xcassets */; };
 		D1CABB4924111F32004A28A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1CABB4724111F32004A28A5 /* LaunchScreen.storyboard */; };
 		D1CABB5424111F32004A28A5 /* QuartoNanoChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB5324111F32004A28A5 /* QuartoNanoChallengeTests.swift */; };
@@ -88,7 +91,30 @@
 		16CA36B93D1C517DD9DFA28F /* Pods-QuartoNanoChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallengeTests/Pods-QuartoNanoChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		7189858464AB8F5AA11C6D7B /* Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests/Pods-QuartoNanoChallenge-QuartoNanoChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A147157F643BB58E41157AB3 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D100615C2422A3EC00E4A3EC /* Coin Collected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Coin Collected.wav"; sourceTree = "<group>"; };
+		D11DC469243009040004C5E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = View/Assets.xcassets; sourceTree = "<group>"; };
+		D11DC47224300B1D0004C5E2 /* CustomSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSound.swift; sourceTree = "<group>"; };
+		D11DC48824300BED0004C5E2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D11DC4A424300F290004C5E2 /* Pig Oink(2).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Pig Oink(2).wav"; path = "../Sounds/Pig Oink(2).wav"; sourceTree = "<group>"; };
+		D11DC4A524300F2A0004C5E2 /* Coin Collected.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Coin Collected.wav"; path = "../Sounds/Coin Collected.wav"; sourceTree = "<group>"; };
+		D11DC4A624300F2A0004C5E2 /* Swipe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Swipe.wav; path = ../Sounds/Swipe.wav; sourceTree = "<group>"; };
+		D11DC4A724300F2A0004C5E2 /* Swipe(2).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Swipe(2).wav"; path = "../Sounds/Swipe(2).wav"; sourceTree = "<group>"; };
+		D11DC4A824300F2A0004C5E2 /* Pig Colision Ice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Pig Colision Ice.wav"; path = "../Sounds/Pig Colision Ice.wav"; sourceTree = "<group>"; };
+		D11DC4A924300F2A0004C5E2 /* Stack Up Box(3).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Stack Up Box(3).wav"; path = "../Sounds/Stack Up Box(3).wav"; sourceTree = "<group>"; };
+		D11DC4AA24300F2A0004C5E2 /* Pig Oink(3).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Pig Oink(3).wav"; path = "../Sounds/Pig Oink(3).wav"; sourceTree = "<group>"; };
+		D11DC4AB24300F2A0004C5E2 /* Box Colision Dirt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Box Colision Dirt.wav"; path = "../Sounds/Box Colision Dirt.wav"; sourceTree = "<group>"; };
+		D11DC4AC24300F2A0004C5E2 /* Pig Oink.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Pig Oink.wav"; path = "../Sounds/Pig Oink.wav"; sourceTree = "<group>"; };
+		D11DC4AD24300F2A0004C5E2 /* Swipe(3).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Swipe(3).wav"; path = "../Sounds/Swipe(3).wav"; sourceTree = "<group>"; };
+		D11DC4AE24300F2A0004C5E2 /* Water Splash(3).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Water Splash(3).wav"; path = "../Sounds/Water Splash(3).wav"; sourceTree = "<group>"; };
+		D11DC4AF24300F2A0004C5E2 /* Stack Up Box(2).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Stack Up Box(2).wav"; path = "../Sounds/Stack Up Box(2).wav"; sourceTree = "<group>"; };
+		D11DC4B024300F2A0004C5E2 /* Box Colision Rock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Box Colision Rock.wav"; path = "../Sounds/Box Colision Rock.wav"; sourceTree = "<group>"; };
+		D11DC4B124300F2A0004C5E2 /* Water Splash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Water Splash.wav"; path = "../Sounds/Water Splash.wav"; sourceTree = "<group>"; };
+		D11DC4B224300F2B0004C5E2 /* Box Colision Ice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Box Colision Ice.wav"; path = "../Sounds/Box Colision Ice.wav"; sourceTree = "<group>"; };
+		D11DC4B324300F2B0004C5E2 /* Pig Colision Dirt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Pig Colision Dirt.wav"; path = "../Sounds/Pig Colision Dirt.wav"; sourceTree = "<group>"; };
+		D11DC4B424300F2B0004C5E2 /* Water Splash(2).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Water Splash(2).wav"; path = "../Sounds/Water Splash(2).wav"; sourceTree = "<group>"; };
+		D11DC4B524300F2B0004C5E2 /* Pig Colision Rock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Pig Colision Rock.wav"; path = "../Sounds/Pig Colision Rock.wav"; sourceTree = "<group>"; };
+		D11DC4B624300F2B0004C5E2 /* Stack Up Box.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Stack Up Box.wav"; path = "../Sounds/Stack Up Box.wav"; sourceTree = "<group>"; };
+		D13A92B7242F90C700829CA7 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		D13A92B9242F90D900829CA7 /* AllCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCharacters.swift; sourceTree = "<group>"; };
 		D1407E14241667F9009AD490 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		D1407E1624166814009AD490 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D1407E182417B6D3009AD490 /* CamControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamControl.swift; sourceTree = "<group>"; };
@@ -98,25 +124,6 @@
 		D1472B69241A733F005FBB07 /* GameOver.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameOver.storyboard; sourceTree = "<group>"; };
 		D1472B6B241A735E005FBB07 /* InitialScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreenViewController.swift; sourceTree = "<group>"; };
 		D1472B6D241A7369005FBB07 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
-		D18372DA24210C0500079634 /* Stack Up Box(3).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Stack Up Box(3).wav"; sourceTree = "<group>"; };
-		D18372DB24210C0500079634 /* Swipe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Swipe.wav; sourceTree = "<group>"; };
-		D18372DC24210C0500079634 /* Stack Up Box.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Stack Up Box.wav"; sourceTree = "<group>"; };
-		D18372DD24210C0500079634 /* Pig Oink(3).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig Oink(3).wav"; sourceTree = "<group>"; };
-		D18372DE24210C0600079634 /* Stack Up Box(2).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Stack Up Box(2).wav"; sourceTree = "<group>"; };
-		D18372DF24210C0600079634 /* Pig Colision Ice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig Colision Ice.wav"; sourceTree = "<group>"; };
-		D18372E024210C0600079634 /* Pig Colision Dirt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig Colision Dirt.wav"; sourceTree = "<group>"; };
-		D18372E124210C0600079634 /* Water Splash(2).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Water Splash(2).wav"; sourceTree = "<group>"; };
-		D18372E224210C0600079634 /* Water Splash.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Water Splash.wav"; sourceTree = "<group>"; };
-		D18372E324210C0600079634 /* Water Splash(3).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Water Splash(3).wav"; sourceTree = "<group>"; };
-		D18372E424210C0600079634 /* Pig Oink(2).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig Oink(2).wav"; sourceTree = "<group>"; };
-		D18372E524210C0600079634 /* Box Colision Dirt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Box Colision Dirt.wav"; sourceTree = "<group>"; };
-		D18372E624210C0600079634 /* Swipe(3).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Swipe(3).wav"; sourceTree = "<group>"; };
-		D18372E724210C0600079634 /* Pig Oink.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig Oink.wav"; sourceTree = "<group>"; };
-		D18372E824210C0700079634 /* Box Colision Ice.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Box Colision Ice.wav"; sourceTree = "<group>"; };
-		D18372E924210C0700079634 /* Swipe(2).wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Swipe(2).wav"; sourceTree = "<group>"; };
-		D18372EA24210C0700079634 /* Pig Colision Rock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pig Colision Rock.wav"; sourceTree = "<group>"; };
-		D18372EB24210C0700079634 /* Box Colision Rock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Box Colision Rock.wav"; sourceTree = "<group>"; };
-		D1B28419241BC95D00EAFF05 /* CustomSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSound.swift; sourceTree = "<group>"; };
 		D1B76201242AB553009B23C0 /* AdPermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdPermissionViewController.swift; sourceTree = "<group>"; };
 		D1B76203242AB56D009B23C0 /* AdPermission.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdPermission.storyboard; sourceTree = "<group>"; };
 		D1CABB3524111F2E004A28A5 /* Topple Towers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Topple Towers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +131,6 @@
 		D1CABB3A24111F2E004A28A5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		D1CABB3E24111F2E004A28A5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D1CABB4024111F2E004A28A5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		D1CABB4324111F2E004A28A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1CABB4524111F32004A28A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1CABB4824111F32004A28A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1CABB4A24111F32004A28A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -205,38 +211,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D1B28417241BC8ED00EAFF05 /* Sounds */ = {
+		D11DC48A24300C630004C5E2 /* SoundControll */ = {
 			isa = PBXGroup;
 			children = (
-				D18372E524210C0600079634 /* Box Colision Dirt.wav */,
-				D18372EB24210C0700079634 /* Box Colision Rock.wav */,
-				D18372E824210C0700079634 /* Box Colision Ice.wav */,
-				D18372E024210C0600079634 /* Pig Colision Dirt.wav */,
-				D18372EA24210C0700079634 /* Pig Colision Rock.wav */,
-				D18372DF24210C0600079634 /* Pig Colision Ice.wav */,
-				D18372E724210C0600079634 /* Pig Oink.wav */,
-				D18372E424210C0600079634 /* Pig Oink(2).wav */,
-				D18372DD24210C0500079634 /* Pig Oink(3).wav */,
-				D18372DC24210C0500079634 /* Stack Up Box.wav */,
-				D18372DE24210C0600079634 /* Stack Up Box(2).wav */,
-				D100615C2422A3EC00E4A3EC /* Coin Collected.wav */,
-				D18372DA24210C0500079634 /* Stack Up Box(3).wav */,
-				D18372DB24210C0500079634 /* Swipe.wav */,
-				D18372E924210C0700079634 /* Swipe(2).wav */,
-				D18372E624210C0600079634 /* Swipe(3).wav */,
-				D18372E224210C0600079634 /* Water Splash.wav */,
-				D18372E124210C0600079634 /* Water Splash(2).wav */,
-				D18372E324210C0600079634 /* Water Splash(3).wav */,
-			);
-			path = Sounds;
-			sourceTree = "<group>";
-		};
-		D1B28418241BC92800EAFF05 /* SoundControll */ = {
-			isa = PBXGroup;
-			children = (
-				D1B28419241BC95D00EAFF05 /* CustomSound.swift */,
+				D11DC47224300B1D0004C5E2 /* CustomSound.swift */,
 			);
 			path = SoundControll;
+			sourceTree = "<group>";
+		};
+		D11DC4B724300F3B0004C5E2 /* Sounds2 */ = {
+			isa = PBXGroup;
+			children = (
+				D11DC4AB24300F2A0004C5E2 /* Box Colision Dirt.wav */,
+				D11DC4B224300F2B0004C5E2 /* Box Colision Ice.wav */,
+				D11DC4B024300F2A0004C5E2 /* Box Colision Rock.wav */,
+				D11DC4A524300F2A0004C5E2 /* Coin Collected.wav */,
+				D11DC4B324300F2B0004C5E2 /* Pig Colision Dirt.wav */,
+				D11DC4A824300F2A0004C5E2 /* Pig Colision Ice.wav */,
+				D11DC4B524300F2B0004C5E2 /* Pig Colision Rock.wav */,
+				D11DC4AC24300F2A0004C5E2 /* Pig Oink.wav */,
+				D11DC4A424300F290004C5E2 /* Pig Oink(2).wav */,
+				D11DC4AA24300F2A0004C5E2 /* Pig Oink(3).wav */,
+				D11DC4B624300F2B0004C5E2 /* Stack Up Box.wav */,
+				D11DC4AF24300F2A0004C5E2 /* Stack Up Box(2).wav */,
+				D11DC4A924300F2A0004C5E2 /* Stack Up Box(3).wav */,
+				D11DC4A624300F2A0004C5E2 /* Swipe.wav */,
+				D11DC4A724300F2A0004C5E2 /* Swipe(2).wav */,
+				D11DC4AD24300F2A0004C5E2 /* Swipe(3).wav */,
+				D11DC4B124300F2A0004C5E2 /* Water Splash.wav */,
+				D11DC4B424300F2B0004C5E2 /* Water Splash(2).wav */,
+				D11DC4AE24300F2A0004C5E2 /* Water Splash(3).wav */,
+			);
+			path = Sounds2;
 			sourceTree = "<group>";
 		};
 		D1CABB2C24111F2E004A28A5 = {
@@ -265,6 +271,7 @@
 		D1CABB3724111F2E004A28A5 /* QuartoNanoChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				D11DC469243009040004C5E2 /* Assets.xcassets */,
 				D1CABB6E24111FB9004A28A5 /* Model */,
 				D1CABB6D24111FB3004A28A5 /* View */,
 				D1CABB6C24111F9D004A28A5 /* Controller */,
@@ -310,10 +317,10 @@
 		D1CABB6D24111FB3004A28A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D1B28417241BC8ED00EAFF05 /* Sounds */,
+				D11DC4B724300F3B0004C5E2 /* Sounds2 */,
 				D1CABB4524111F32004A28A5 /* Assets.xcassets */,
 				D1CABB3A24111F2E004A28A5 /* GameScene.sks */,
-				D1CABB4224111F2E004A28A5 /* Main.storyboard */,
+				D11DC48824300BED0004C5E2 /* Main.storyboard */,
 				D1472B67241A732C005FBB07 /* InitialScreen.storyboard */,
 				D1472B69241A733F005FBB07 /* GameOver.storyboard */,
 				D1B76203242AB56D009B23C0 /* AdPermission.storyboard */,
@@ -325,11 +332,13 @@
 			isa = PBXGroup;
 			children = (
 				D1CABB6F24112004004A28A5 /* Model.swift */,
+				D13A92B7242F90C700829CA7 /* Character.swift */,
+				D13A92B9242F90D900829CA7 /* AllCharacters.swift */,
 				D1CABB71241120C3004A28A5 /* BodyMasks.swift */,
 				D1407E1624166814009AD490 /* GameObject.swift */,
-				D1CABB3E24111F2E004A28A5 /* GameScene.swift */,
 				D1407E182417B6D3009AD490 /* CamControl.swift */,
-				D1B28418241BC92800EAFF05 /* SoundControll */,
+				D1CABB3E24111F2E004A28A5 /* GameScene.swift */,
+				D11DC48A24300C630004C5E2 /* SoundControll */,
 				D1CABB7A241125D7004A28A5 /* Spawners */,
 				D1CABB7924112579004A28A5 /* GameObjects */,
 			);
@@ -473,34 +482,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11DC4B824300F5A0004C5E2 /* Box Colision Dirt.wav in Resources */,
+				D11DC4B924300F5A0004C5E2 /* Box Colision Ice.wav in Resources */,
+				D11DC4BA24300F5A0004C5E2 /* Box Colision Rock.wav in Resources */,
+				D11DC4BB24300F5A0004C5E2 /* Coin Collected.wav in Resources */,
+				D11DC4BC24300F5A0004C5E2 /* Pig Colision Dirt.wav in Resources */,
+				D11DC4BD24300F5A0004C5E2 /* Pig Colision Ice.wav in Resources */,
+				D11DC4BE24300F5A0004C5E2 /* Pig Colision Rock.wav in Resources */,
+				D11DC4BF24300F5A0004C5E2 /* Pig Oink.wav in Resources */,
+				D11DC4C024300F5A0004C5E2 /* Pig Oink(2).wav in Resources */,
+				D11DC4C124300F5A0004C5E2 /* Pig Oink(3).wav in Resources */,
+				D11DC4C224300F5A0004C5E2 /* Stack Up Box.wav in Resources */,
+				D11DC4C324300F5A0004C5E2 /* Stack Up Box(2).wav in Resources */,
+				D11DC4C424300F5A0004C5E2 /* Stack Up Box(3).wav in Resources */,
+				D11DC4C524300F5A0004C5E2 /* Swipe.wav in Resources */,
+				D11DC4C624300F5A0004C5E2 /* Swipe(2).wav in Resources */,
+				D11DC4C724300F5A0004C5E2 /* Swipe(3).wav in Resources */,
+				D11DC4C824300F5A0004C5E2 /* Water Splash.wav in Resources */,
+				D11DC4C924300F5A0004C5E2 /* Water Splash(2).wav in Resources */,
+				D11DC4CA24300F5A0004C5E2 /* Water Splash(3).wav in Resources */,
 				D1472B6A241A733F005FBB07 /* GameOver.storyboard in Resources */,
-				D18372F524210C0700079634 /* Water Splash(3).wav in Resources */,
-				D18372F124210C0700079634 /* Pig Colision Ice.wav in Resources */,
-				D1CABB4424111F2E004A28A5 /* Main.storyboard in Resources */,
 				D1CABB3B24111F2E004A28A5 /* GameScene.sks in Resources */,
-				D18372FC24210C0700079634 /* Pig Colision Rock.wav in Resources */,
 				FB8041D024217C400034B83B /* BalooBhaina-Regular.ttf in Resources */,
-				D18372FB24210C0700079634 /* Swipe(2).wav in Resources */,
-				D18372FD24210C0700079634 /* Box Colision Rock.wav in Resources */,
-				D18372FA24210C0700079634 /* Box Colision Ice.wav in Resources */,
-				D18372F824210C0700079634 /* Swipe(3).wav in Resources */,
 				D1CABB4624111F32004A28A5 /* Assets.xcassets in Resources */,
-				D18372F224210C0700079634 /* Pig Colision Dirt.wav in Resources */,
+				D11DC48924300BED0004C5E2 /* Main.storyboard in Resources */,
 				FBACE77C2421A52E0007B24B /* GoogleService-Info.plist in Resources */,
-				D18372EF24210C0700079634 /* Pig Oink(3).wav in Resources */,
-				D18372EE24210C0700079634 /* Stack Up Box.wav in Resources */,
 				D1B76204242AB56D009B23C0 /* AdPermission.storyboard in Resources */,
 				D1472B68241A732C005FBB07 /* InitialScreen.storyboard in Resources */,
-				D100615D2422A3ED00E4A3EC /* Coin Collected.wav in Resources */,
-				D18372ED24210C0700079634 /* Swipe.wav in Resources */,
 				D1CABB4924111F32004A28A5 /* LaunchScreen.storyboard in Resources */,
-				D18372F624210C0700079634 /* Pig Oink(2).wav in Resources */,
-				D18372EC24210C0700079634 /* Stack Up Box(3).wav in Resources */,
-				D18372F324210C0700079634 /* Water Splash(2).wav in Resources */,
-				D18372F724210C0700079634 /* Box Colision Dirt.wav in Resources */,
-				D18372F924210C0700079634 /* Pig Oink.wav in Resources */,
-				D18372F024210C0700079634 /* Stack Up Box(2).wav in Resources */,
-				D18372F424210C0700079634 /* Water Splash.wav in Resources */,
+				D11DC46C243009050004C5E2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,16 +650,18 @@
 				D1472B6E241A7369005FBB07 /* GameOverViewController.swift in Sources */,
 				D1CABB72241120C3004A28A5 /* BodyMasks.swift in Sources */,
 				FB92DC4D242A56960019C877 /* GameCenter.swift in Sources */,
-				D1B2841A241BC95D00EAFF05 /* CustomSound.swift in Sources */,
 				D1CABB4124111F2E004A28A5 /* GameViewController.swift in Sources */,
 				D1CABB762411233F004A28A5 /* Box.swift in Sources */,
+				D13A92BA242F90D900829CA7 /* AllCharacters.swift in Sources */,
 				D1472B6C241A735E005FBB07 /* InitialScreenViewController.swift in Sources */,
 				FB615D9A242E28DD00ACCD58 /* CharacterCollectionViewCell.swift in Sources */,
 				D1CABB3924111F2E004A28A5 /* AppDelegate.swift in Sources */,
 				D1472B66241A5529005FBB07 /* Water.swift in Sources */,
 				D1407E15241667F9009AD490 /* Coins.swift in Sources */,
+				D11DC47324300B1D0004C5E2 /* CustomSound.swift in Sources */,
 				D1407E192417B6D3009AD490 /* CamControl.swift in Sources */,
 				D1CABB7024112004004A28A5 /* Model.swift in Sources */,
+				D13A92B8242F90C700829CA7 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,14 +697,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D1CABB4224111F2E004A28A5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D1CABB4324111F2E004A28A5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D1CABB4724111F32004A28A5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -60,9 +60,9 @@ class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
     }
 
     func rewardedAdDidPresent(_ rewardedAd: GADRewardedAd) {
+        Model.shared.totalCoins += Model.shared.currentCoins
         Model.shared.currentCoins += Model.shared.currentCoins
         updateCoins()
-        
         btnGoHome.isHidden = false
         btnGoHome.isEnabled = true
         

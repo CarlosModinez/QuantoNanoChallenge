@@ -43,14 +43,21 @@ class Model {
     
     var currentPlayerSkin: SKTexture!
     var currentEars: SKTexture?
+    var characters: [Character]!
     var currentBackground = SKTexture(imageNamed: "background_2")
     
     var rewardedAd: GADRewardedAd? = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
-    
         // ID LOJA
         //"ca-app-pub-3143840922595951/3310571075")
         // ID TESTE
         //"ca-app-pub-3940256099942544/1712485313")
+    
+    
+    var ableCharacters: [Bool] {
+        didSet {
+            UserDefaults.standard.set(self.ableCharacters, forKey: "ableCharacters")
+        }
+    }
     
     
     var character: Int {
@@ -74,7 +81,7 @@ class Model {
     
     var totalCoins: Int {
         didSet {
-            UserDefaults.standard.set(self.bestScore, forKey: " totalCoins")
+            UserDefaults.standard.set(self.totalCoins, forKey: " totalCoins")
         }
     }
     
@@ -88,7 +95,6 @@ class Model {
         rewardedAd?.load(GADRequest()) { error in
             if let error = error {
                 // Handle ad failed to load case.
-                print("NAO")
                 print(error)
             } else {
                 // Ad successfully loaded.
@@ -104,18 +110,36 @@ class Model {
             
         else
         {
+            // Variaveis setadas para a primeira vez que o usuário abre o aplicativo
             UserDefaults.standard.set(0, forKey: "bestScore")
             UserDefaults.standard.set(0, forKey: "totalCoins")
             UserDefaults.standard.set(true, forKey: "launchedBefore")
             UserDefaults.standard.set(0, forKey: "character")
+            UserDefaults.standard.set([true, false, false, false, false, false, false, false, true, false], forKey: "ableCharacters")
         }
         
         totalCoins = UserDefaults.standard.integer(forKey: "totalCoins")
         currentCoins = UserDefaults.standard.integer(forKey: "currentCoins")
         bestScore = UserDefaults.standard.integer(forKey: "bestScore")
         currentScore = UserDefaults.standard.integer(forKey: "currentScore")
-//        character = UserDefaults.standard.integer(forKey: "character")
-        character = 10
+        character = UserDefaults.standard.integer(forKey: "character")
+        // ableCharacters = [true, false, false, false, false, false, false, false, true, false]
+        ableCharacters = UserDefaults.standard.array(forKey: "ableCharacters") as! [Bool]
+        
+    
+        updateCharacter()
+        characters = [Character(imageName: "iniciaPig", characterName: "Mr. Pig", able: ableCharacters[0], price: 0),
+                                       Character(imageName: "inicialBird", characterName: "Frajola", able: ableCharacters[1], price: 1),
+                                       Character(imageName: "inicialElephant", characterName: "Nima", able: ableCharacters[2], price: 35),
+                                       Character(imageName: "inicialGiraf", characterName: "Rick", able: ableCharacters[3], price: 40),
+                                       Character(imageName: "inicialHippo", characterName: "Gloria", able: ableCharacters[4], price: 47),
+                                       Character(imageName: "inicialMonkey", characterName: "Kong Lee", able: ableCharacters[5], price: 55),
+                                       Character(imageName: "inicialPanda", characterName: "Po", able: ableCharacters[6], price: 60),
+                                       Character(imageName: "inicialPenguin", characterName: "Christopher", able: ableCharacters[7], price: 70),
+                                       Character(imageName: "inicialhabbit", characterName: "Alfredin", able: ableCharacters[8], price: 80),
+                                       Character(imageName: "inicialSnake", characterName: "Vitoria", able: ableCharacters[9], price: 90)]
+    }
+    func updateCharacter() {
         switch character {
         case 1:
             currentPlayerSkin = bird

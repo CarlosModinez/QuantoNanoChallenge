@@ -120,7 +120,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if score > Model.shared.bestScore {
                 Model.shared.bestScore = score
             }
-            Model.shared.currentCoins = coinsCount
+            
             Model.shared.totalCoins += Model.shared.currentCoins
             waterSplash.play()
             allowSound = false
@@ -344,6 +344,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func initialSetup() {
+        Model.shared.currentCoins = 0
         firstTap = true
         allowSound = true
         gameVelocity = 0.85
