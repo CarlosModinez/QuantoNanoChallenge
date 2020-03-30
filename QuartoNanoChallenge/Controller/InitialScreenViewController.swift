@@ -17,6 +17,9 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var lblCharacterPrice: UILabel!
     @IBOutlet weak var firstScreenView: UIView!
     
+    let swipeRightRec = UISwipeGestureRecognizer()
+    let swipeLeftRec = UISwipeGestureRecognizer()
+    
     var characterID: Int = 0
     
     var imageCharacters: [UIImage?] = [UIImage(named: "iniciaPig"), UIImage(named: "inicialBird"), UIImage(named: "inicialElephant"), UIImage(named: "inicialGiraf"), UIImage(named: "inicialHippo"), UIImage(named: "inicialMonkey"), UIImage(named: "inicialPanda"), UIImage(named: "inicialPenguin"), UIImage(named: "inicialhabbit"), UIImage(named: "inicialSnake")]
@@ -29,6 +32,8 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         GameCenter.shared.authenticateLocalPlayer(presentingVC: self)
         lblCoinsAmount.text = String(Model.shared.totalCoins)
         updateButtons()
+    
+        characterCollection.isUserInteractionEnabled = false
     }
     
     
@@ -93,6 +98,7 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         cell.imageCharacter.frame.size = cell.frame.size
         return cell
     }
+    
     
     @IBAction func btnLeftArrowAction(_ sender: Any) {
         let collectionBounds = self.characterCollection.bounds
