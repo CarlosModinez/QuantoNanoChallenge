@@ -48,7 +48,7 @@ class Model {
     var currentBackground = SKTexture(imageNamed: "background_2")
     var gameOverCount: Int
     
-    var initialBannerAd: GADBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+    var initialBannerAd: GADBannerView? = GADBannerView(adSize: kGADAdSizeBanner)
         // Mudar tambem na initialScreenViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/1780408112"
@@ -56,7 +56,7 @@ class Model {
         //"ca-app-pub-3940256099942544/2934735716"
     
     
-    var gameOverAd: GADInterstitial! = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+    var gameOverAd: GADInterstitial? = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         // Mudar tambem na GameOverViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/9170978827"
@@ -112,7 +112,7 @@ class Model {
                 print("BOA")
             }
         }
-        gameOverAd.load(GADRequest())
+        gameOverAd?.load(GADRequest())
         
         
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")

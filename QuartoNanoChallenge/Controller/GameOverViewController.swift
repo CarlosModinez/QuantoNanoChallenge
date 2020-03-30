@@ -35,7 +35,7 @@ class GameOverViewController: UIViewController, GADInterstitialDelegate {
         Model.shared.gameOverCount += 1
         if Model.shared.gameOverCount == 3 {
             Model.shared.gameOverCount = 0
-            Model.shared.gameOverAd.present(fromRootViewController: self)
+            Model.shared.gameOverAd?.present(fromRootViewController: self)
             loadGameOverAd()
         }
     }

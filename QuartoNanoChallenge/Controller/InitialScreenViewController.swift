@@ -37,16 +37,16 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         characterCollection.isUserInteractionEnabled = false
         
         //Adiciona o banner ad na view
-        Model.shared.initialBannerAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        Model.shared.initialBannerAd?.adUnitID = "ca-app-pub-3940256099942544/2934735716"
             // Mudar tambem na model
             // ID LOJA
             //"ca-app-pub-3143840922595951/1780408112"
-            // ID TESTE
+            // ID TESTE s
             //"ca-app-pub-3940256099942544/2934735716"
         
-        Model.shared.initialBannerAd.rootViewController = self
-        addBannerViewToView(Model.shared.initialBannerAd)
-        Model.shared.initialBannerAd.load(GADRequest())
+        Model.shared.initialBannerAd?.rootViewController = self
+        addBannerViewToView(Model.shared.initialBannerAd!)
+        Model.shared.initialBannerAd?.load(GADRequest())
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
