@@ -151,6 +151,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         controller.gameViewController = self.gameViewController
         controller.gameScene = self
         self.gameViewController.present(controller, animated: true, completion: nil)
+        controller.showGameOverAd()
     }
     
     override func update(_ currentTime: TimeInterval) {

@@ -54,15 +54,14 @@ class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
             Model.shared.rewardedAd?.present(fromRootViewController: self, delegate: self)
         }
     }
-
+    
     func rewardedAd(_ rewardedAd: GADRewardedAd, userDidEarn reward: GADAdReward) {
-        print("reward received")
-    }
-
-    func rewardedAdDidPresent(_ rewardedAd: GADRewardedAd) {
         Model.shared.totalCoins += Model.shared.currentCoins
         Model.shared.currentCoins += Model.shared.currentCoins
         updateCoins()
+    }
+
+    func rewardedAdDidPresent(_ rewardedAd: GADRewardedAd) {
         btnGoHome.isHidden = false
         btnGoHome.isEnabled = true
         
@@ -85,7 +84,7 @@ class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
     @IBAction func goHomePressed(_ sender: Any) {
         
         gameScene.removeAllChildren()
-        
+
         let appDelegate = UIApplication.shared.delegate
         appDelegate?.window??.rootViewController = self
         

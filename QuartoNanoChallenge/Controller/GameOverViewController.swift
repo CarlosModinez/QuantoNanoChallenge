@@ -9,8 +9,9 @@
 import UIKit
 import GameKit
 import GameplayKit
+import GoogleMobileAds
 
-class GameOverViewController: UIViewController {
+class GameOverViewController: UIViewController, GADInterstitialDelegate {
     
     @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var lblCurrenntScore: UILabel!
@@ -28,15 +29,43 @@ class GameOverViewController: UIViewController {
         GameCenter.shared.updateScore(with: Model.shared.bestScore)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        if Model.shared.currentCoins > 0 {
-            let adPermissionViewController: AdPermissionViewController!
-            let adPermissionView: UIStoryboard = UIStoryboard(name: "AdPermission", bundle: nil)
-            adPermissionViewController = adPermissionView.instantiateViewController(withIdentifier: "AdView") as? AdPermissionViewController
-            adPermissionViewController.gameScene = self.gameScene
-            self.present(adPermissionViewController, animated: true, completion: nil)
+
+    func showGameOverAd() {
+        Model.shared.gameOverCount += 1
+        print(Model.shared.gameOverCount)
+        if Model.shared.gameOverCount == 2 {
+            Model.shared.gameOverCount = 0
+            Model.shared.gameOverAd.present(fromRootViewController: self)
+            loadGameOverAd()
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let adSorter = Int.random(in: 0..<2)
+        if Model.shared.currentCoins > 0 && adSorter == 0 {
+           showAdPermission()
+        }
+    }
+    
+    func loadGameOverAd(){
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        // ID LOJA
+        //"ca-app-pub-3143840922595951/9170978827"
+        // ID TESTE
+        //"ca-app-pub-3940256099942544/4411468910"
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+        Model.shared.gameOverAd = interstitial
+    }
+    
+    func showAdPermission() {
+        let adPermissionViewController: AdPermissionViewController!
+        let adPermissionView: UIStoryboard = UIStoryboard(name: "AdPermission", bundle: nil)
+        adPermissionViewController = adPermissionView.instantiateViewController(withIdentifier: "AdView") as? AdPermissionViewController
+        adPermissionViewController.gameScene = self.gameScene
+        self.present(adPermissionViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func playAgainPressed(_ sender: Any) {
         
         gameScene.removeAllChildren()

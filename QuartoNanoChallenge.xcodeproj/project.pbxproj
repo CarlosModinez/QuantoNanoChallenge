@@ -32,7 +32,6 @@
 		D11DC4C924300F5A0004C5E2 /* Water Splash(2).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4B424300F2B0004C5E2 /* Water Splash(2).wav */; };
 		D11DC4CA24300F5A0004C5E2 /* Water Splash(3).wav in Resources */ = {isa = PBXBuildFile; fileRef = D11DC4AE24300F2A0004C5E2 /* Water Splash(3).wav */; };
 		D13A92B8242F90C700829CA7 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13A92B7242F90C700829CA7 /* Character.swift */; };
-		D13A92BA242F90D900829CA7 /* AllCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13A92B9242F90D900829CA7 /* AllCharacters.swift */; };
 		D1407E15241667F9009AD490 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E14241667F9009AD490 /* Coins.swift */; };
 		D1407E1724166814009AD490 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E1624166814009AD490 /* GameObject.swift */; };
 		D1407E192417B6D3009AD490 /* CamControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1407E182417B6D3009AD490 /* CamControl.swift */; };
@@ -114,7 +113,6 @@
 		D11DC4B524300F2B0004C5E2 /* Pig Colision Rock.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Pig Colision Rock.wav"; path = "../Sounds/Pig Colision Rock.wav"; sourceTree = "<group>"; };
 		D11DC4B624300F2B0004C5E2 /* Stack Up Box.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "Stack Up Box.wav"; path = "../Sounds/Stack Up Box.wav"; sourceTree = "<group>"; };
 		D13A92B7242F90C700829CA7 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		D13A92B9242F90D900829CA7 /* AllCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCharacters.swift; sourceTree = "<group>"; };
 		D1407E14241667F9009AD490 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		D1407E1624166814009AD490 /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D1407E182417B6D3009AD490 /* CamControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamControl.swift; sourceTree = "<group>"; };
@@ -333,7 +331,6 @@
 			children = (
 				D1CABB6F24112004004A28A5 /* Model.swift */,
 				D13A92B7242F90C700829CA7 /* Character.swift */,
-				D13A92B9242F90D900829CA7 /* AllCharacters.swift */,
 				D1CABB71241120C3004A28A5 /* BodyMasks.swift */,
 				D1407E1624166814009AD490 /* GameObject.swift */,
 				D1407E182417B6D3009AD490 /* CamControl.swift */,
@@ -652,7 +649,6 @@
 				FB92DC4D242A56960019C877 /* GameCenter.swift in Sources */,
 				D1CABB4124111F2E004A28A5 /* GameViewController.swift in Sources */,
 				D1CABB762411233F004A28A5 /* Box.swift in Sources */,
-				D13A92BA242F90D900829CA7 /* AllCharacters.swift in Sources */,
 				D1472B6C241A735E005FBB07 /* InitialScreenViewController.swift in Sources */,
 				FB615D9A242E28DD00ACCD58 /* CharacterCollectionViewCell.swift in Sources */,
 				D1CABB3924111F2E004A28A5 /* AppDelegate.swift in Sources */,
@@ -829,7 +825,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F6XL2RL8RU;
+				DEVELOPMENT_TEAM = CM34PRAQJX;
 				INFOPLIST_FILE = QuartoNanoChallenge/Info.plist;
 				"INFOPLIST_FILE[sdk=*]" = QuartoNanoChallenge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -837,7 +833,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = akira.123.com;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.carlosmodinez;
 				PRODUCT_NAME = "Topple Towers";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

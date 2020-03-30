@@ -29,6 +29,8 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(Model.shared.totalCoins)
+        
         GameCenter.shared.authenticateLocalPlayer(presentingVC: self)
         lblCoinsAmount.text = String(Model.shared.totalCoins)
         updateButtons()
