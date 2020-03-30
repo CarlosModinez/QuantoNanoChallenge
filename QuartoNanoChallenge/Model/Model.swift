@@ -49,6 +49,7 @@ class Model {
     var gameOverCount: Int
     
     var initialBannerAd: GADBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        // Mudar tambem na initialScreenViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/1780408112"
         // ID TESTE
@@ -56,12 +57,14 @@ class Model {
     
     
     var gameOverAd: GADInterstitial! = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        // Mudar tambem na GameOverViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/9170978827"
         // ID TESTE
         //"ca-app-pub-3940256099942544/4411468910"
     
     var rewardedAd: GADRewardedAd? = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
+        // Mudar tambem na AdPermissionViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/3310571075"
         // ID TESTE

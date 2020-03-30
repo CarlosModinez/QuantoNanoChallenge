@@ -38,6 +38,7 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         
         //Adiciona o banner ad na view
         Model.shared.initialBannerAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+            // Mudar tambem na model
             // ID LOJA
             //"ca-app-pub-3143840922595951/1780408112"
             // ID TESTE
