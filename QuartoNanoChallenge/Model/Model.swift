@@ -48,6 +48,13 @@ class Model {
     var currentBackground = SKTexture(imageNamed: "background_2")
     var gameOverCount: Int
     
+    var initialBannerAd: GADBannerView = GADBannerView(adSize: kGADAdSizeBanner)
+        // ID LOJA
+        //"ca-app-pub-3143840922595951/1780408112"
+        // ID TESTE
+        //"ca-app-pub-3940256099942544/2934735716"
+    
+    
     var gameOverAd: GADInterstitial! = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         // ID LOJA
         //"ca-app-pub-3143840922595951/9170978827"

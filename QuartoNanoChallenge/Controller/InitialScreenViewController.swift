@@ -8,6 +8,7 @@
 
 import UIKit
 import GameKit
+import GoogleMobileAds
 
 class InitialScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -30,13 +31,45 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         print(Model.shared.totalCoins)
-        
         GameCenter.shared.authenticateLocalPlayer(presentingVC: self)
         lblCoinsAmount.text = String(Model.shared.totalCoins)
         updateButtons()
-    
         characterCollection.isUserInteractionEnabled = false
+        
+        //Adiciona o banner ad na view
+        Model.shared.initialBannerAd.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+            // ID LOJA
+            //"ca-app-pub-3143840922595951/1780408112"
+            // ID TESTE
+            //"ca-app-pub-3940256099942544/2934735716"
+        
+        Model.shared.initialBannerAd.rootViewController = self
+        addBannerViewToView(Model.shared.initialBannerAd)
+        Model.shared.initialBannerAd.load(GADRequest())
     }
+    
+    func addBannerViewToView(_ bannerView: GADBannerView) {
+     bannerView.translatesAutoresizingMaskIntoConstraints = false
+     view.addSubview(bannerView)
+     view.addConstraints(
+       [NSLayoutConstraint(item: bannerView,
+                           attribute: .bottom,
+                           relatedBy: .equal,
+                           toItem: bottomLayoutGuide,
+                           attribute: .top,
+                           multiplier: 1,
+                           constant: 0),
+        NSLayoutConstraint(item: bannerView,
+                           attribute: .centerX,
+                           relatedBy: .equal,
+                           toItem: view,
+                           attribute: .centerX,
+                           multiplier: 1,
+                           constant: 0)
+       ])
+    }
+    
+    
     
     
     @IBAction func playBtnPressed(_ sender: Any) {
@@ -55,7 +88,6 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         Model.shared.totalCoins -= Model.shared.characters[characterID].price
         
         updateButtons()
-        
     }
     
     func updateButtons() {
