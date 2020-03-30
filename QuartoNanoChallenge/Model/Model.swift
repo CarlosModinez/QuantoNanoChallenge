@@ -48,7 +48,7 @@ class Model {
     var currentBackground = SKTexture(imageNamed: "background_2")
     var gameOverCount: Int
     
-    var initialBannerAd: GADBannerView? = GADBannerView(adSize: kGADAdSizeBanner)
+//    var initialBannerAd: GADBannerView? = GADBannerView(adSize: kGADAdSizeBanner)
         // Mudar tambem na initialScreenViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/1780408112"

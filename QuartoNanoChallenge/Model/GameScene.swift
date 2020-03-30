@@ -252,18 +252,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func checkInternality() {
-        if head.box.position.x + 2 > (scene?.size.width)!/2 || head.box.position.x - 2 < -(scene?.size.width)!/2 {
+        if head.box.position.x + 5 > (scene?.size.width)!/2 || head.box.position.x - 5 < -(scene?.size.width)!/2 {
             head.box.position.x = -head.box.position.x
         }
         
         for box in disableBoxes {
-            if box.box.position.x + 2 > (scene?.size.width)!/2 || box.box.position.x - 2 < -(scene?.size.width)!/2 {
+            if box.box.position.x + 5 > (scene?.size.width)!/2 || box.box.position.x - 5 < -(scene?.size.width)!/2 {
                 box.box.position.x = -box.box.position.x
             }
         }
         
         for i in 1..<boxes.count {
-            if boxes[i].box.position.x + 2 > (scene?.size.width)!/2 || boxes[i].box.position.x - 2 < -(scene?.size.width)!/2 {
+            if boxes[i].box.position.x + 5 > (scene?.size.width)!/2 || boxes[i].box.position.x - 5 < -(scene?.size.width)!/2 {
                 boxes[i].box.position.x = -boxes[i].box.position.x
             }
         }
