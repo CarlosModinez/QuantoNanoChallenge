@@ -67,10 +67,12 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - SwiftyGif (5.2.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Google-Mobile-Ads-SDK
+  - SwiftyGif
 
 SPEC REPOS:
   trunk:
@@ -87,6 +89,7 @@ SPEC REPOS:
     - GoogleUtilities
     - nanopb
     - PromisesObjC
+    - SwiftyGif
 
 SPEC CHECKSUMS:
   Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
@@ -102,7 +105,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SwiftyGif: b85c6b33a9411859d9e1db998b6a8214aea942df
 
-PODFILE CHECKSUM: de853d1af57ce67fec1e3670fbe500832b65d6b9
+PODFILE CHECKSUM: 4467dee8f200d84aef79fc52c93554261a5605b5
 
 COCOAPODS: 1.9.1

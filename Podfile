@@ -6,16 +6,10 @@ target 'QuartoNanoChallenge' do
   use_frameworks!
 
   # Pods for QuartoNanoChallenge
-  # add the Firebase pod for Google Analytics
-  source 'https://github.com/CocoaPods/Specs.git'
-  use_frameworks!
+  pod 'Google-Mobile-Ads-SDK'
   pod 'SwiftyGif'
   pod 'Firebase/Analytics'
-  pod 'Google-Mobile-Ads-SDK'
-  
-  # add pods for any other desired Firebase products
-  # https://firebase.google.com/docs/ios/setup#available-pods
-  
+
   target 'QuartoNanoChallengeTests' do
     inherit! :search_paths
     # Pods for testing
