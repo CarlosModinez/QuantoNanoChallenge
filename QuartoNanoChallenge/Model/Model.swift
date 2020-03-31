@@ -56,14 +56,14 @@ class Model {
         //"ca-app-pub-3940256099942544/2934735716"
     
     
-    var gameOverAd: GADInterstitial? = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+    var gameOverAd: GADInterstitial? = GADInterstitial(adUnitID: "ca-app-pub-3143840922595951/9170978827")
         // Mudar tambem na GameOverViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/9170978827"
         // ID TESTE
         //"ca-app-pub-3940256099942544/4411468910"
     
-    var rewardedAd: GADRewardedAd? = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
+    var rewardedAd: GADRewardedAd? = GADRewardedAd(adUnitID: "ca-app-pub-3143840922595951/3310571075")
         // Mudar tambem na AdPermissionViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/3310571075"

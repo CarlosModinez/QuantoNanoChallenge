@@ -16,6 +16,8 @@ class GameOverViewController: UIViewController, GADInterstitialDelegate {
     @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var lblCurrenntScore: UILabel!
     
+    @IBOutlet weak var leaderboardButtomTopSpace: NSLayoutConstraint!
+    @IBOutlet weak var shopButtomTopSpace: NSLayoutConstraint!
     
     var gameScene: GameScene!
     var width : CGFloat!
@@ -27,6 +29,9 @@ class GameOverViewController: UIViewController, GADInterstitialDelegate {
         lblScore.text = String(Model.shared.bestScore)
         lblCurrenntScore.text = String(Model.shared.currentScore)
         GameCenter.shared.updateScore(with: Model.shared.bestScore)
+        leaderboardButtomTopSpace.constant = (self.view.frame.width/1000)
+        shopButtomTopSpace.constant = (self.view.frame.width/1000)
+        
     }
     
 
@@ -49,7 +54,7 @@ class GameOverViewController: UIViewController, GADInterstitialDelegate {
     }
     
     func loadGameOverAd(){
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3143840922595951/9170978827")
         //Mudar tambem na Model
         // ID LOJA
         //"ca-app-pub-3143840922595951/9170978827"

@@ -95,7 +95,7 @@ class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
     }
     
     func createAndLoadRewardedAd() {
-        let rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
+        let rewardedAd = GADRewardedAd(adUnitID: "ca-app-pub-3143840922595951/3310571075")
             // Mudar tambem na Model
             // ID LOJA
             //"ca-app-pub-3143840922595951/3310571075")

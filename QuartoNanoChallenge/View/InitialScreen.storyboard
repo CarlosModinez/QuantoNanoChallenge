@@ -51,7 +51,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inicialElephant" translatesAutoresizingMaskIntoConstraints="NO" id="hcg-o8-qIP">
-                                                    <rect key="frame" x="133.5" y="49.5" width="147" height="230.00000000000023"/>
+                                                    <rect key="frame" x="133.5" y="49.5" width="147" height="230"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="hcg-o8-qIP" secondAttribute="height" multiplier="1564:2452" id="nrB-TW-hFj"/>
                                                     </constraints>
@@ -172,7 +172,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-oJ-P07">
-                                <rect key="frame" x="190" y="191.5" width="75" height="34"/>
+                                <rect key="frame" x="190" y="186" width="75" height="45"/>
                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -193,7 +193,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pnl-3d-2vs" firstAttribute="width" secondItem="GO9-IX-rpL" secondAttribute="width" id="4aC-BK-2vl"/>
-                            <constraint firstItem="SaS-oJ-P07" firstAttribute="height" secondItem="u9I-Wd-lRk" secondAttribute="height" multiplier="0.0379464" id="5k8-Mf-41v"/>
+                            <constraint firstItem="SaS-oJ-P07" firstAttribute="height" secondItem="u9I-Wd-lRk" secondAttribute="height" multiplier="0.05" id="5k8-Mf-41v"/>
                             <constraint firstItem="i9e-ih-OGh" firstAttribute="width" secondItem="BI2-C7-m83" secondAttribute="width" id="6wa-wI-Of1"/>
                             <constraint firstItem="i9e-ih-OGh" firstAttribute="centerX" secondItem="BI2-C7-m83" secondAttribute="centerX" id="9cj-s4-YZO"/>
                             <constraint firstItem="HyW-MQ-5Gc" firstAttribute="centerX" secondItem="u9I-Wd-lRk" secondAttribute="centerX" multiplier="0.8" id="ANU-yF-D9P"/>

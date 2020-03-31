@@ -16,7 +16,6 @@
         <!--Game Over View Controller-->
         <scene sceneID="uaV-KC-mDW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jh-Oq-lTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController restorationIdentifier="GameOver" storyboardIdentifier="GameOver" modalPresentationStyle="overFullScreen" id="43m-kd-0JT" customClass="GameOverViewController" customModule="Topple_Towers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TFg-LC-THE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -96,7 +95,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VAs-JL-l3r" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" multiplier="1.305" id="0ph-SO-vP0"/>
                             <constraint firstItem="af8-aI-Mfn" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="4Ri-jr-U8b"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" id="6PD-fu-xtD"/>
                             <constraint firstItem="43J-X9-7OF" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="A6W-WF-Tf1"/>
@@ -107,12 +105,13 @@
                             <constraint firstItem="v4e-gw-XJq" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="0.34" id="KSY-Ik-v5I"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="height" secondItem="TFg-LC-THE" secondAttribute="height" id="PET-Ce-AOB"/>
                             <constraint firstItem="7d3-dg-OI3" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.95" id="Pcu-34-iRi"/>
-                            <constraint firstItem="v4e-gw-XJq" firstAttribute="centerY" secondItem="DMB-vy-Reb" secondAttribute="centerY" multiplier="1.305" id="X73-0N-xaZ"/>
                             <constraint firstItem="4pS-8j-qJB" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="XpL-zS-aFQ"/>
                             <constraint firstItem="VAs-JL-l3r" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.36" id="c6F-IS-BoZ"/>
+                            <constraint firstItem="VAs-JL-l3r" firstAttribute="top" secondItem="H9i-4k-yaH" secondAttribute="bottom" constant="-3.5" id="dCa-8k-dFx"/>
                             <constraint firstItem="v4e-gw-XJq" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="0.64" id="fNY-3f-wPC"/>
                             <constraint firstItem="H9i-4k-yaH" firstAttribute="width" secondItem="TFg-LC-THE" secondAttribute="width" multiplier="0.7" id="hdS-jR-Nuu"/>
                             <constraint firstItem="Jff-mv-xi9" firstAttribute="centerX" secondItem="DMB-vy-Reb" secondAttribute="centerX" id="mjA-2P-yWF"/>
+                            <constraint firstItem="v4e-gw-XJq" firstAttribute="top" secondItem="H9i-4k-yaH" secondAttribute="bottom" constant="-3.5" id="nIE-Wq-lg4"/>
                             <constraint firstItem="Mdc-YN-90V" firstAttribute="centerY" secondItem="Jff-mv-xi9" secondAttribute="centerY" multiplier="0.8" id="qWQ-vO-nOd"/>
                             <constraint firstItem="7d3-dg-OI3" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" multiplier="1.5" id="qer-P3-Tg9"/>
                             <constraint firstItem="Mdc-YN-90V" firstAttribute="centerX" secondItem="Jff-mv-xi9" secondAttribute="centerX" id="qlL-gi-leE"/>
@@ -127,8 +126,11 @@
                     <connections>
                         <outlet property="lblCurrenntScore" destination="af8-aI-Mfn" id="hhn-60-ZZM"/>
                         <outlet property="lblScore" destination="43J-X9-7OF" id="2tg-gQ-IYC"/>
+                        <outlet property="leaderboardButtomTopSpace" destination="dCa-8k-dFx" id="7CD-NU-P7l"/>
+                        <outlet property="shopButtomTopSpace" destination="nIE-Wq-lg4" id="2YZ-ED-NXx"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Jh-Oq-lTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.28985507246378" y="70.982142857142847"/>
         </scene>

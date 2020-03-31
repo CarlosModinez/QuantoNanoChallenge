@@ -7,6 +7,9 @@ target 'QuartoNanoChallenge' do
 
   # Pods for QuartoNanoChallenge
   # add the Firebase pod for Google Analytics
+  source 'https://github.com/CocoaPods/Specs.git'
+  use_frameworks!
+  pod 'SwiftyGif'
   pod 'Firebase/Analytics'
   pod 'Google-Mobile-Ads-SDK'
   
