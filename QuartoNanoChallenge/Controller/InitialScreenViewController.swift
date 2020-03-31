@@ -18,12 +18,17 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
     @IBOutlet weak var lblCharacterPrice: UILabel!
     @IBOutlet weak var firstScreenView: UIView!
     
+    @IBOutlet weak var playButtomBottomSpace: NSLayoutConstraint!
+    
+    @IBOutlet weak var buyButtomBottomSpace: NSLayoutConstraint!
+    
     let swipeRightRec = UISwipeGestureRecognizer()
     let swipeLeftRec = UISwipeGestureRecognizer()
     
     var characterID: Int = 0
+    var modelCharacters = Model.shared.characters!
     
-    var imageCharacters: [UIImage?] = [UIImage(named: "iniciaPig"), UIImage(named: "inicialBird"), UIImage(named: "inicialElephant"), UIImage(named: "inicialGiraf"), UIImage(named: "inicialHippo"), UIImage(named: "inicialMonkey"), UIImage(named: "inicialPanda"), UIImage(named: "inicialPenguin"), UIImage(named: "inicialhabbit"), UIImage(named: "inicialSnake")]
+//    var modelCharacters: [UIImage?] = [UIImage(named: "iniciaPig"), UIImage(named: "inicialBird"), UIImage(named: "inicialElephant"), UIImage(named: "inicialGiraf"), UIImage(named: "inicialHippo"), UIImage(named: "inicialMonkey"), UIImage(named: "inicialPanda"), UIImage(named: "inicialPenguin"), UIImage(named: "inicialhabbit"), UIImage(named: "inicialSnake")]
     
     @IBOutlet weak var characterCollection: UICollectionView!
     var gameScene: GameScene!
@@ -35,6 +40,8 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         lblCoinsAmount.text = String(Model.shared.totalCoins)
         updateButtons()
         characterCollection.isUserInteractionEnabled = false
+        playButtomBottomSpace.constant = -(self.view.frame.height/10)*2.3
+        buyButtomBottomSpace.constant = -(self.view.frame.height/10)*2.3
         
         //Adiciona o banner ad na view
 //        Model.shared.initialBannerAd?.adUnitID = "ca-app-pub-3940256099942544/2934735716"
@@ -119,7 +126,7 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
     
     // COLLECTION
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageCharacters.count
+        return modelCharacters.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -129,8 +136,9 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: "character", for: indexPath) as! CharacterCollectionViewCell
-        cell.imageCharacter.image = imageCharacters[indexPath.row]
+        cell.imageCharacter.image = modelCharacters[indexPath.row].image
         cell.imageCharacter.frame.size = cell.frame.size
+        cell.name.text = modelCharacters[indexPath.row].characterName
         return cell
     }
     
@@ -156,14 +164,14 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         let isInteger = Int(contentOffset/widthCollection)
         characterID = isInteger
         print(isInteger)
-        if contentOffset == widthCollection*(CGFloat(imageCharacters.count)){
+        if contentOffset == widthCollection*(CGFloat(modelCharacters.count)){
             characterID = 0
-            let frame: CGRect = CGRect(x : (contentOffset/CGFloat(imageCharacters.count)) - widthCollection ,y : self.characterCollection.contentOffset.y ,width : self.characterCollection.frame.width,height : self.characterCollection.frame.height)
+            let frame: CGRect = CGRect(x : (contentOffset/CGFloat(modelCharacters.count)) - widthCollection ,y : self.characterCollection.contentOffset.y ,width : self.characterCollection.frame.width,height : self.characterCollection.frame.height)
             self.characterCollection.scrollRectToVisible(frame, animated: true)
         }
         else if contentOffset == -widthCollection {
             characterID = 9
-            let frame: CGRect = CGRect(x : (-contentOffset*CGFloat(imageCharacters.count)) - widthCollection ,y : self.characterCollection.contentOffset.y ,width : self.characterCollection.frame.width,height : self.characterCollection.frame.height)
+            let frame: CGRect = CGRect(x : (-contentOffset*CGFloat(modelCharacters.count)) - widthCollection ,y : self.characterCollection.contentOffset.y ,width : self.characterCollection.frame.width,height : self.characterCollection.frame.height)
             self.characterCollection.scrollRectToVisible(frame, animated: true)
         }
         

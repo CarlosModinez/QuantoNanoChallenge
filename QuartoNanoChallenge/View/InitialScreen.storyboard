@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sky-Mr-Ine">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sky-Mr-Ine">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,24 +26,15 @@
                                 <rect key="frame" x="0.0" y="5" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundInicial" translatesAutoresizingMaskIntoConstraints="NO" id="BI2-C7-m83">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DownBackground" translatesAutoresizingMaskIntoConstraints="NO" id="BI2-C7-m83">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOPPLE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhy-sc-wcL">
-                                <rect key="frame" x="0.0" y="45" width="414" height="134"/>
-                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="80"/>
-                                <color key="textColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOWERS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-zr-PKa">
-                                <rect key="frame" x="0.0" y="112" width="414" height="134.5"/>
-                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="80"/>
-                                <color key="textColor" red="0.90980392160000001" green="0.41568627450000001" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopBackground" translatesAutoresizingMaskIntoConstraints="NO" id="i9e-ih-OGh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="269"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pnl-3d-2vs">
-                                <rect key="frame" x="0.0" y="289.5" width="414" height="327"/>
+                                <rect key="frame" x="0.0" y="253" width="414" height="490.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="KaU-vc-mfN">
                                     <size key="itemSize" width="50" height="50"/>
@@ -53,22 +44,32 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="a" reuseIdentifier="character" id="5Jc-3f-PV7" customClass="CharacterCollectionViewCell" customModule="Topple_Towers" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-1" width="414" height="329"/>
+                                        <rect key="frame" x="0.0" y="81" width="414" height="329"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yiN-ze-wlG">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="329"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inicialElephant" translatesAutoresizingMaskIntoConstraints="NO" id="hcg-o8-qIP">
-                                                    <rect key="frame" x="133.5" y="49.5" width="147" height="230"/>
+                                                    <rect key="frame" x="133.5" y="49.5" width="147" height="230.00000000000023"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="hcg-o8-qIP" secondAttribute="height" multiplier="1564:2452" id="nrB-TW-hFj"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0v-hF-4GC">
+                                                    <rect key="frame" x="103.5" y="-24.5" width="207" height="98.5"/>
+                                                    <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="hcg-o8-qIP" firstAttribute="centerY" secondItem="yiN-ze-wlG" secondAttribute="centerY" id="5i5-ek-zcu"/>
                                                 <constraint firstItem="hcg-o8-qIP" firstAttribute="centerX" secondItem="yiN-ze-wlG" secondAttribute="centerX" id="8a2-tX-xYF"/>
+                                                <constraint firstItem="X0v-hF-4GC" firstAttribute="centerX" secondItem="yiN-ze-wlG" secondAttribute="centerX" id="AHi-9i-wsr"/>
+                                                <constraint firstItem="X0v-hF-4GC" firstAttribute="width" secondItem="yiN-ze-wlG" secondAttribute="width" multiplier="0.5" id="ZES-68-Lm5"/>
+                                                <constraint firstItem="X0v-hF-4GC" firstAttribute="centerY" secondItem="yiN-ze-wlG" secondAttribute="centerY" multiplier="0.15" id="dqJ-uE-q9W"/>
+                                                <constraint firstItem="X0v-hF-4GC" firstAttribute="height" secondItem="yiN-ze-wlG" secondAttribute="height" multiplier="0.3" id="vWc-yj-Hhd"/>
                                                 <constraint firstItem="hcg-o8-qIP" firstAttribute="height" secondItem="yiN-ze-wlG" secondAttribute="height" multiplier="0.7" id="y1c-gn-xbD"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -76,6 +77,7 @@
                                         <size key="customSize" width="414" height="329"/>
                                         <connections>
                                             <outlet property="imageCharacter" destination="hcg-o8-qIP" id="lvl-8r-Fxn"/>
+                                            <outlet property="name" destination="X0v-hF-4GC" id="Dpa-Jl-zr0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -85,7 +87,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRH-5k-sf4">
-                                <rect key="frame" x="333" y="431.5" width="37.5" height="43"/>
+                                <rect key="frame" x="333" y="477" width="37.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37.659999999999997" id="2aq-eo-GDI"/>
                                     <constraint firstAttribute="width" secondItem="VRH-5k-sf4" secondAttribute="height" multiplier="113:129" id="st4-pw-8pQ"/>
@@ -96,7 +98,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11m-dh-sN6">
-                                <rect key="frame" x="43.5" y="431.5" width="37.5" height="43"/>
+                                <rect key="frame" x="43.5" y="477" width="37.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37.659999999999997" id="Rzp-pe-QzU"/>
                                     <constraint firstAttribute="width" secondItem="11m-dh-sN6" secondAttribute="height" multiplier="113:129" id="SeB-zT-uw5"/>
@@ -106,11 +108,11 @@
                                     <action selector="btnLeftArrowAction:" destination="sky-Mr-Ine" eventType="touchUpInside" id="QYk-XC-IIa"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOk-dn-dFe">
-                                <rect key="frame" x="124" y="656.5" width="166" height="120.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cOk-dn-dFe" userLabel="buyView">
+                                <rect key="frame" x="124" y="657" width="166" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhY-Rk-6Iw">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="120.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HhY-Rk-6Iw" secondAttribute="height" multiplier="1155:838" id="ICV-x7-nE5"/>
                                         </constraints>
@@ -121,19 +123,19 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="P2v-bL-lZm">
-                                        <rect key="frame" x="37.5" y="13.5" width="33" height="33.5"/>
+                                        <rect key="frame" x="37.5" y="13.5" width="33" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="P2v-bL-lZm" secondAttribute="height" multiplier="1:1" id="EGy-1I-jRa"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUY" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8I-8x-d4l">
-                                        <rect key="frame" x="33.5" y="63.5" width="99" height="48"/>
+                                        <rect key="frame" x="33.5" y="63" width="99" height="48"/>
                                         <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="230" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e6-bd-YWS">
-                                        <rect key="frame" x="66.5" y="17.5" width="74.5" height="37.5"/>
+                                        <rect key="frame" x="66.5" y="17" width="74.5" height="38"/>
                                         <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -158,63 +160,84 @@
                                     <constraint firstItem="P2v-bL-lZm" firstAttribute="centerY" secondItem="cOk-dn-dFe" secondAttribute="centerY" multiplier="0.5" id="zSI-ZF-sro"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-oJ-P07">
-                                <rect key="frame" x="186" y="225" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CtJ-QV-gIS">
-                                <rect key="frame" x="124" y="656.5" width="166" height="120.5"/>
+                                <rect key="frame" x="124" y="657" width="166" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CtJ-QV-gIS" secondAttribute="height" multiplier="386:280" id="O4N-Tn-f7m"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="60"/>
                                 <state key="normal" backgroundImage="PlayButton_1"/>
                                 <connections>
                                     <action selector="playBtnPressed:" destination="sky-Mr-Ine" eventType="touchUpInside" id="Ixc-2E-6Oy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaS-oJ-P07">
+                                <rect key="frame" x="190" y="191.5" width="75" height="34"/>
+                                <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="HyW-MQ-5Gc">
+                                <rect key="frame" x="148" y="186" width="35.5" height="35.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HyW-MQ-5Gc" secondAttribute="height" multiplier="1:1" id="YYk-Qn-P9v"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NameToppleTowers" translatesAutoresizingMaskIntoConstraints="NO" id="oY5-jq-Ta7">
+                                <rect key="frame" x="40.5" y="44" width="333" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oY5-jq-Ta7" secondAttribute="height" multiplier="800:430" id="Lvi-ml-8Bu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="pnl-3d-2vs" firstAttribute="width" secondItem="GO9-IX-rpL" secondAttribute="width" id="4aC-BK-2vl"/>
-                            <constraint firstItem="Fhy-sc-wcL" firstAttribute="height" secondItem="BI2-C7-m83" secondAttribute="height" multiplier="0.15" id="7AN-9j-hSD"/>
+                            <constraint firstItem="SaS-oJ-P07" firstAttribute="height" secondItem="u9I-Wd-lRk" secondAttribute="height" multiplier="0.0379464" id="5k8-Mf-41v"/>
+                            <constraint firstItem="i9e-ih-OGh" firstAttribute="width" secondItem="BI2-C7-m83" secondAttribute="width" id="6wa-wI-Of1"/>
+                            <constraint firstItem="i9e-ih-OGh" firstAttribute="centerX" secondItem="BI2-C7-m83" secondAttribute="centerX" id="9cj-s4-YZO"/>
+                            <constraint firstItem="HyW-MQ-5Gc" firstAttribute="centerX" secondItem="u9I-Wd-lRk" secondAttribute="centerX" multiplier="0.8" id="ANU-yF-D9P"/>
                             <constraint firstAttribute="bottom" secondItem="BI2-C7-m83" secondAttribute="bottom" id="BSt-zB-RGw"/>
+                            <constraint firstItem="cOk-dn-dFe" firstAttribute="top" secondItem="u9I-Wd-lRk" secondAttribute="bottom" constant="-244" id="C8a-LQ-JtL"/>
                             <constraint firstItem="11m-dh-sN6" firstAttribute="centerY" secondItem="pnl-3d-2vs" secondAttribute="centerY" id="EhN-Co-04v"/>
-                            <constraint firstItem="cOk-dn-dFe" firstAttribute="centerY" secondItem="BI2-C7-m83" secondAttribute="centerY" multiplier="1.6" id="G8s-eb-TI5"/>
+                            <constraint firstItem="SaS-oJ-P07" firstAttribute="centerX" secondItem="u9I-Wd-lRk" secondAttribute="centerX" multiplier="1.1" id="GIN-mv-Q1O"/>
                             <constraint firstItem="VRH-5k-sf4" firstAttribute="centerX" secondItem="BI2-C7-m83" secondAttribute="centerX" multiplier="1.7" id="GyK-gp-WC7"/>
                             <constraint firstItem="cOk-dn-dFe" firstAttribute="centerX" secondItem="BI2-C7-m83" secondAttribute="centerX" id="J7R-KS-Jml"/>
+                            <constraint firstItem="i9e-ih-OGh" firstAttribute="top" secondItem="BI2-C7-m83" secondAttribute="top" id="NPN-ml-w7N"/>
+                            <constraint firstItem="oY5-jq-Ta7" firstAttribute="centerX" secondItem="u9I-Wd-lRk" secondAttribute="centerX" id="NiH-KW-cMK"/>
                             <constraint firstItem="pnl-3d-2vs" firstAttribute="centerX" secondItem="GO9-IX-rpL" secondAttribute="centerX" id="Q3a-xq-167"/>
                             <constraint firstItem="11m-dh-sN6" firstAttribute="centerX" secondItem="BI2-C7-m83" secondAttribute="centerX" multiplier="0.3" id="RCf-k4-dAs"/>
                             <constraint firstItem="cOk-dn-dFe" firstAttribute="width" secondItem="BI2-C7-m83" secondAttribute="width" multiplier="0.4" id="T59-4c-gTZ"/>
-                            <constraint firstItem="pnl-3d-2vs" firstAttribute="centerY" secondItem="GO9-IX-rpL" secondAttribute="centerY" id="Y0m-LU-u7G"/>
-                            <constraint firstItem="Fhy-sc-wcL" firstAttribute="width" secondItem="BI2-C7-m83" secondAttribute="width" id="Yf6-o2-Hhl"/>
+                            <constraint firstItem="GO9-IX-rpL" firstAttribute="top" secondItem="oY5-jq-Ta7" secondAttribute="top" id="Tbx-Dy-eBx"/>
+                            <constraint firstItem="pnl-3d-2vs" firstAttribute="centerY" secondItem="GO9-IX-rpL" secondAttribute="centerY" multiplier="1.1" id="Y0m-LU-u7G"/>
+                            <constraint firstItem="HyW-MQ-5Gc" firstAttribute="width" secondItem="u9I-Wd-lRk" secondAttribute="width" multiplier="0.0857488" id="YB4-Zs-gFn"/>
                             <constraint firstItem="VRH-5k-sf4" firstAttribute="centerY" secondItem="pnl-3d-2vs" secondAttribute="centerY" id="Yis-6D-upO"/>
                             <constraint firstItem="BI2-C7-m83" firstAttribute="leading" secondItem="h0A-bJ-eZz" secondAttribute="leading" id="ZQg-ie-1KV"/>
-                            <constraint firstItem="CtJ-QV-gIS" firstAttribute="width" secondItem="cOk-dn-dFe" secondAttribute="width" id="Zqc-YG-s4W"/>
                             <constraint firstItem="CtJ-QV-gIS" firstAttribute="centerX" secondItem="cOk-dn-dFe" secondAttribute="centerX" id="b2w-4S-9G5"/>
-                            <constraint firstItem="fYC-zr-PKa" firstAttribute="centerX" secondItem="BI2-C7-m83" secondAttribute="centerX" id="blz-kX-4xx"/>
                             <constraint firstItem="u9I-Wd-lRk" firstAttribute="width" secondItem="h0A-bJ-eZz" secondAttribute="width" id="c4O-IA-I3k"/>
+                            <constraint firstItem="HyW-MQ-5Gc" firstAttribute="centerY" secondItem="u9I-Wd-lRk" secondAttribute="centerY" multiplier="0.45" id="cBR-IS-RMN"/>
+                            <constraint firstItem="SaS-oJ-P07" firstAttribute="width" secondItem="u9I-Wd-lRk" secondAttribute="width" multiplier="0.181159" id="cbR-Wx-ROr"/>
+                            <constraint firstItem="CtJ-QV-gIS" firstAttribute="top" secondItem="u9I-Wd-lRk" secondAttribute="bottom" constant="-244" id="e2h-eP-n1J"/>
                             <constraint firstItem="CtJ-QV-gIS" firstAttribute="height" secondItem="cOk-dn-dFe" secondAttribute="height" id="h7l-af-LP7"/>
-                            <constraint firstItem="Fhy-sc-wcL" firstAttribute="centerY" secondItem="BI2-C7-m83" secondAttribute="centerY" multiplier="0.25" id="is0-4E-yNO"/>
-                            <constraint firstItem="fYC-zr-PKa" firstAttribute="width" secondItem="BI2-C7-m83" secondAttribute="width" id="mm2-nz-QBA"/>
-                            <constraint firstItem="fYC-zr-PKa" firstAttribute="height" secondItem="BI2-C7-m83" secondAttribute="height" multiplier="0.15" id="n5l-1V-yZz"/>
-                            <constraint firstItem="CtJ-QV-gIS" firstAttribute="centerY" secondItem="cOk-dn-dFe" secondAttribute="centerY" id="oEm-jt-EO8"/>
-                            <constraint firstItem="fYC-zr-PKa" firstAttribute="centerY" secondItem="BI2-C7-m83" secondAttribute="centerY" multiplier="0.4" id="oSu-91-ORQ"/>
+                            <constraint firstItem="SaS-oJ-P07" firstAttribute="centerY" secondItem="u9I-Wd-lRk" secondAttribute="centerY" multiplier="0.46" id="mum-eT-mdI"/>
+                            <constraint firstItem="i9e-ih-OGh" firstAttribute="height" secondItem="BI2-C7-m83" secondAttribute="height" multiplier="0.3" id="nsR-3n-JYl"/>
                             <constraint firstItem="u9I-Wd-lRk" firstAttribute="centerY" secondItem="GO9-IX-rpL" secondAttribute="centerY" id="r5j-o1-NXW"/>
                             <constraint firstItem="u9I-Wd-lRk" firstAttribute="height" secondItem="h0A-bJ-eZz" secondAttribute="height" id="rM6-s4-S79"/>
                             <constraint firstAttribute="trailing" secondItem="BI2-C7-m83" secondAttribute="trailing" id="sWM-tz-pu7"/>
                             <constraint firstItem="BI2-C7-m83" firstAttribute="top" secondItem="h0A-bJ-eZz" secondAttribute="top" id="vU7-27-xPl"/>
-                            <constraint firstItem="Fhy-sc-wcL" firstAttribute="centerX" secondItem="BI2-C7-m83" secondAttribute="centerX" id="xbF-Bx-Wna"/>
-                            <constraint firstItem="pnl-3d-2vs" firstAttribute="height" secondItem="GO9-IX-rpL" secondAttribute="height" multiplier="0.4" id="z3x-2R-rhQ"/>
+                            <constraint firstItem="oY5-jq-Ta7" firstAttribute="height" secondItem="u9I-Wd-lRk" secondAttribute="height" multiplier="0.2" id="xJ8-p0-fUo"/>
+                            <constraint firstItem="pnl-3d-2vs" firstAttribute="height" secondItem="GO9-IX-rpL" secondAttribute="height" multiplier="0.6" id="z3x-2R-rhQ"/>
                             <constraint firstItem="u9I-Wd-lRk" firstAttribute="centerX" secondItem="GO9-IX-rpL" secondAttribute="centerX" id="zZV-Zo-dQC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GO9-IX-rpL"/>
                     </view>
                     <connections>
+                        <outlet property="buyButtomBottomSpace" destination="C8a-LQ-JtL" id="ntK-ml-JJu"/>
                         <outlet property="characterCollection" destination="pnl-3d-2vs" id="iM5-xf-7Y9"/>
                         <outlet property="firstScreenView" destination="u9I-Wd-lRk" id="gdS-7Z-qaY"/>
                         <outlet property="lblCharacterPrice" destination="3e6-bd-YWS" id="o3i-ke-N0n"/>
                         <outlet property="lblCoinsAmount" destination="SaS-oJ-P07" id="qyS-NA-9i5"/>
+                        <outlet property="playButtomBottomSpace" destination="e2h-eP-n1J" id="NGy-dM-5PQ"/>
                         <outlet property="tapToBuyOutlet" destination="HhY-Rk-6Iw" id="Uhb-tg-Ub6"/>
                         <outlet property="tapToPlayOutlet" destination="CtJ-QV-gIS" id="6aw-oy-4zb"/>
                     </connections>
@@ -226,10 +249,12 @@
     </scenes>
     <resources>
         <image name="BuyBackground" width="385.5" height="279.5"/>
+        <image name="DownBackground" width="1436" height="3038.5"/>
         <image name="Left" width="113" height="128.5"/>
+        <image name="NameToppleTowers" width="799.5" height="429.5"/>
         <image name="PlayButton_1" width="385.5" height="279.5"/>
         <image name="Right" width="112.5" height="128.5"/>
-        <image name="backgroundInicial" width="1242.5" height="2688.5"/>
+        <image name="TopBackground" width="1436.5" height="1075"/>
         <image name="coin" width="35.5" height="35.5"/>
         <image name="inicialElephant" width="521.5" height="817.5"/>
     </resources>
