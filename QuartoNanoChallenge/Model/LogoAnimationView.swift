@@ -29,6 +29,9 @@ class LogoAnimationView: UIView {
         logoGifImageView.translatesAutoresizingMaskIntoConstraints = false
         logoGifImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         logoGifImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        logoGifImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleBottomMargin, .flexibleRightMargin, .flexibleLeftMargin, .flexibleTopMargin]
+        logoGifImageView.contentMode = .scaleAspectFill // OR .scaleAspectFit
+        logoGifImageView.clipsToBounds = true
 //        logoGifImageView.widthAnchor.constraint(equalToConstant: 280).isActive = true
 //        logoGifImageView.heightAnchor.constraint(equalToConstant: 108).isActive = true
     }
