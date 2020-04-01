@@ -56,16 +56,20 @@
 		D1CABB762411233F004A28A5 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB752411233F004A28A5 /* Box.swift */; };
 		D1CABB782411243A004A28A5 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB772411243A004A28A5 /* Floor.swift */; };
 		D1CABB7C241125F9004A28A5 /* SpawningFloors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */; };
+		FB34E2642434B5CB009029BE /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB34E2632434B5CB009029BE /* LogoAnimationView.swift */; };
+		FB34E26A2434BE1C009029BE /* LaunchScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB34E2692434BE1C009029BE /* LaunchScreen.gif */; };
+		FB34E26B2434BE1C009029BE /* LaunchScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB34E2692434BE1C009029BE /* LaunchScreen.gif */; };
+		FB34E26C2434BE1C009029BE /* LaunchScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB34E2692434BE1C009029BE /* LaunchScreen.gif */; };
 		FB615D9A242E28DD00ACCD58 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB615D99242E28DD00ACCD58 /* CharacterCollectionViewCell.swift */; };
 		FB8041D024217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
-		FB86B47A2433F85A0033E334 /* LogoAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB86B4792433F85A0033E334 /* LogoAnimationView.swift */; };
 		FB92DC4D242A56960019C877 /* GameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB92DC4C242A56950019C877 /* GameCenter.swift */; };
 		FBACE77C2421A52E0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 		FBACE77D2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 		FBACE77E2421A52F0007B24B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FB8041D7242184DD0034B83B /* GoogleService-Info.plist */; };
 		FBACE7802421B91C0007B24B /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBACE77F2421B91C0007B24B /* GameKit.framework */; };
+		FBCFE4372434067900538488 /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFE4362434067900538488 /* GIF.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,13 +151,15 @@
 		D1CABB772411243A004A28A5 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
 		D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawningFloors.swift; sourceTree = "<group>"; };
 		F0524A99949ABECAC0FB77D1 /* Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuartoNanoChallenge_QuartoNanoChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB34E2632434B5CB009029BE /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
+		FB34E2692434BE1C009029BE /* LaunchScreen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LaunchScreen.gif; sourceTree = "<group>"; };
 		FB615D99242E28DD00ACCD58 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
 		FB8041D7242184DD0034B83B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FB86B4792433F85A0033E334 /* LogoAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
 		FB92DC4C242A56950019C877 /* GameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
 		FBACE77F2421B91C0007B24B /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		FBAEEEDF242174B9000F15B8 /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
+		FBCFE4362434067900538488 /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +321,7 @@
 		D1CABB6D24111FB3004A28A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FB34E2672434BD64009029BE /* GIFzin */,
 				D11DC4B724300F3B0004C5E2 /* Sounds2 */,
 				D1CABB4524111F32004A28A5 /* Assets.xcassets */,
 				D1CABB3A24111F2E004A28A5 /* GameScene.sks */,
@@ -330,12 +337,13 @@
 			isa = PBXGroup;
 			children = (
 				D1CABB6F24112004004A28A5 /* Model.swift */,
-				FB86B4792433F85A0033E334 /* LogoAnimationView.swift */,
 				D13A92B7242F90C700829CA7 /* Character.swift */,
 				D1CABB71241120C3004A28A5 /* BodyMasks.swift */,
 				D1407E1624166814009AD490 /* GameObject.swift */,
 				D1407E182417B6D3009AD490 /* CamControl.swift */,
 				D1CABB3E24111F2E004A28A5 /* GameScene.swift */,
+				FBCFE4362434067900538488 /* GIF.swift */,
+				FB34E2632434B5CB009029BE /* LogoAnimationView.swift */,
 				D11DC48A24300C630004C5E2 /* SoundControll */,
 				D1CABB7A241125D7004A28A5 /* Spawners */,
 				D1CABB7924112579004A28A5 /* GameObjects */,
@@ -360,6 +368,14 @@
 				D1CABB7B241125F9004A28A5 /* SpawningFloors.swift */,
 			);
 			path = Spawners;
+			sourceTree = "<group>";
+		};
+		FB34E2672434BD64009029BE /* GIFzin */ = {
+			isa = PBXGroup;
+			children = (
+				FB34E2692434BE1C009029BE /* LaunchScreen.gif */,
+			);
+			path = GIFzin;
 			sourceTree = "<group>";
 		};
 		FBAEEEDE242174B4000F15B8 /* Fonts */ = {
@@ -497,6 +513,7 @@
 				D11DC4C624300F5A0004C5E2 /* Swipe(2).wav in Resources */,
 				D11DC4C724300F5A0004C5E2 /* Swipe(3).wav in Resources */,
 				D11DC4C824300F5A0004C5E2 /* Water Splash.wav in Resources */,
+				FB34E26A2434BE1C009029BE /* LaunchScreen.gif in Resources */,
 				D11DC4C924300F5A0004C5E2 /* Water Splash(2).wav in Resources */,
 				D11DC4CA24300F5A0004C5E2 /* Water Splash(3).wav in Resources */,
 				D1472B6A241A733F005FBB07 /* GameOver.storyboard in Resources */,
@@ -518,6 +535,7 @@
 			files = (
 				FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */,
 				FBACE77D2421A52F0007B24B /* GoogleService-Info.plist in Resources */,
+				FB34E26B2434BE1C009029BE /* LaunchScreen.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +545,7 @@
 			files = (
 				FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */,
 				FBACE77E2421A52F0007B24B /* GoogleService-Info.plist in Resources */,
+				FB34E26C2434BE1C009029BE /* LaunchScreen.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,7 +661,6 @@
 			files = (
 				D1B76202242AB553009B23C0 /* AdPermissionViewController.swift in Sources */,
 				D1407E1724166814009AD490 /* GameObject.swift in Sources */,
-				FB86B47A2433F85A0033E334 /* LogoAnimationView.swift in Sources */,
 				D1CABB782411243A004A28A5 /* Floor.swift in Sources */,
 				D1CABB7C241125F9004A28A5 /* SpawningFloors.swift in Sources */,
 				D1CABB3F24111F2E004A28A5 /* GameScene.swift in Sources */,
@@ -651,12 +669,14 @@
 				FB92DC4D242A56960019C877 /* GameCenter.swift in Sources */,
 				D1CABB4124111F2E004A28A5 /* GameViewController.swift in Sources */,
 				D1CABB762411233F004A28A5 /* Box.swift in Sources */,
+				FBCFE4372434067900538488 /* GIF.swift in Sources */,
 				D1472B6C241A735E005FBB07 /* InitialScreenViewController.swift in Sources */,
 				FB615D9A242E28DD00ACCD58 /* CharacterCollectionViewCell.swift in Sources */,
 				D1CABB3924111F2E004A28A5 /* AppDelegate.swift in Sources */,
 				D1472B66241A5529005FBB07 /* Water.swift in Sources */,
 				D1407E15241667F9009AD490 /* Coins.swift in Sources */,
 				D11DC47324300B1D0004C5E2 /* CustomSound.swift in Sources */,
+				FB34E2642434B5CB009029BE /* LogoAnimationView.swift in Sources */,
 				D1407E192417B6D3009AD490 /* CamControl.swift in Sources */,
 				D1CABB7024112004004A28A5 /* Model.swift in Sources */,
 				D13A92B8242F90C700829CA7 /* Character.swift in Sources */,

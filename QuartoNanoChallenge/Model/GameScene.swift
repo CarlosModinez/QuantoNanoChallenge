@@ -189,7 +189,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Exclui os objetos que a agua passou
             excludeBoxesCauseWater()
-            if gameVelocity < 2 {
+            if gameVelocity < 1.7 {
                 gameVelocity += 0.001/3
             }
             // Initialize _lastUpdateTime if it has not already been

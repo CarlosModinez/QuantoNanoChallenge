@@ -9,6 +9,7 @@
 import UIKit
 import GameKit
 import GoogleMobileAds
+import SwiftyGif
 
 class InitialScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -28,14 +29,17 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
     var characterID: Int = 0
     var modelCharacters = Model.shared.characters!
     
-//    var modelCharacters: [UIImage?] = [UIImage(named: "iniciaPig"), UIImage(named: "inicialBird"), UIImage(named: "inicialElephant"), UIImage(named: "inicialGiraf"), UIImage(named: "inicialHippo"), UIImage(named: "inicialMonkey"), UIImage(named: "inicialPanda"), UIImage(named: "inicialPenguin"), UIImage(named: "inicialhabbit"), UIImage(named: "inicialSnake")]
     
     @IBOutlet weak var characterCollection: UICollectionView!
     var gameScene: GameScene!
     
+    let logoAnimationView = LogoAnimationView()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        logoAnimationView.logoGifImageView.startAnimatingGif()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(Model.shared.totalCoins)
         GameCenter.shared.authenticateLocalPlayer(presentingVC: self)
         lblCoinsAmount.text = String(Model.shared.totalCoins)
         updateButtons()
@@ -43,38 +47,46 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         playButtomBottomSpace.constant = -(self.view.frame.height/10)*2.3
         buyButtomBottomSpace.constant = -(self.view.frame.height/10)*2.3
         
-        //Adiciona o banner ad na view
-//        Model.shared.initialBannerAd?.adUnitID = "ca-app-pub-3940256099942544/2934735716"
-            // Mudar tambem na model
-            // ID LOJA
-            //"ca-app-pub-3143840922595951/1780408112"
-            // ID TESTE s
-            //"ca-app-pub-3940256099942544/2934735716"
         
-//        Model.shared.initialBannerAd?.rootViewController = self
-//        addBannerViewToView(Model.shared.initialBannerAd!)
-//        Model.shared.initialBannerAd?.load(GADRequest())
+        
+        view.addSubview(logoAnimationView)
+        logoAnimationView.pinEdgesToSuperView()
+        logoAnimationView.logoGifImageView.widthAnchor.constraint(equalToConstant: self.view.frame.size.width).isActive = true
+        logoAnimationView.logoGifImageView.heightAnchor.constraint(equalToConstant: self.view.frame.size.height).isActive = true
+        logoAnimationView.logoGifImageView.delegate = self as? SwiftyGifDelegate
+        
+        //Adiciona o banner ad na view
+        //        Model.shared.initialBannerAd?.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        // Mudar tambem na model
+        // ID LOJA
+        //"ca-app-pub-3143840922595951/1780408112"
+        // ID TESTE s
+        //"ca-app-pub-3940256099942544/2934735716"
+        
+        //        Model.shared.initialBannerAd?.rootViewController = self
+        //        addBannerViewToView(Model.shared.initialBannerAd!)
+        //        Model.shared.initialBannerAd?.load(GADRequest())
     }
     
     func addBannerViewToView(_ bannerView: GADBannerView) {
-     bannerView.translatesAutoresizingMaskIntoConstraints = false
-     view.addSubview(bannerView)
-     view.addConstraints(
-       [NSLayoutConstraint(item: bannerView,
-                           attribute: .bottom,
-                           relatedBy: .equal,
-                           toItem: bottomLayoutGuide,
-                           attribute: .top,
-                           multiplier: 1,
-                           constant: 0),
-        NSLayoutConstraint(item: bannerView,
-                           attribute: .centerX,
-                           relatedBy: .equal,
-                           toItem: view,
-                           attribute: .centerX,
-                           multiplier: 1,
-                           constant: 0)
-       ])
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        view.addConstraints(
+            [NSLayoutConstraint(item: bannerView,
+                                attribute: .bottom,
+                                relatedBy: .equal,
+                                toItem: bottomLayoutGuide,
+                                attribute: .top,
+                                multiplier: 1,
+                                constant: 0),
+             NSLayoutConstraint(item: bannerView,
+                                attribute: .centerX,
+                                relatedBy: .equal,
+                                toItem: view,
+                                attribute: .centerX,
+                                multiplier: 1,
+                                constant: 0)
+        ])
     }
     
     
@@ -174,7 +186,7 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
             let frame: CGRect = CGRect(x : (-contentOffset*CGFloat(modelCharacters.count)) - widthCollection ,y : self.characterCollection.contentOffset.y ,width : self.characterCollection.frame.width,height : self.characterCollection.frame.height)
             self.characterCollection.scrollRectToVisible(frame, animated: true)
         }
-        
+            
         else {
             if  CGFloat(isInteger) == contentOffset/widthCollection {
                 let frame: CGRect = CGRect(x : contentOffset ,y : self.characterCollection.contentOffset.y ,width : self.characterCollection.frame.width,height : self.characterCollection.frame.height)
@@ -183,4 +195,10 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         }
     }
     
+}
+
+extension InitialScreenViewController: SwiftyGifDelegate {
+    func gifDidStop(sender: UIImageView) {
+        logoAnimationView.isHidden = true
+    }
 }
