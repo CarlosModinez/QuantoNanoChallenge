@@ -61,6 +61,7 @@
 		FB34E26B2434BE1C009029BE /* LaunchScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB34E2692434BE1C009029BE /* LaunchScreen.gif */; };
 		FB34E26C2434BE1C009029BE /* LaunchScreen.gif in Resources */ = {isa = PBXBuildFile; fileRef = FB34E2692434BE1C009029BE /* LaunchScreen.gif */; };
 		FB615D9A242E28DD00ACCD58 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB615D99242E28DD00ACCD58 /* CharacterCollectionViewCell.swift */; };
+		FB6582692436AAAF00890B95 /* UIbuttom Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6582682436AAAF00890B95 /* UIbuttom Extension.swift */; };
 		FB8041D024217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D124217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
 		FB8041D224217C400034B83B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */; };
@@ -154,6 +155,7 @@
 		FB34E2632434B5CB009029BE /* LogoAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoAnimationView.swift; sourceTree = "<group>"; };
 		FB34E2692434BE1C009029BE /* LaunchScreen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = LaunchScreen.gif; sourceTree = "<group>"; };
 		FB615D99242E28DD00ACCD58 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB6582682436AAAF00890B95 /* UIbuttom Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIbuttom Extension.swift"; sourceTree = "<group>"; };
 		FB8041CF24217C3F0034B83B /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
 		FB8041D7242184DD0034B83B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FB92DC4C242A56950019C877 /* GameCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCenter.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				D1CABB3E24111F2E004A28A5 /* GameScene.swift */,
 				FBCFE4362434067900538488 /* GIF.swift */,
 				FB34E2632434B5CB009029BE /* LogoAnimationView.swift */,
+				FB6582682436AAAF00890B95 /* UIbuttom Extension.swift */,
 				D11DC48A24300C630004C5E2 /* SoundControll */,
 				D1CABB7A241125D7004A28A5 /* Spawners */,
 				D1CABB7924112579004A28A5 /* GameObjects */,
@@ -660,6 +663,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B76202242AB553009B23C0 /* AdPermissionViewController.swift in Sources */,
+				FB6582692436AAAF00890B95 /* UIbuttom Extension.swift in Sources */,
 				D1407E1724166814009AD490 /* GameObject.swift in Sources */,
 				D1CABB782411243A004A28A5 /* Floor.swift in Sources */,
 				D1CABB7C241125F9004A28A5 /* SpawningFloors.swift in Sources */,

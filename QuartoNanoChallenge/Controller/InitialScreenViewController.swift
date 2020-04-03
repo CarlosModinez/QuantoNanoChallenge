@@ -32,12 +32,15 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
     
     @IBOutlet weak var characterCollection: UICollectionView!
     var gameScene: GameScene!
+    var animationAlreadyPlayed = Model.shared.animationGIFPLayed
     
     let logoAnimationView = LogoAnimationView()
     
     override func viewDidAppear(_ animated: Bool) {
+        
         logoAnimationView.logoGifImageView.startAnimatingGif()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GameCenter.shared.authenticateLocalPlayer(presentingVC: self)
@@ -47,9 +50,12 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         playButtomBottomSpace.constant = -(self.view.frame.height/10)*2.3
         buyButtomBottomSpace.constant = -(self.view.frame.height/10)*2.3
         
+        if animationAlreadyPlayed == false {
+            view.addSubview(logoAnimationView)
+            Model.shared.animationGIFPLayed = true
+            
+        }
         
-        
-        view.addSubview(logoAnimationView)
         logoAnimationView.pinEdgesToSuperView()
         logoAnimationView.logoGifImageView.widthAnchor.constraint(equalToConstant: self.view.frame.size.width).isActive = true
         logoAnimationView.logoGifImageView.heightAnchor.constraint(equalToConstant: self.view.frame.size.height).isActive = true
@@ -99,6 +105,7 @@ class InitialScreenViewController: UIViewController, UICollectionViewDataSource,
         Model.shared.updateCharacter()
         gameViewController = gameView.instantiateViewController(withIdentifier: "gameView") as? GameViewController
         self.present(gameViewController, animated: true, completion: nil)
+        
     }
     
     @IBAction func buyBtNPressed(_ sender: Any) {

@@ -66,7 +66,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let swipeSound = CustomSound(fileName: "Swipe.wav")
     let waterSplash = CustomSound(fileName: "Water Splash(3).wav")
     let coinCollected = CustomSound(fileName: "Coin Collected.wav")
-    
     //Enumerate for identify swipe side
     enum Side {
         case right
@@ -99,6 +98,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         var firstBody: SKPhysicsBody
         var secondBody: SKPhysicsBody
+        
         
         
         if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
@@ -156,6 +156,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(_ currentTime: TimeInterval) {
         if runnigAnimation {
+            // posição da camera
+            cam.position.y = boxes[0].box.position.y
             //Posicoes do score
             score = (Int(cam.position.y) - Model.shared.floorStep * 2 - 37) / 5
             scoreBox.position.y = cam.position.y + gameViewController.height/1.35
@@ -183,7 +185,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 scoreText.text = String(0)
             }
             
-            cam.position.y = boxes[0].box.position.y
+            
             backgroundSprite.position.y = boxes[0].box.position.y - (view?.frame.size.height)!
             checkInternality()
             

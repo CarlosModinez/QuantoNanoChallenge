@@ -32,8 +32,6 @@ class LogoAnimationView: UIView {
         logoGifImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight, .flexibleBottomMargin, .flexibleRightMargin, .flexibleLeftMargin, .flexibleTopMargin]
         logoGifImageView.contentMode = .scaleAspectFill // OR .scaleAspectFit
         logoGifImageView.clipsToBounds = true
-//        logoGifImageView.widthAnchor.constraint(equalToConstant: 280).isActive = true
-//        logoGifImageView.heightAnchor.constraint(equalToConstant: 108).isActive = true
     }
 }
 extension UIView {
