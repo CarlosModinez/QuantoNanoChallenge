@@ -46,7 +46,8 @@ class Model {
     var characters: [Character]!
     var character: Int
     var currentBackground = SKTexture(imageNamed: "background_2")
-    var gameOverCount: Int
+    var gameOverCount: Int = 0
+    var gameOverCoinsCount: Int = 0
     
     var animationGIFPLayed = false
     
@@ -58,14 +59,14 @@ class Model {
         //"ca-app-pub-3940256099942544/2934735716"
     
     
-    var gameOverAd: GADInterstitial? = GADInterstitial(adUnitID: "ca-app-pub-3143840922595951/9170978827")
+    var gameOverAd: GADInterstitial? = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         // Mudar tambem na GameOverViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/9170978827"
         // ID TESTE
         //"ca-app-pub-3940256099942544/4411468910"
     
-    var rewardedAd: GADRewardedAd? = GADRewardedAd(adUnitID: "ca-app-pub-3143840922595951/3310571075")
+    var rewardedAd: GADRewardedAd? = GADRewardedAd(adUnitID: "ca-app-pub-3940256099942544/1712485313")
         // Mudar tambem na AdPermissionViewController
         // ID LOJA
         //"ca-app-pub-3143840922595951/3310571075"

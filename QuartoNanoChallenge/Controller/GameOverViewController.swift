@@ -38,7 +38,8 @@ class GameOverViewController: UIViewController, GADInterstitialDelegate {
     func showGameOverAd() {
         //A frequência desse ad é de 1/3
         Model.shared.gameOverCount += 1
-        if Model.shared.gameOverCount == 3 {
+        if Model.shared.gameOverCount == 2 {
+            print("FAPSKFAOSKFOASKOSAKDOSAKDOASKDOSA")
             Model.shared.gameOverCount = 0
             Model.shared.gameOverAd?.present(fromRootViewController: self)
             loadGameOverAd()
@@ -47,14 +48,14 @@ class GameOverViewController: UIViewController, GADInterstitialDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         // A frequência desse ad é 1/2
-        let adSorter = Int.random(in: 0..<2)
-        if Model.shared.currentCoins > 0 && adSorter == 0 {
+        let adSorter = Int.random(in: 0..<5)
+        if Model.shared.currentCoins > 0 && adSorter < 3 {
            showAdPermission()
         }
     }
     
     func loadGameOverAd(){
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3143840922595951/9170978827")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
         //Mudar tambem na Model
         // ID LOJA
         //"ca-app-pub-3143840922595951/9170978827"
