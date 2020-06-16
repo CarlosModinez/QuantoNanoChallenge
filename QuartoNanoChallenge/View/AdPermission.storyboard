@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,7 +31,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="124.5" height="128"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="oun-P2-KCN">
-                                                        <rect key="frame" x="87" y="45.5" width="37.5" height="37"/>
+                                                        <rect key="frame" x="103" y="45.5" width="37.5" height="37"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="oun-P2-KCN" secondAttribute="height" multiplier="1:1" id="akh-Qh-cKn"/>
                                                         </constraints>
@@ -40,7 +40,6 @@
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="oun-P2-KCN" firstAttribute="centerY" secondItem="yFU-Fy-RYk" secondAttribute="centerY" id="Ocy-ft-m4u"/>
-                                                    <constraint firstAttribute="trailing" secondItem="oun-P2-KCN" secondAttribute="trailing" id="WmX-Iy-pxE"/>
                                                     <constraint firstItem="oun-P2-KCN" firstAttribute="width" secondItem="yFU-Fy-RYk" secondAttribute="width" multiplier="0.3" id="bBm-EI-GBJ"/>
                                                 </constraints>
                                             </view>
@@ -48,8 +47,8 @@
                                                 <rect key="frame" x="124.5" y="0.0" width="186.5" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWp-8V-otl">
-                                                <rect key="frame" x="143" y="33.5" width="149.5" height="61"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWp-8V-otl">
+                                                <rect key="frame" x="150.5" y="33.5" width="56" height="61"/>
                                                 <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="30"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -62,23 +61,17 @@
                                             <constraint firstItem="yFU-Fy-RYk" firstAttribute="centerY" secondItem="bJa-Wx-TWw" secondAttribute="centerY" id="6ss-nQ-OrF"/>
                                             <constraint firstItem="Y55-Pz-bDB" firstAttribute="width" secondItem="bJa-Wx-TWw" secondAttribute="width" multiplier="0.6" id="EtK-sV-PGN"/>
                                             <constraint firstAttribute="trailing" secondItem="Y55-Pz-bDB" secondAttribute="trailing" id="GwN-ZN-AjB"/>
+                                            <constraint firstItem="yWp-8V-otl" firstAttribute="leading" secondItem="oun-P2-KCN" secondAttribute="trailing" constant="10" id="LhX-g7-uFn"/>
                                             <constraint firstItem="Y55-Pz-bDB" firstAttribute="centerY" secondItem="bJa-Wx-TWw" secondAttribute="centerY" id="QR0-TB-E6e"/>
                                             <constraint firstItem="yWp-8V-otl" firstAttribute="centerY" secondItem="Y55-Pz-bDB" secondAttribute="centerY" id="WcM-k0-YaX"/>
-                                            <constraint firstItem="yWp-8V-otl" firstAttribute="width" secondItem="Y55-Pz-bDB" secondAttribute="width" multiplier="0.8" id="ca2-aw-ezB"/>
-                                            <constraint firstItem="yWp-8V-otl" firstAttribute="centerX" secondItem="Y55-Pz-bDB" secondAttribute="centerX" id="fkK-cd-X5F"/>
+                                            <constraint firstItem="yWp-8V-otl" firstAttribute="width" secondItem="Y55-Pz-bDB" secondAttribute="width" multiplier="0.3" id="ca2-aw-ezB"/>
+                                            <constraint firstItem="yWp-8V-otl" firstAttribute="centerX" secondItem="Y55-Pz-bDB" secondAttribute="centerX" multiplier="0.82" id="fkK-cd-X5F"/>
                                             <constraint firstItem="yFU-Fy-RYk" firstAttribute="width" secondItem="bJa-Wx-TWw" secondAttribute="width" multiplier="0.4" id="iNn-Ot-tn7"/>
                                             <constraint firstItem="yFU-Fy-RYk" firstAttribute="leading" secondItem="bJa-Wx-TWw" secondAttribute="leading" id="u2J-2j-UrU"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61z-Jk-3bi">
-                                        <rect key="frame" x="42.5" y="151" width="226" height="117"/>
-                                        <state key="normal" title="Button" image="DoubleCoinButton"/>
-                                        <connections>
-                                            <action selector="doubleCoinsPressed:" destination="1BE-zA-Wbh" eventType="touchUpInside" id="f1h-9M-azh"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hY-hY-V2C">
-                                        <rect key="frame" x="42.5" y="278" width="226" height="57"/>
+                                        <rect key="frame" x="102" y="297.5" width="107" height="57"/>
                                         <fontDescription key="fontDescription" name="BalooBhaina-Regular" family="Baloo Bhaina" pointSize="22"/>
                                         <state key="normal" title="No, thanks">
                                             <color key="titleColor" red="0.56358621373695406" green="0.56358621373695406" blue="0.56358621373695406" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -88,27 +81,33 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uto-QC-4RP" userLabel="Btn go Home">
-                                        <rect key="frame" x="42.5" y="151" width="226" height="117"/>
+                                        <rect key="frame" x="100" y="181" width="111" height="57"/>
                                         <state key="normal" backgroundImage="GoHomeButton"/>
                                         <connections>
                                             <action selector="goHomePressed:" destination="1BE-zA-Wbh" eventType="touchUpInside" id="Y94-CF-ctv"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61z-Jk-3bi">
+                                        <rect key="frame" x="62" y="131.5" width="187" height="156"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="61z-Jk-3bi" secondAttribute="height" multiplier="278:233" id="PAb-66-gbh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Double Coins-1"/>
+                                        <connections>
+                                            <action selector="doubleCoinsPressed:" destination="1BE-zA-Wbh" eventType="touchUpInside" id="f1h-9M-azh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="4hY-hY-V2C" firstAttribute="width" secondItem="61z-Jk-3bi" secondAttribute="width" id="2SZ-GX-Ydb"/>
                                     <constraint firstItem="61z-Jk-3bi" firstAttribute="centerY" secondItem="x7Y-Id-VwT" secondAttribute="centerY" id="Bdj-kp-1tu"/>
                                     <constraint firstItem="bJa-Wx-TWw" firstAttribute="width" secondItem="x7Y-Id-VwT" secondAttribute="width" id="EQD-IO-DKX"/>
                                     <constraint firstAttribute="width" secondItem="x7Y-Id-VwT" secondAttribute="height" multiplier="311:419" id="JNq-CA-5wl"/>
-                                    <constraint firstItem="Uto-QC-4RP" firstAttribute="height" secondItem="61z-Jk-3bi" secondAttribute="height" id="KYd-tA-TOp"/>
                                     <constraint firstItem="bJa-Wx-TWw" firstAttribute="top" secondItem="x7Y-Id-VwT" secondAttribute="top" id="L34-DT-zUm"/>
-                                    <constraint firstItem="61z-Jk-3bi" firstAttribute="width" secondItem="x7Y-Id-VwT" secondAttribute="width" multiplier="0.726688" id="O8N-ra-xbH"/>
-                                    <constraint firstItem="61z-Jk-3bi" firstAttribute="height" secondItem="x7Y-Id-VwT" secondAttribute="height" multiplier="0.279236" id="PJ7-QV-upy"/>
+                                    <constraint firstItem="61z-Jk-3bi" firstAttribute="width" secondItem="x7Y-Id-VwT" secondAttribute="width" multiplier="0.6" id="Upk-yr-OtG"/>
                                     <constraint firstItem="4hY-hY-V2C" firstAttribute="top" secondItem="61z-Jk-3bi" secondAttribute="bottom" constant="10" id="VSS-RC-7J5"/>
                                     <constraint firstItem="Uto-QC-4RP" firstAttribute="centerY" secondItem="61z-Jk-3bi" secondAttribute="centerY" id="aQf-ly-ksM"/>
                                     <constraint firstItem="Uto-QC-4RP" firstAttribute="centerX" secondItem="61z-Jk-3bi" secondAttribute="centerX" id="ckm-7i-1Rm"/>
-                                    <constraint firstItem="Uto-QC-4RP" firstAttribute="width" secondItem="61z-Jk-3bi" secondAttribute="width" id="jmu-NI-aQy"/>
                                     <constraint firstItem="4hY-hY-V2C" firstAttribute="centerX" secondItem="x7Y-Id-VwT" secondAttribute="centerX" id="mLC-a4-jAC"/>
                                     <constraint firstItem="bJa-Wx-TWw" firstAttribute="height" secondItem="x7Y-Id-VwT" secondAttribute="height" multiplier="0.305489" id="msP-d2-vfP"/>
                                     <constraint firstItem="61z-Jk-3bi" firstAttribute="centerX" secondItem="x7Y-Id-VwT" secondAttribute="centerX" id="q6n-Fd-GKr"/>
@@ -138,7 +137,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DoubleCoinButton" width="225" height="117"/>
+        <image name="Double Coins-1" width="279.5" height="234.5"/>
         <image name="GoHomeButton" width="111" height="57"/>
         <image name="coin" width="35.5" height="35.5"/>
     </resources>

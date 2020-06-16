@@ -27,17 +27,6 @@ class AdPermissionViewController: UIViewController, GADRewardedAdDelegate {
         btnGoHome.isHidden = true
         btnGoHome.isEnabled = false
         
-        // Go home  button layout adjust
-        btnGoHome.layer.shadowColor = UIColor.black.cgColor
-        btnGoHome.layer.shadowOpacity = 1
-        btnGoHome.layer.shadowOffset = CGSize(width: 3, height: 3)
-        btnGoHome.layer.shadowRadius = 10
-        
-        // Double coins button layout adjust
-        btnDoubleCoins.layer.shadowColor = UIColor.black.cgColor
-        btnDoubleCoins.layer.shadowOpacity = 1
-        btnDoubleCoins.layer.shadowOffset = CGSize(width: 3, height:3)
-        btnDoubleCoins.layer.shadowRadius = 10
         
         // View layout adjust
         presentationView.layer.cornerRadius = 50
